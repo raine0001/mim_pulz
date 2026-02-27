@@ -22,9 +22,17 @@ MIM_pulz/
 ## Getting Started
 
 1. Install dependencies: `pip install -r requirements.txt`
+  - App-focused install: `pip install -r requirements.app.txt`
+  - Kaggle-focused install: `pip install -r requirements.kaggle.txt`
 2. Place your raw data in the `data/raw/` folder
 3. Start with the exploration notebook in `notebooks/`
 4. Develop your models using the modules in `src/`
+
+Known-good lock snapshots are stored at:
+
+- `requirements.lock.txt`
+- `release/demo/requirements.lock.txt`
+- `release/kaggle/requirements.lock.txt`
 
 ## Key Features
 

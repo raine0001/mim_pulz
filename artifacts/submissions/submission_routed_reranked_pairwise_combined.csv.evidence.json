@@ -1,9 +1,9 @@
 {
-  "model_id": "RoutedRetrievalReranked(base=CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3,uncertainty(enabled=True,thr=0.03,closing_thr=0.02,br_pct=80.0,itop_thr=0.48,igap_thr=0.01,topk_add=20,ext_add=2,kboost=0.0,ext_bonus=0.0,stg2_disc=0.0,len_disc=0.0,len_min=0.65,skel_blend=0.05,num_bonus=0.005,form_bonus=0.005,slot_bonus=0.0,var_bonus=0.002,unc_pen=0.0,var_eq=True,var_k=3,var_thr=0.72,var_min_sup=2,var_max=256,skel_path=True,skel_k=120,rare_cut=2)),routing_sha=a3b078fdfffb,reranker_sha=fc43e32242c1)",
-  "routing_map_path": "C:\\MIM_pulz\\artifacts\\profiles\\routing_map.json",
+  "model_id": "RoutedRetrievalReranked(base=CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3,uncertainty(enabled=True,thr=0.03,closing_thr=0.02,br_pct=80.0,itop_thr=0.48,igap_thr=0.01,topk_add=20,ext_add=2,kboost=0.0,ext_bonus=0.0,stg2_disc=0.0,len_disc=0.0,len_min=0.65,skel_blend=0.05,num_bonus=0.005,form_bonus=0.005,slot_bonus=0.0,var_bonus=0.002,unc_pen=0.0,var_eq=True,var_k=3,var_thr=0.72,var_min_sup=2,var_max=256,skel_path=True,skel_k=120,rare_cut=2)),routing_sha=a3b078fdfffb,reranker_sha=e2ced1c1994b)",
+  "routing_map_path": "F:\\DRIVE\\mim_pulz\\artifacts\\profiles\\routing_map.json",
   "routing_map_sha256": "a3b078fdfffbe3d897dbde0ac479314fc302b7410af62351e8b13f7fcbc4845a",
-  "reranker_model_path": "C:\\MIM_pulz\\artifacts\\models\\routed_linear_reranker_seed42_pairwise_combined.json",
-  "reranker_model_sha256": "fc43e32242c144d3ab879335c862213a8176cb71fe3b943be8939e10b59fca03",
+  "reranker_model_path": "F:\\DRIVE\\mim_pulz\\artifacts\\models\\routed_linear_reranker_seed43_pairwise_combined.json",
+  "reranker_model_sha256": "e2ced1c1994b7b1c71ba2064051699b2129a3ad226b07568e014567c27020713",
   "reranker_internal_top_k": 120,
   "reranker_oracc_cap": 25,
   "route_counts": {
@@ -276,8 +276,8 @@
           "hyphen_token_ratio": 0.875,
           "rare_token_ratio": 0.375
         },
-        "reranker_model_path": "C:\\MIM_pulz\\artifacts\\models\\routed_linear_reranker_seed42_pairwise_combined.json",
-        "reranker_model_sha256": "fc43e32242c144d3ab879335c862213a8176cb71fe3b943be8939e10b59fca03",
+        "reranker_model_path": "F:\\DRIVE\\mim_pulz\\artifacts\\models\\routed_linear_reranker_seed43_pairwise_combined.json",
+        "reranker_model_sha256": "e2ced1c1994b7b1c71ba2064051699b2129a3ad226b07568e014567c27020713",
         "reranker_feature_names": [
           "cosine",
           "base_score",
@@ -296,23 +296,23 @@
           "marker_density_proximity"
         ],
         "reranker_selected_idx": 196,
-        "reranker_selected_score": 0.9853602051734924,
+        "reranker_selected_score": 0.8773604035377502,
         "reranker_gated_to_baseline": true,
-        "reranker_gate_prob_gap": 0.014266908168792725,
-        "reranker_gate_pred_delta": 0.04728511184100043,
-        "reranker_gate_allow_prob": false,
+        "reranker_gate_prob_gap": 0.12150496244430542,
+        "reranker_gate_pred_delta": 2.4876213983544435,
+        "reranker_gate_allow_prob": true,
         "reranker_gate_allow_base": false,
         "reranker_gate_allow_pred_delta": true,
         "reranker_gate_allow_digits": true,
         "reranker_gate_numeric_heavy": false,
         "reranker_gate_best_digits_overlap": 0.0,
         "reranker_gate_routed_digits_overlap": 0.0,
-        "reranker_gate_prob_margin": 0.05,
-        "reranker_gate_base_score_drop": 0.1,
+        "reranker_gate_prob_margin": 0.02,
+        "reranker_gate_base_score_drop": 0.03,
         "reranker_gate_min_pred_delta": 0.0,
-        "reranker_delta_calibration_slope": 20.0,
-        "reranker_delta_calibration_intercept": -0.23805305153485407,
-        "reranker_gate_digit_overlap_tol": 0.05,
+        "reranker_delta_calibration_slope": 18.99051466538338,
+        "reranker_delta_calibration_intercept": 0.18017962713900446,
+        "reranker_gate_digit_overlap_tol": 0.0,
         "reranker_pool_size": 145,
         "reranker_internal_top_k": 120,
         "reranker_oracc_cap": 25,
@@ -322,7 +322,7 @@
             "memory_idx": 406,
             "origin": "competition",
             "context": "letter",
-            "reranker_score": 0.9996271133422852,
+            "reranker_score": 0.9988653659820557,
             "target_text": "Thus  Kanesh, say to the -payers, our messenger, every single colony, and the trading stations: A letter of the City has arrived. In the letter of the City (it is written): From this day on, whoever buys meteoric iron, (the City of) Assur is not  part of the profit made, the tithe on it  Kanesh will collect.\" As soo...",
             "features": {
               "cosine": 0.5504035353660583,
@@ -347,7 +347,7 @@
             "memory_idx": 1421,
             "origin": "competition",
             "context": "letter",
-            "reranker_score": 0.9909194707870483,
+            "reranker_score": 0.9796278476715088,
             "target_text": "Thus the 'datu-payers,' Kuliya, the messenger of  Kanesh, and  Durhumit, say to every single  and (all) the until  Kanesh: Asānum, our messenger, has been sent to  Kanesh to deliver information. As soon as you have heard our letter, each of you must give an escort to Asānum and each  must escort him to the next, all...",
             "features": {
               "cosine": 0.42576390504837036,
@@ -369,27 +369,27 @@
           },
           {
             "rank": 3,
-            "memory_idx": 196,
+            "memory_idx": 525,
             "origin": "competition",
-            "context": "unknown",
-            "reranker_score": 0.9853602051734924,
-            "target_text": "Seal of the -payers, of Kuliya, the messenger of  Kanesh, and of  Durhumit, to every single and the, until  Kanesh.",
+            "context": "letter",
+            "reranker_score": 0.9561343193054199,
+            "target_text": "From Šalim-Aššur to Ikūn-pīya(?) and Ennam-Aššur: Concerning the tablets, missives and copies you wrote me about, all your tablets have been placed before the City assembly and the City has heard them and passed a verdict, that ... of the City, Šalim-Ištar, the envoy, carries the tablet of the City to the colony, st...",
             "features": {
-              "cosine": 0.5065381526947021,
-              "base_score": 1.0631134510040283,
-              "stage2_norm": 0.5194835662841797,
-              "rank_inv": 0.5,
+              "cosine": 0.2675968110561371,
+              "base_score": 0.3861682415008545,
+              "stage2_norm": 0.4286861717700958,
+              "rank_inv": 0.0833333358168602,
               "is_external": 0.0,
-              "domain_match": 0.0,
-              "len_ratio": 0.9109588861465454,
+              "domain_match": 1.0,
+              "len_ratio": 0.18095238506793976,
               "digits_overlap": 0.0,
               "pn_overlap": 0.0,
               "section_match": 1.0,
-              "digit_ratio_proximity": 0.835616409778595,
-              "bracket_ratio_proximity": 0.7593985199928284,
-              "unknown_ratio_proximity": 1.0,
-              "repeat_trigram_proximity": 1.0,
-              "marker_density_proximity": 0.4444444477558136
+              "digit_ratio_proximity": 0.9836734533309937,
+              "bracket_ratio_proximity": 0.979377031326294,
+              "unknown_ratio_proximity": 0.0,
+              "repeat_trigram_proximity": 0.0,
+              "marker_density_proximity": 0.8399999737739563
             }
           },
           {
@@ -397,7 +397,7 @@
             "memory_idx": 971,
             "origin": "competition",
             "context": "letter",
-            "reranker_score": 0.9788778424263,
+            "reranker_score": 0.9378592371940613,
             "target_text": "Thus Kanesh, say to <every single> colony and the trading stations until Tuhpiya as follows: Kuliya, our messanger, has been sent to transmit instructions. Give him two escorts and (thus each) colony must convey him to the (next) colony. Do not cause him to delay! If among the escorts you have chosen somebody refuse...",
             "features": {
               "cosine": 0.3893898129463196,
@@ -419,27 +419,27 @@
           },
           {
             "rank": 5,
-            "memory_idx": 687,
+            "memory_idx": 118,
             "origin": "competition",
-            "context": "legal",
-            "reranker_score": 0.9780640602111816,
-            "target_text": "Seal of  Kanesh. To Kuliya, the-payer, our messenger, to every single , wherever Sukkaliya, son of Aššuriš-tikal is staying, small and big.",
+            "context": "letter",
+            "reranker_score": 0.9336675405502319,
+            "target_text": "Thus  Kaniš, say to the datu-payers, our messenger Kuliya, the plenary of Kuburnat hanaknak and Tišmurna: As soon as you hear our letter, produce the dagger of Assur in the presence of our messenger Kuliya and whoever over there carries meteoric iron, whether he has already sold it to a palace or has not yet sold it...",
             "features": {
-              "cosine": 0.470236212015152,
-              "base_score": 1.0422080755233765,
-              "stage2_norm": 0.4642469882965088,
-              "rank_inv": 0.3333333432674408,
+              "cosine": 0.27899131178855896,
+              "base_score": 0.37805381417274475,
+              "stage2_norm": 0.4383964538574219,
+              "rank_inv": 0.125,
               "is_external": 0.0,
-              "domain_match": 0.0,
-              "len_ratio": 0.9366196990013123,
+              "domain_match": 1.0,
+              "len_ratio": 0.1484375,
               "digits_overlap": 0.0,
               "pn_overlap": 0.0,
               "section_match": 1.0,
-              "digit_ratio_proximity": 0.9154929518699646,
-              "bracket_ratio_proximity": 0.7593985199928284,
+              "digit_ratio_proximity": 0.8258928656578064,
+              "bracket_ratio_proximity": 0.8308270573616028,
               "unknown_ratio_proximity": 1.0,
-              "repeat_trigram_proximity": 1.0,
-              "marker_density_proximity": 0.4117647111415863
+              "repeat_trigram_proximity": 0.6581196784973145,
+              "marker_density_proximity": 0.7478991746902466
             }
           }
         ],
@@ -463,7 +463,7 @@
           "candidate_c": {
             "label": "selected by Reranker (final)",
             "memory_idx": 196,
-            "score": 0.9853602051734924,
+            "score": 0.8773604035377502,
             "origin": "competition",
             "context": "unknown",
             "target_text": "Seal of the -payers, of Kuliya, the messenger of  Kanesh, and of  Durhumit, to every single and the, until  Kanesh."
@@ -471,28 +471,28 @@
           "top_weights": [
             {
               "feature": "len_ratio",
-              "weight": 0.3899713318591144,
-              "abs_weight": 0.3899713318591144
+              "weight": 0.43897494639348006,
+              "abs_weight": 0.43897494639348006
             },
             {
               "feature": "stage2_norm",
-              "weight": -0.31093811455028825,
-              "abs_weight": 0.31093811455028825
-            },
-            {
-              "feature": "is_external",
-              "weight": -0.281193926388283,
-              "abs_weight": 0.281193926388283
-            },
-            {
-              "feature": "bracket_ratio_proximity",
-              "weight": -0.22980074140124782,
-              "abs_weight": 0.22980074140124782
+              "weight": -0.3579636749168912,
+              "abs_weight": 0.3579636749168912
             },
             {
               "feature": "base_score",
-              "weight": 0.21736797581866393,
-              "abs_weight": 0.21736797581866393
+              "weight": 0.3219175596646727,
+              "abs_weight": 0.3219175596646727
+            },
+            {
+              "feature": "is_external",
+              "weight": -0.22991005334846745,
+              "abs_weight": 0.22991005334846745
+            },
+            {
+              "feature": "bracket_ratio_proximity",
+              "weight": -0.22431615125750282,
+              "abs_weight": 0.22431615125750282
             }
           ]
         }
@@ -761,8 +761,8 @@
           "hyphen_token_ratio": 0.8947368421052632,
           "rare_token_ratio": 0.5263157894736842
         },
-        "reranker_model_path": "C:\\MIM_pulz\\artifacts\\models\\routed_linear_reranker_seed42_pairwise_combined.json",
-        "reranker_model_sha256": "fc43e32242c144d3ab879335c862213a8176cb71fe3b943be8939e10b59fca03",
+        "reranker_model_path": "F:\\DRIVE\\mim_pulz\\artifacts\\models\\routed_linear_reranker_seed43_pairwise_combined.json",
+        "reranker_model_sha256": "e2ced1c1994b7b1c71ba2064051699b2129a3ad226b07568e014567c27020713",
         "reranker_feature_names": [
           "cosine",
           "base_score",
@@ -781,10 +781,10 @@
           "marker_density_proximity"
         ],
         "reranker_selected_idx": 406,
-        "reranker_selected_score": 0.999982476234436,
+        "reranker_selected_score": 0.9999746084213257,
         "reranker_gated_to_baseline": true,
         "reranker_gate_prob_gap": 0.0,
-        "reranker_gate_pred_delta": -0.23805305153485407,
+        "reranker_gate_pred_delta": 0.18017962713900446,
         "reranker_gate_allow_prob": false,
         "reranker_gate_allow_base": true,
         "reranker_gate_allow_pred_delta": true,
@@ -792,12 +792,12 @@
         "reranker_gate_numeric_heavy": false,
         "reranker_gate_best_digits_overlap": 0.0,
         "reranker_gate_routed_digits_overlap": 0.0,
-        "reranker_gate_prob_margin": 0.05,
-        "reranker_gate_base_score_drop": 0.1,
+        "reranker_gate_prob_margin": 0.02,
+        "reranker_gate_base_score_drop": 0.03,
         "reranker_gate_min_pred_delta": 0.0,
-        "reranker_delta_calibration_slope": 20.0,
-        "reranker_delta_calibration_intercept": -0.23805305153485407,
-        "reranker_gate_digit_overlap_tol": 0.05,
+        "reranker_delta_calibration_slope": 18.99051466538338,
+        "reranker_delta_calibration_intercept": 0.18017962713900446,
+        "reranker_gate_digit_overlap_tol": 0.0,
         "reranker_pool_size": 145,
         "reranker_internal_top_k": 120,
         "reranker_oracc_cap": 25,
@@ -807,7 +807,7 @@
             "memory_idx": 406,
             "origin": "competition",
             "context": "letter",
-            "reranker_score": 0.999982476234436,
+            "reranker_score": 0.9999746084213257,
             "target_text": "Thus  Kanesh, say to the -payers, our messenger, every single colony, and the trading stations: A letter of the City has arrived. In the letter of the City (it is written): From this day on, whoever buys meteoric iron, (the City of) Assur is not  part of the profit made, the tithe on it  Kanesh will collect.\" As soo...",
             "features": {
               "cosine": 0.5175835490226746,
@@ -832,7 +832,7 @@
             "memory_idx": 237,
             "origin": "competition",
             "context": "letter",
-            "reranker_score": 0.9738459587097168,
+            "reranker_score": 0.9798705577850342,
             "target_text": "These words he spoke before the colony. The colony passed a verdict, to the effect that until they acquire the blood-money for Šalim-Aššur's son, no one may forgive the colleague from Tawniya, and no one, either among the great men or among the small men may carry out his wishes. If anyone knows the verdict of the c...",
             "features": {
               "cosine": 0.23330511152744293,
@@ -854,26 +854,26 @@
           },
           {
             "rank": 3,
-            "memory_idx": 631,
+            "memory_idx": 399,
             "origin": "competition",
             "context": "unknown",
-            "reranker_score": 0.9653725624084473,
-            "target_text": "Over there no one of the share-holders representing the investors shall approach anything. According to the tablet of the City, (if he does) it will be considered as stolen by him.",
+            "reranker_score": 0.9650596380233765,
+            "target_text": "The plenary Kanesh colony passed the following verdict: In conformity with what [they have promised], Uṣur-pī-Aššur will enter and leave their paternal house together with [his brother] Ennam-Aššur (and) will eat and drink together with him. He stays married to the maid just as he has married (her), he shall not sel...",
             "features": {
-              "cosine": 0.23824375867843628,
-              "base_score": 0.7619423866271973,
-              "stage2_norm": 0.18537180125713348,
-              "rank_inv": 0.20000000298023224,
+              "cosine": 0.18613258004188538,
+              "base_score": 0.4230755865573883,
+              "stage2_norm": 0.23627692461013794,
+              "rank_inv": 0.03999999910593033,
               "is_external": 0.0,
               "domain_match": 1.0,
-              "len_ratio": 0.8561643958091736,
+              "len_ratio": 0.37823835015296936,
               "digits_overlap": 0.0,
               "pn_overlap": 0.0,
               "section_match": 1.0,
-              "digit_ratio_proximity": 1.0,
-              "bracket_ratio_proximity": 0.9631780982017517,
+              "digit_ratio_proximity": 0.9067357778549194,
+              "bracket_ratio_proximity": 0.8637234568595886,
               "unknown_ratio_proximity": 1.0,
-              "repeat_trigram_proximity": 1.0,
+              "repeat_trigram_proximity": 0.37254902720451355,
               "marker_density_proximity": 0.4736842215061188
             }
           },
@@ -882,7 +882,7 @@
             "memory_idx": 80,
             "origin": "competition",
             "context": "letter",
-            "reranker_score": 0.9556106328964233,
+            "reranker_score": 0.9590768814086914,
             "target_text": "To Ilī-emūqī, Šu-Tammuzi, Abiya, Elaya and Lamassī from Adida and Ali-ahum: After Šalim-Aššur died our father's customers to whom he owed silver there treated me and Ennam-Aššur badly, we were detained and our outstanding claims blocked, and you heard about it and went to the City assembly, and the City gave a verdi...",
             "features": {
               "cosine": 0.2508303225040436,
@@ -904,26 +904,26 @@
           },
           {
             "rank": 5,
-            "memory_idx": 399,
+            "memory_idx": 631,
             "origin": "competition",
             "context": "unknown",
-            "reranker_score": 0.9450687766075134,
-            "target_text": "The plenary Kanesh colony passed the following verdict: In conformity with what [they have promised], Uṣur-pī-Aššur will enter and leave their paternal house together with [his brother] Ennam-Aššur (and) will eat and drink together with him. He stays married to the maid just as he has married (her), he shall not sel...",
+            "reranker_score": 0.9284144639968872,
+            "target_text": "Over there no one of the share-holders representing the investors shall approach anything. According to the tablet of the City, (if he does) it will be considered as stolen by him.",
             "features": {
-              "cosine": 0.18613258004188538,
-              "base_score": 0.4230755865573883,
-              "stage2_norm": 0.23627692461013794,
-              "rank_inv": 0.03999999910593033,
+              "cosine": 0.23824375867843628,
+              "base_score": 0.7619423866271973,
+              "stage2_norm": 0.18537180125713348,
+              "rank_inv": 0.20000000298023224,
               "is_external": 0.0,
               "domain_match": 1.0,
-              "len_ratio": 0.37823835015296936,
+              "len_ratio": 0.8561643958091736,
               "digits_overlap": 0.0,
               "pn_overlap": 0.0,
               "section_match": 1.0,
-              "digit_ratio_proximity": 0.9067357778549194,
-              "bracket_ratio_proximity": 0.8637234568595886,
+              "digit_ratio_proximity": 1.0,
+              "bracket_ratio_proximity": 0.9631780982017517,
               "unknown_ratio_proximity": 1.0,
-              "repeat_trigram_proximity": 0.37254902720451355,
+              "repeat_trigram_proximity": 1.0,
               "marker_density_proximity": 0.4736842215061188
             }
           }
@@ -948,7 +948,7 @@
           "candidate_c": {
             "label": "selected by Reranker (final)",
             "memory_idx": 406,
-            "score": 0.999982476234436,
+            "score": 0.9999746084213257,
             "origin": "competition",
             "context": "letter",
             "target_text": "Thus  Kanesh, say to the -payers, our messenger, every single colony, and the trading stations: A letter of the City has arrived. In the letter of the City (it is written): From this day on, whoever buys meteoric iron, (the City of) Assur is not  part of the profit made, the tithe on it  Kanesh will collect.\" As soo..."
@@ -956,28 +956,28 @@
           "top_weights": [
             {
               "feature": "len_ratio",
-              "weight": 0.3899713318591144,
-              "abs_weight": 0.3899713318591144
+              "weight": 0.43897494639348006,
+              "abs_weight": 0.43897494639348006
             },
             {
               "feature": "stage2_norm",
-              "weight": -0.31093811455028825,
-              "abs_weight": 0.31093811455028825
-            },
-            {
-              "feature": "is_external",
-              "weight": -0.281193926388283,
-              "abs_weight": 0.281193926388283
-            },
-            {
-              "feature": "bracket_ratio_proximity",
-              "weight": -0.22980074140124782,
-              "abs_weight": 0.22980074140124782
+              "weight": -0.3579636749168912,
+              "abs_weight": 0.3579636749168912
             },
             {
               "feature": "base_score",
-              "weight": 0.21736797581866393,
-              "abs_weight": 0.21736797581866393
+              "weight": 0.3219175596646727,
+              "abs_weight": 0.3219175596646727
+            },
+            {
+              "feature": "is_external",
+              "weight": -0.22991005334846745,
+              "abs_weight": 0.22991005334846745
+            },
+            {
+              "feature": "bracket_ratio_proximity",
+              "weight": -0.22431615125750282,
+              "abs_weight": 0.22431615125750282
             }
           ]
         }
@@ -1243,8 +1243,8 @@
           "hyphen_token_ratio": 0.8235294117647058,
           "rare_token_ratio": 0.5
         },
-        "reranker_model_path": "C:\\MIM_pulz\\artifacts\\models\\routed_linear_reranker_seed42_pairwise_combined.json",
-        "reranker_model_sha256": "fc43e32242c144d3ab879335c862213a8176cb71fe3b943be8939e10b59fca03",
+        "reranker_model_path": "F:\\DRIVE\\mim_pulz\\artifacts\\models\\routed_linear_reranker_seed43_pairwise_combined.json",
+        "reranker_model_sha256": "e2ced1c1994b7b1c71ba2064051699b2129a3ad226b07568e014567c27020713",
         "reranker_feature_names": [
           "cosine",
           "base_score",
@@ -1263,10 +1263,10 @@
           "marker_density_proximity"
         ],
         "reranker_selected_idx": 406,
-        "reranker_selected_score": 0.9999891519546509,
+        "reranker_selected_score": 0.9999732971191406,
         "reranker_gated_to_baseline": true,
         "reranker_gate_prob_gap": 0.0,
-        "reranker_gate_pred_delta": -0.23805305153485407,
+        "reranker_gate_pred_delta": 0.18017962713900446,
         "reranker_gate_allow_prob": false,
         "reranker_gate_allow_base": true,
         "reranker_gate_allow_pred_delta": true,
@@ -1274,12 +1274,12 @@
         "reranker_gate_numeric_heavy": false,
         "reranker_gate_best_digits_overlap": 0.0,
         "reranker_gate_routed_digits_overlap": 0.0,
-        "reranker_gate_prob_margin": 0.05,
-        "reranker_gate_base_score_drop": 0.1,
+        "reranker_gate_prob_margin": 0.02,
+        "reranker_gate_base_score_drop": 0.03,
         "reranker_gate_min_pred_delta": 0.0,
-        "reranker_delta_calibration_slope": 20.0,
-        "reranker_delta_calibration_intercept": -0.23805305153485407,
-        "reranker_gate_digit_overlap_tol": 0.05,
+        "reranker_delta_calibration_slope": 18.99051466538338,
+        "reranker_delta_calibration_intercept": 0.18017962713900446,
+        "reranker_gate_digit_overlap_tol": 0.0,
         "reranker_pool_size": 145,
         "reranker_internal_top_k": 120,
         "reranker_oracc_cap": 25,
@@ -1289,7 +1289,7 @@
             "memory_idx": 406,
             "origin": "competition",
             "context": "letter",
-            "reranker_score": 0.9999891519546509,
+            "reranker_score": 0.9999732971191406,
             "target_text": "Thus  Kanesh, say to the -payers, our messenger, every single colony, and the trading stations: A letter of the City has arrived. In the letter of the City (it is written): From this day on, whoever buys meteoric iron, (the City of) Assur is not  part of the profit made, the tithe on it  Kanesh will collect.\" As soo...",
             "features": {
               "cosine": 0.6762632727622986,
@@ -1314,7 +1314,7 @@
             "memory_idx": 118,
             "origin": "competition",
             "context": "letter",
-            "reranker_score": 0.9921048879623413,
+            "reranker_score": 0.9911500215530396,
             "target_text": "Thus  Kaniš, say to the datu-payers, our messenger Kuliya, the plenary of Kuburnat hanaknak and Tišmurna: As soon as you hear our letter, produce the dagger of Assur in the presence of our messenger Kuliya and whoever over there carries meteoric iron, whether he has already sold it to a palace or has not yet sold it...",
             "features": {
               "cosine": 0.3785889744758606,
@@ -1339,7 +1339,7 @@
             "memory_idx": 1100,
             "origin": "competition",
             "context": "letter",
-            "reranker_score": 0.9822624921798706,
+            "reranker_score": 0.9892423748970032,
             "target_text": "Thus  Kaniš, say to the -payers, our messenger Kuliya, (s) Durhumit, hattuš, Tamnia (and) Tuhpiya, (all the way) until Nenašša: As soon as you hear our letter produce the dagger of Aššur and impose an oath and whoever has sold meteoric iron to a palace or, having not yet sold it, still carries it with him, seize (fr...",
             "features": {
               "cosine": 0.36122608184814453,
@@ -1364,7 +1364,7 @@
             "memory_idx": 1140,
             "origin": "competition",
             "context": "letter",
-            "reranker_score": 0.9691804647445679,
+            "reranker_score": 0.9706485867500305,
             "target_text": "Thus  Kanesh to Kuliya, our messenger (and) every single , wherever Sukkaliya, son of Aššuriš-tikal, is staying. Say to Sukkaliya: Tin for a value of 1 mina of silver, we gave you two years ago, with the words: 'Send as soon as you have entered Wahšušana the silver here with the first opportunity. You treated the  a...",
             "features": {
               "cosine": 0.2885338366031647,
@@ -1389,7 +1389,7 @@
             "memory_idx": 53,
             "origin": "competition",
             "context": "letter",
-            "reranker_score": 0.9246492981910706,
+            "reranker_score": 0.9394062757492065,
             "target_text": "To Iddin-abum, Itūr-ilī, Kukawa, Adida and Ali-ahum from Ennam-Aššur: Once or twice I have written to our father's representatives and to you about how to deal with our father's goods in a safe manner. In your instructions you keep writing to me about bringing the goods on the Narrow Track. You wrote: Decide about t...",
             "features": {
               "cosine": 0.22405092418193817,
@@ -1430,7 +1430,7 @@
           "candidate_c": {
             "label": "selected by Reranker (final)",
             "memory_idx": 406,
-            "score": 0.9999891519546509,
+            "score": 0.9999732971191406,
             "origin": "competition",
             "context": "letter",
             "target_text": "Thus  Kanesh, say to the -payers, our messenger, every single colony, and the trading stations: A letter of the City has arrived. In the letter of the City (it is written): From this day on, whoever buys meteoric iron, (the City of) Assur is not  part of the profit made, the tithe on it  Kanesh will collect.\" As soo..."
@@ -1438,28 +1438,28 @@
           "top_weights": [
             {
               "feature": "len_ratio",
-              "weight": 0.3899713318591144,
-              "abs_weight": 0.3899713318591144
+              "weight": 0.43897494639348006,
+              "abs_weight": 0.43897494639348006
             },
             {
               "feature": "stage2_norm",
-              "weight": -0.31093811455028825,
-              "abs_weight": 0.31093811455028825
-            },
-            {
-              "feature": "is_external",
-              "weight": -0.281193926388283,
-              "abs_weight": 0.281193926388283
-            },
-            {
-              "feature": "bracket_ratio_proximity",
-              "weight": -0.22980074140124782,
-              "abs_weight": 0.22980074140124782
+              "weight": -0.3579636749168912,
+              "abs_weight": 0.3579636749168912
             },
             {
               "feature": "base_score",
-              "weight": 0.21736797581866393,
-              "abs_weight": 0.21736797581866393
+              "weight": 0.3219175596646727,
+              "abs_weight": 0.3219175596646727
+            },
+            {
+              "feature": "is_external",
+              "weight": -0.22991005334846745,
+              "abs_weight": 0.22991005334846745
+            },
+            {
+              "feature": "bracket_ratio_proximity",
+              "weight": -0.22431615125750282,
+              "abs_weight": 0.22431615125750282
             }
           ]
         }
@@ -1725,8 +1725,8 @@
           "hyphen_token_ratio": 0.8125,
           "rare_token_ratio": 0.375
         },
-        "reranker_model_path": "C:\\MIM_pulz\\artifacts\\models\\routed_linear_reranker_seed42_pairwise_combined.json",
-        "reranker_model_sha256": "fc43e32242c144d3ab879335c862213a8176cb71fe3b943be8939e10b59fca03",
+        "reranker_model_path": "F:\\DRIVE\\mim_pulz\\artifacts\\models\\routed_linear_reranker_seed43_pairwise_combined.json",
+        "reranker_model_sha256": "e2ced1c1994b7b1c71ba2064051699b2129a3ad226b07568e014567c27020713",
         "reranker_feature_names": [
           "cosine",
           "base_score",
@@ -1745,10 +1745,10 @@
           "marker_density_proximity"
         ],
         "reranker_selected_idx": 406,
-        "reranker_selected_score": 0.9999371767044067,
+        "reranker_selected_score": 0.9998921155929565,
         "reranker_gated_to_baseline": true,
         "reranker_gate_prob_gap": 0.0,
-        "reranker_gate_pred_delta": -0.23805305153485407,
+        "reranker_gate_pred_delta": 0.18017962713900446,
         "reranker_gate_allow_prob": false,
         "reranker_gate_allow_base": true,
         "reranker_gate_allow_pred_delta": true,
@@ -1756,12 +1756,12 @@
         "reranker_gate_numeric_heavy": false,
         "reranker_gate_best_digits_overlap": 0.0,
         "reranker_gate_routed_digits_overlap": 0.0,
-        "reranker_gate_prob_margin": 0.05,
-        "reranker_gate_base_score_drop": 0.1,
+        "reranker_gate_prob_margin": 0.02,
+        "reranker_gate_base_score_drop": 0.03,
         "reranker_gate_min_pred_delta": 0.0,
-        "reranker_delta_calibration_slope": 20.0,
-        "reranker_delta_calibration_intercept": -0.23805305153485407,
-        "reranker_gate_digit_overlap_tol": 0.05,
+        "reranker_delta_calibration_slope": 18.99051466538338,
+        "reranker_delta_calibration_intercept": 0.18017962713900446,
+        "reranker_gate_digit_overlap_tol": 0.0,
         "reranker_pool_size": 145,
         "reranker_internal_top_k": 120,
         "reranker_oracc_cap": 25,
@@ -1771,7 +1771,7 @@
             "memory_idx": 406,
             "origin": "competition",
             "context": "letter",
-            "reranker_score": 0.9999371767044067,
+            "reranker_score": 0.9998921155929565,
             "target_text": "Thus  Kanesh, say to the -payers, our messenger, every single colony, and the trading stations: A letter of the City has arrived. In the letter of the City (it is written): From this day on, whoever buys meteoric iron, (the City of) Assur is not  part of the profit made, the tithe on it  Kanesh will collect.\" As soo...",
             "features": {
               "cosine": 0.6815788149833679,
@@ -1793,35 +1793,10 @@
           },
           {
             "rank": 2,
-            "memory_idx": 196,
-            "origin": "competition",
-            "context": "unknown",
-            "reranker_score": 0.9728589057922363,
-            "target_text": "Seal of the -payers, of Kuliya, the messenger of  Kanesh, and of  Durhumit, to every single and the, until  Kanesh.",
-            "features": {
-              "cosine": 0.2464199811220169,
-              "base_score": 0.7865569591522217,
-              "stage2_norm": 0.1798131763935089,
-              "rank_inv": 0.3333333432674408,
-              "is_external": 0.0,
-              "domain_match": 1.0,
-              "len_ratio": 0.8835616707801819,
-              "digits_overlap": 0.0,
-              "pn_overlap": 0.0,
-              "section_match": 1.0,
-              "digit_ratio_proximity": 0.835616409778595,
-              "bracket_ratio_proximity": 1.0,
-              "unknown_ratio_proximity": 1.0,
-              "repeat_trigram_proximity": 1.0,
-              "marker_density_proximity": 0.4444444477558136
-            }
-          },
-          {
-            "rank": 3,
             "memory_idx": 118,
             "origin": "competition",
             "context": "letter",
-            "reranker_score": 0.9714342951774597,
+            "reranker_score": 0.9698800444602966,
             "target_text": "Thus  Kaniš, say to the datu-payers, our messenger Kuliya, the plenary of Kuburnat hanaknak and Tišmurna: As soon as you hear our letter, produce the dagger of Assur in the presence of our messenger Kuliya and whoever over there carries meteoric iron, whether he has already sold it to a palace or has not yet sold it...",
             "features": {
               "cosine": 0.255079060792923,
@@ -1842,53 +1817,78 @@
             }
           },
           {
-            "rank": 4,
-            "memory_idx": 1344,
+            "rank": 3,
+            "memory_idx": 1100,
             "origin": "competition",
             "context": "letter",
-            "reranker_score": 0.9684339761734009,
-            "target_text": "Dan-Aššur detains Enna-Suen son of Iddin-abum and he gave him to hanu son of Itūr-ilī as guarantor. Dan-Aššur said: You will return the man. If you have not returned the man you will be responsible for 12 minas of silver and its interest in accordance with the certified tablet concerning his father's debt.\" Enna-Sue...",
+            "reranker_score": 0.9611344933509827,
+            "target_text": "Thus  Kaniš, say to the -payers, our messenger Kuliya, (s) Durhumit, hattuš, Tamnia (and) Tuhpiya, (all the way) until Nenašša: As soon as you hear our letter produce the dagger of Aššur and impose an oath and whoever has sold meteoric iron to a palace or, having not yet sold it, still carries it with him, seize (fr...",
             "features": {
-              "cosine": 0.22748182713985443,
-              "base_score": 0.3702434003353119,
-              "stage2_norm": 0.35060781240463257,
-              "rank_inv": 0.1428571492433548,
+              "cosine": 0.2276233732700348,
+              "base_score": 0.32439467310905457,
+              "stage2_norm": 0.29474544525146484,
+              "rank_inv": 0.1666666716337204,
               "is_external": 0.0,
               "domain_match": 0.0,
-              "len_ratio": 0.22126929461956024,
+              "len_ratio": 0.14461883902549744,
               "digits_overlap": 0.0,
-              "pn_overlap": 0.1111111119389534,
-              "section_match": 0.0,
-              "digit_ratio_proximity": 0.8970840573310852,
+              "pn_overlap": 0.125,
+              "section_match": 1.0,
+              "digit_ratio_proximity": 0.8387457728385925,
+              "bracket_ratio_proximity": 0.9641657471656799,
+              "unknown_ratio_proximity": 1.0,
+              "repeat_trigram_proximity": 0.0714285746216774,
+              "marker_density_proximity": 0.9122806787490845
+            }
+          },
+          {
+            "rank": 4,
+            "memory_idx": 1140,
+            "origin": "competition",
+            "context": "letter",
+            "reranker_score": 0.9571034908294678,
+            "target_text": "Thus  Kanesh to Kuliya, our messenger (and) every single , wherever Sukkaliya, son of Aššuriš-tikal, is staying. Say to Sukkaliya: Tin for a value of 1 mina of silver, we gave you two years ago, with the words: 'Send as soon as you have entered Wahšušana the silver here with the first opportunity. You treated the  a...",
+            "features": {
+              "cosine": 0.2251327633857727,
+              "base_score": 0.3570225238800049,
+              "stage2_norm": 0.30427974462509155,
+              "rank_inv": 0.125,
+              "is_external": 0.0,
+              "domain_match": 0.0,
+              "len_ratio": 0.20314960181713104,
+              "digits_overlap": 0.0,
+              "pn_overlap": 0.1666666716337204,
+              "section_match": 1.0,
+              "digit_ratio_proximity": 0.8677165508270264,
               "bracket_ratio_proximity": 1.0,
               "unknown_ratio_proximity": 1.0,
               "repeat_trigram_proximity": 1.0,
-              "marker_density_proximity": 0.4736842215061188
+              "marker_density_proximity": 1.0
             }
           },
           {
             "rank": 5,
-            "memory_idx": 971,
+            "memory_idx": 196,
             "origin": "competition",
-            "context": "letter",
-            "reranker_score": 0.9533169865608215,
-            "target_text": "Thus Kanesh, say to <every single> colony and the trading stations until Tuhpiya as follows: Kuliya, our messanger, has been sent to transmit instructions. Give him two escorts and (thus each) colony must convey him to the (next) colony. Do not cause him to delay! If among the escorts you have chosen somebody refuse...",
+            "context": "unknown",
+            "reranker_score": 0.9569021463394165,
+            "target_text": "Seal of the -payers, of Kuliya, the messenger of  Kanesh, and of  Durhumit, to every single and the, until  Kanesh.",
             "features": {
-              "cosine": 0.2433045357465744,
-              "base_score": 0.5005888938903809,
-              "stage2_norm": 0.24547041952610016,
-              "rank_inv": 0.25,
+              "cosine": 0.2464199811220169,
+              "base_score": 0.7865569591522217,
+              "stage2_norm": 0.1798131763935089,
+              "rank_inv": 0.3333333432674408,
               "is_external": 0.0,
-              "domain_match": 0.0,
-              "len_ratio": 0.4121405780315399,
+              "domain_match": 1.0,
+              "len_ratio": 0.8835616707801819,
               "digits_overlap": 0.0,
               "pn_overlap": 0.0,
               "section_match": 1.0,
-              "digit_ratio_proximity": 0.9616613388061523,
+              "digit_ratio_proximity": 0.835616409778595,
               "bracket_ratio_proximity": 1.0,
               "unknown_ratio_proximity": 1.0,
               "repeat_trigram_proximity": 1.0,
-              "marker_density_proximity": 0.18918919563293457
+              "marker_density_proximity": 0.4444444477558136
             }
           }
         ],
@@ -1912,7 +1912,7 @@
           "candidate_c": {
             "label": "selected by Reranker (final)",
             "memory_idx": 406,
-            "score": 0.9999371767044067,
+            "score": 0.9998921155929565,
             "origin": "competition",
             "context": "letter",
             "target_text": "Thus  Kanesh, say to the -payers, our messenger, every single colony, and the trading stations: A letter of the City has arrived. In the letter of the City (it is written): From this day on, whoever buys meteoric iron, (the City of) Assur is not  part of the profit made, the tithe on it  Kanesh will collect.\" As soo..."
@@ -1920,28 +1920,28 @@
           "top_weights": [
             {
               "feature": "len_ratio",
-              "weight": 0.3899713318591144,
-              "abs_weight": 0.3899713318591144
+              "weight": 0.43897494639348006,
+              "abs_weight": 0.43897494639348006
             },
             {
               "feature": "stage2_norm",
-              "weight": -0.31093811455028825,
-              "abs_weight": 0.31093811455028825
-            },
-            {
-              "feature": "is_external",
-              "weight": -0.281193926388283,
-              "abs_weight": 0.281193926388283
-            },
-            {
-              "feature": "bracket_ratio_proximity",
-              "weight": -0.22980074140124782,
-              "abs_weight": 0.22980074140124782
+              "weight": -0.3579636749168912,
+              "abs_weight": 0.3579636749168912
             },
             {
               "feature": "base_score",
-              "weight": 0.21736797581866393,
-              "abs_weight": 0.21736797581866393
+              "weight": 0.3219175596646727,
+              "abs_weight": 0.3219175596646727
+            },
+            {
+              "feature": "is_external",
+              "weight": -0.22991005334846745,
+              "abs_weight": 0.22991005334846745
+            },
+            {
+              "feature": "bracket_ratio_proximity",
+              "weight": -0.22431615125750282,
+              "abs_weight": 0.22431615125750282
             }
           ]
         }

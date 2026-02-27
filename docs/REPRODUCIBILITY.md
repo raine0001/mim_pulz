@@ -9,6 +9,50 @@
 python -m pip install -r release/kaggle/requirements.txt -c release/kaggle/constraints.txt
 ```
 
+- Golden lock snapshot (known-good machine state):
+	- `release/kaggle/requirements.lock.txt`
+	- `release/demo/requirements.lock.txt`
+	- root fallback: `requirements.lock.txt`
+
+- Target-specific dependency files:
+	- `requirements.kaggle.txt`
+	- `requirements.app.txt`
+
+## Clean-Room Package Verification
+
+Validate packages from scratch using fresh venvs and packaged scripts:
+
+```bash
+# Kaggle package
+python -m venv .venv_pkg_kaggle
+. .venv_pkg_kaggle/bin/activate
+python -m pip install -r release/kaggle/requirements.txt -c release/kaggle/constraints.txt
+powershell -ExecutionPolicy Bypass -File release/kaggle/run_kaggle.ps1 -Mode canonical
+powershell -ExecutionPolicy Bypass -File release/kaggle/run_kaggle.ps1 -Mode probe
+
+# Demo package
+python -m venv .venv_pkg_demo
+. .venv_pkg_demo/bin/activate
+python -m pip install -r release/demo/requirements.txt
+powershell -ExecutionPolicy Bypass -File release/demo/run_demo.ps1
+```
+
+Hash verification command (must report `mismatch_count=0`):
+
+```powershell
+$m=Get-Content release\manifest.json|ConvertFrom-Json
+$items=@($m.canonical.routing_map,$m.canonical.reranker_seed43,$m.canonical.reranker_seed44,$m.canonical.oracc_memory,$m.canonical.submission_seed43,$m.canonical.submission_seed44_probe)
+$bad=0
+foreach($i in $items){
+	$p=$i.path
+	if(Test-Path $p){
+		$a=(Get-FileHash -Algorithm SHA256 $p).Hash.ToLower()
+		if($a -ne $i.sha256.ToLower()){ $bad++ }
+	} else { $bad++ }
+}
+"mismatch_count=$bad"
+```
+
 ## Canonical Artifacts
 
 Use the pinned artifacts in:

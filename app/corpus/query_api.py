@@ -7,9 +7,12 @@ import sqlite3
 import sys
 import unicodedata
 import csv
+import hashlib
+import platform
 from pathlib import Path
 from typing import Iterable
 from urllib.parse import quote_plus
+from importlib.metadata import version as pkg_version
 
 from flask import Blueprint, Response, jsonify, request, send_file
 from functools import wraps
@@ -3518,6 +3521,42 @@ def demo_ui():
       `;
     };
 
+    const artifactContextHtmlV2 = (profile) => {
+      const p = profile || {};
+      const domain = String(p.domain_intent || "");
+      const template = String(p.template_type || "");
+      const formula = String(p.formula_density || "");
+
+      const tags = [];
+      if (domain === "Letter") tags.push("Letter");
+      if (domain === "Legal" || domain === "Administrative") tags.push("Legal");
+      if (template === "Slot-Structured" || p.numeric_density === "High") tags.push("Ledger");
+      if (formula === "High") tags.push("Formulaic");
+      if (!tags.length) tags.push("General");
+
+      let about = "These tablets are grouped by structural profile to keep retrieval decisions explainable and consistent.";
+      if (tags.includes("Letter")) {
+        about = "Letter-like pieces usually preserve sender/addressee formulas, message intent, and delivery context.";
+      } else if (tags.includes("Ledger")) {
+        about = "Ledger-like pieces are typically quantity/name-heavy records where numeric and slot structure drive retrieval.";
+      } else if (tags.includes("Legal")) {
+        about = "Legal/administrative pieces prioritize institutional vocabulary, witness/date markers, and formula boundaries.";
+      } else if (tags.includes("Formulaic")) {
+        about = "Formulaic pieces rely on recurring expression patterns and closing markers that affect route selection.";
+      }
+
+      return `
+        <div class="artifact-context-box">
+          <div class="struct-title" style="font-size:13px;margin-bottom:4px;">Artifact Context</div>
+          <div class="struct-badges">${tags.map(t => `<span class="struct-badge">${escapeHtml(t)}</span>`).join("")}</div>
+          <details class="trace-details" style="margin-top:8px;">
+            <summary>About these tablets</summary>
+            <div class="meta" style="margin-top:8px;">${escapeHtml(about)}</div>
+          </details>
+        </div>
+      `;
+    };
+
     const renderStructuralHeaderV2 = (si, opts = {}) => {
       if (!si) {
         return "<div class='struct-header'><div class='meta'>Structural profile unavailable.</div></div>";
@@ -3543,6 +3582,7 @@ def demo_ui():
             <div class="struct-item"><strong>Length Bucket:</strong> ${escapeHtml(p.length_bucket || "Unknown")}</div>
             <div class="struct-item"><strong>Domain Intent:</strong> ${escapeHtml(p.domain_intent || "Unknown")}</div>
           </div>
+          ${artifactContextHtmlV2(p)}
           <div class="routing-box">
             <div class="struct-title" style="font-size:13px;margin-bottom:4px;">Routing Decision
               <span class="policy-chip ${policyClass(policy)}">${escapeHtml(policy)}</span>
@@ -6159,7 +6199,69 @@ if __name__ == "__main__":
         counts = {}
         for table in ["page_registry", "philology", "social"]:
             counts[table] = q(f"SELECT COUNT(*) AS n FROM {table}")[0]["n"]
-        return jsonify({"ok": True, "db": str(DB), "counts": counts})
+
+        manifest_path = PROJECT_ROOT / "release" / "manifest.json"
+        manifest = {}
+        try:
+          if manifest_path.exists():
+            try:
+              manifest = json.loads(manifest_path.read_text(encoding="utf-8-sig"))
+            except Exception:
+              manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+          else:
+            manifest = {}
+        except Exception:
+          manifest = {}
+
+        canonical = manifest.get("canonical", {}) if isinstance(manifest, dict) else {}
+
+        def _artifact_check(path: Path, expected_sha: str | None = None) -> dict:
+            exists = path.exists()
+            actual_sha = None
+            if exists:
+                try:
+                    actual_sha = hashlib.sha256(path.read_bytes()).hexdigest()
+                except Exception:
+                    actual_sha = None
+            return {
+                "path": str(path),
+                "exists": exists,
+                "expected_sha256": expected_sha,
+                "actual_sha256": actual_sha,
+                "sha_match": (actual_sha == expected_sha) if (expected_sha and actual_sha) else None,
+            }
+
+        artifact_checks = {
+            "routing_map": _artifact_check(
+                PROJECT_ROOT / "artifacts" / "profiles" / "routing_map.json",
+                canonical.get("routing_map", {}).get("sha256"),
+            ),
+            "reranker_seed43": _artifact_check(
+                PROJECT_ROOT / "artifacts" / "models" / "routed_linear_reranker_seed43_pairwise_combined.json",
+                canonical.get("reranker_seed43", {}).get("sha256"),
+            ),
+            "reranker_seed44": _artifact_check(
+                PROJECT_ROOT / "artifacts" / "models" / "routed_linear_reranker_seed44_pairwise_combined.json",
+                canonical.get("reranker_seed44", {}).get("sha256"),
+            ),
+            "oracc_memory": _artifact_check(
+                PROJECT_ROOT / "data" / "processed" / "oracc_evacun_memory.csv",
+                canonical.get("oracc_memory", {}).get("sha256"),
+            ),
+        }
+
+        return jsonify(
+            {
+                "ok": True,
+                "db": str(DB),
+                "counts": counts,
+                "runtime": {
+                    "python_version": platform.python_version(),
+                    "flask_version": pkg_version("flask"),
+                },
+                "artifacts": artifact_checks,
+            }
+        )
 
     app.run(host="127.0.0.1", port=50001, debug=True)
 

@@ -1,8 +1,8 @@
 {
   "model_id": "RoutedRetrievalReranked(base=CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3,uncertainty(enabled=True,thr=0.03,closing_thr=0.02,br_pct=80.0,itop_thr=0.48,igap_thr=0.01,topk_add=20,ext_add=2,kboost=0.0,ext_bonus=0.0,stg2_disc=0.0,len_disc=0.0,len_min=0.65,skel_blend=0.05,num_bonus=0.005,form_bonus=0.005,slot_bonus=0.0,var_bonus=0.002,unc_pen=0.0,var_eq=True,var_k=3,var_thr=0.72,var_min_sup=2,var_max=256,skel_path=True,skel_k=120,rare_cut=2)),routing_sha=a3b078fdfffb,reranker_sha=81aa24123514)",
-  "routing_map_path": "C:\\MIM_pulz\\artifacts\\profiles\\routing_map.json",
+  "routing_map_path": "F:\\DRIVE\\mim_pulz\\artifacts\\profiles\\routing_map.json",
   "routing_map_sha256": "a3b078fdfffbe3d897dbde0ac479314fc302b7410af62351e8b13f7fcbc4845a",
-  "reranker_model_path": "C:\\MIM_pulz\\artifacts\\models\\routed_linear_reranker_seed44_pairwise_combined.json",
+  "reranker_model_path": "F:\\DRIVE\\mim_pulz\\artifacts\\models\\routed_linear_reranker_seed44_pairwise_combined.json",
   "reranker_model_sha256": "81aa24123514b53436dffe909a32088f633ee826abd6f7759a44ee5235a94415",
   "reranker_internal_top_k": 120,
   "reranker_oracc_cap": 25,

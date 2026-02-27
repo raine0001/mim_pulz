@@ -1,5 +1,7 @@
 # venv
 .venv/
+.venv_pkg_demo/
+.venv_pkg_kaggle/
 
 # python
 __pycache__/
@@ -19,3 +21,4 @@ outputs/mim_smoke_server.log
 # misc
 .DS_Store
 .env
+backups/

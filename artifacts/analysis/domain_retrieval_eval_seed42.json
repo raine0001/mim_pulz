@@ -1,0 +1,114 @@
+{
+  "seed": 42,
+  "val_frac": 0.2,
+  "train_rows": 1249,
+  "val_rows": 312,
+  "baseline_top_k": 80,
+  "baseline": {
+    "chrf2": 36.93631463254839,
+    "chrf2_reference": 36.93631463254839,
+    "abs_diff": 0.0
+  },
+  "domain_counts_train": {
+    "letter": 546,
+    "economic": 343,
+    "legal": 299,
+    "unknown": 53,
+    "ritual": 8
+  },
+  "best_domain_aware": {
+    "top_k_domain": 20,
+    "min_domain_docs": 60,
+    "score": {
+      "chrf2": 36.648768595577074,
+      "chrf2_reference": 36.648768595577074,
+      "abs_diff": 0.0
+    },
+    "delta_vs_baseline": -0.28754603697131387,
+    "domains_built": [
+      "economic",
+      "legal",
+      "letter"
+    ]
+  },
+  "top5_domain_aware": [
+    {
+      "top_k_domain": 20,
+      "min_domain_docs": 60,
+      "score": {
+        "chrf2": 36.648768595577074,
+        "chrf2_reference": 36.648768595577074,
+        "abs_diff": 0.0
+      },
+      "delta_vs_baseline": -0.28754603697131387,
+      "domains_built": [
+        "economic",
+        "legal",
+        "letter"
+      ]
+    },
+    {
+      "top_k_domain": 20,
+      "min_domain_docs": 15,
+      "score": {
+        "chrf2": 36.64180744722363,
+        "chrf2_reference": 36.64180744722363,
+        "abs_diff": 0.0
+      },
+      "delta_vs_baseline": -0.29450718532476117,
+      "domains_built": [
+        "economic",
+        "legal",
+        "letter",
+        "unknown"
+      ]
+    },
+    {
+      "top_k_domain": 20,
+      "min_domain_docs": 25,
+      "score": {
+        "chrf2": 36.64180744722363,
+        "chrf2_reference": 36.64180744722363,
+        "abs_diff": 0.0
+      },
+      "delta_vs_baseline": -0.29450718532476117,
+      "domains_built": [
+        "economic",
+        "legal",
+        "letter",
+        "unknown"
+      ]
+    },
+    {
+      "top_k_domain": 20,
+      "min_domain_docs": 40,
+      "score": {
+        "chrf2": 36.64180744722363,
+        "chrf2_reference": 36.64180744722363,
+        "abs_diff": 0.0
+      },
+      "delta_vs_baseline": -0.29450718532476117,
+      "domains_built": [
+        "economic",
+        "legal",
+        "letter",
+        "unknown"
+      ]
+    },
+    {
+      "top_k_domain": 40,
+      "min_domain_docs": 60,
+      "score": {
+        "chrf2": 36.525135710678036,
+        "chrf2_reference": 36.525135710678036,
+        "abs_diff": 0.0
+      },
+      "delta_vs_baseline": -0.4111789218703521,
+      "domains_built": [
+        "economic",
+        "legal",
+        "letter"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "seed": 42,
+  "val_frac": 0.2,
+  "train_rows": 1249,
+  "val_rows": 312,
+  "best_overall": {
+    "family": "char_tfidf",
+    "config": {
+      "analyzer": "char_wb",
+      "ngram_range": [
+        3,
+        5
+      ],
+      "top_k": 120,
+      "len_weight": 0.2
+    },
+    "chrf2": 37.8010867972611,
+    "chrf2_reference": 37.8010867972611,
+    "chrf2_abs_diff": 0.0
+  },
+  "best_tfidf": {
+    "family": "char_tfidf",
+    "config": {
+      "analyzer": "char_wb",
+      "ngram_range": [
+        3,
+        5
+      ],
+      "top_k": 120,
+      "len_weight": 0.2
+    },
+    "chrf2": 37.8010867972611,
+    "chrf2_reference": 37.8010867972611,
+    "chrf2_abs_diff": 0.0
+  },
+  "best_bm25": {
+    "family": "char_bm25",
+    "config": {
+      "analyzer": "char_wb",
+      "ngram_range": [
+        3,
+        5
+      ],
+      "k1": 1.2,
+      "b": 0.5,
+      "top_k": 20,
+      "len_weight": 0.35
+    },
+    "chrf2": 36.782942263237544,
+    "chrf2_reference": 36.782942263237544,
+    "chrf2_abs_diff": 0.0
+  },
+  "top10": [
+    {
+      "family": "char_tfidf",
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.2
+      },
+      "chrf2": 37.8010867972611,
+      "chrf2_reference": 37.8010867972611,
+      "chrf2_abs_diff": 0.0
+    },
+    {
+      "family": "char_tfidf",
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 20,
+        "len_weight": 0.2
+      },
+      "chrf2": 37.78499587386236,
+      "chrf2_reference": 37.78499587386236,
+      "chrf2_abs_diff": 0.0
+    },
+    {
+      "family": "char_tfidf",
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 80,
+        "len_weight": 0.2
+      },
+      "chrf2": 37.782564654599874,
+      "chrf2_reference": 37.782564654599874,
+      "chrf2_abs_diff": 0.0
+    },
+    {
+      "family": "char_tfidf",
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 40,
+        "len_weight": 0.2
+      },
+      "chrf2": 37.77812262189001,
+      "chrf2_reference": 37.77812262189001,
+      "chrf2_abs_diff": 0.0
+    },
+    {
+      "family": "char_tfidf",
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_range": [
+          2,
+          6
+        ],
+        "top_k": 20,
+        "len_weight": 0.2
+      },
+      "chrf2": 37.706161807510355,
+      "chrf2_reference": 37.706161807510355,
+      "chrf2_abs_diff": 0.0
+    },
+    {
+      "family": "char_tfidf",
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_range": [
+          2,
+          6
+        ],
+        "top_k": 40,
+        "len_weight": 0.2
+      },
+      "chrf2": 37.692463967483356,
+      "chrf2_reference": 37.692463967483356,
+      "chrf2_abs_diff": 0.0
+    },
+    {
+      "family": "char_tfidf",
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_range": [
+          2,
+          6
+        ],
+        "top_k": 120,
+        "len_weight": 0.2
+      },
+      "chrf2": 37.690493673584804,
+      "chrf2_reference": 37.690493673584804,
+      "chrf2_abs_diff": 0.0
+    },
+    {
+      "family": "char_tfidf",
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_range": [
+          2,
+          6
+        ],
+        "top_k": 80,
+        "len_weight": 0.2
+      },
+      "chrf2": 37.68255684482837,
+      "chrf2_reference": 37.68255684482837,
+      "chrf2_abs_diff": 0.0
+    },
+    {
+      "family": "char_tfidf",
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.35
+      },
+      "chrf2": 37.62385803822705,
+      "chrf2_reference": 37.62385803822705,
+      "chrf2_abs_diff": 0.0
+    },
+    {
+      "family": "char_tfidf",
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 20,
+        "len_weight": 0.35
+      },
+      "chrf2": 37.62350168072891,
+      "chrf2_reference": 37.62350168072891,
+      "chrf2_abs_diff": 0.0
+    }
+  ],
+  "metric_crosscheck_max_abs_diff": 0.0,
+  "rows_evaluated": 208
+}

@@ -1,0 +1,56 @@
+{
+  "best_metric": 1.692462148316104,
+  "best_model_checkpoint": "C:\\MIM_pulz\\artifacts\\runs\\lora_mt5_small_safe_20260223_122757_nogit\\checkpoints\\checkpoint-79",
+  "global_step": 158,
+  "epoch": 2.0,
+  "log_history": [
+    {
+      "loss": 27.6926,
+      "grad_norm": 887.2730102539062,
+      "learning_rate": 1e-05,
+      "epoch": 0.64,
+      "step": 50
+    },
+    {
+      "eval_loss": 19.136680603027344,
+      "eval_chrf2": 1.692462148316104,
+      "eval_runtime": 430.7457,
+      "eval_samples_per_second": 0.724,
+      "eval_steps_per_second": 0.362,
+      "epoch": 1.0,
+      "step": 79
+    },
+    {
+      "loss": 27.6625,
+      "grad_norm": 1036.3612060546875,
+      "learning_rate": 1e-05,
+      "epoch": 1.2688,
+      "step": 100
+    },
+    {
+      "loss": 26.2797,
+      "grad_norm": 360.615966796875,
+      "learning_rate": 1e-05,
+      "epoch": 1.9088,
+      "step": 150
+    },
+    {
+      "eval_loss": 18.641826629638672,
+      "eval_chrf2": 1.5798344035136616,
+      "eval_runtime": 436.2821,
+      "eval_samples_per_second": 0.715,
+      "eval_steps_per_second": 0.358,
+      "epoch": 2.0,
+      "step": 158
+    },
+    {
+      "train_runtime": 1222.2772,
+      "train_samples_per_second": 2.044,
+      "train_steps_per_second": 0.129,
+      "total_flos": 609744562458624.0,
+      "train_loss": 27.146717892417424,
+      "epoch": 2.0,
+      "step": 158
+    }
+  ]
+}

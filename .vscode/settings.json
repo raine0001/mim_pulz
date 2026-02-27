@@ -1,0 +1,8 @@
+{
+    "python.defaultInterpreterPath": ".venv/bin/python",
+    "python.analysis.extraPaths": [
+        "src"
+    ],
+    "python.testing.pytestEnabled": true,
+    "editor.formatOnSave": true
+}

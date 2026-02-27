@@ -1,0 +1,49 @@
+{
+  "best_metric": 1.3551749790325218,
+  "best_model_checkpoint": "C:\\MIM_pulz\\artifacts\\runs\\lora_lenfix_20260223\\checkpoints\\checkpoint-126",
+  "global_step": 126,
+  "epoch": 2.0,
+  "log_history": [
+    {
+      "loss": 27.2994,
+      "grad_norm": 825.9627075195312,
+      "learning_rate": 1e-05,
+      "epoch": 0.7952286282306164,
+      "step": 50
+    },
+    {
+      "eval_loss": 18.576400756835938,
+      "eval_chrf2": 1.352102783482048,
+      "eval_runtime": 485.6221,
+      "eval_samples_per_second": 0.642,
+      "eval_steps_per_second": 0.321,
+      "epoch": 1.0,
+      "step": 63
+    },
+    {
+      "loss": 27.6107,
+      "grad_norm": 1043.148193359375,
+      "learning_rate": 1e-05,
+      "epoch": 1.588469184890656,
+      "step": 100
+    },
+    {
+      "eval_loss": 18.17855453491211,
+      "eval_chrf2": 1.3551749790325218,
+      "eval_runtime": 511.2977,
+      "eval_samples_per_second": 0.61,
+      "eval_steps_per_second": 0.305,
+      "epoch": 2.0,
+      "step": 126
+    },
+    {
+      "train_runtime": 1311.1957,
+      "train_samples_per_second": 1.534,
+      "train_steps_per_second": 0.096,
+      "total_flos": 595664234409984.0,
+      "train_loss": 27.209317646329364,
+      "epoch": 2.0,
+      "step": 126
+    }
+  ]
+}

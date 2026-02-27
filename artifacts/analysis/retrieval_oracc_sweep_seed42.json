@@ -1,0 +1,1403 @@
+{
+  "seed": 42,
+  "val_frac": 0.2,
+  "train_rows": 1249,
+  "val_rows": 312,
+  "memory_csv": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+  "canonical_no_external": {
+    "config": {
+      "analyzer": "char_wb",
+      "ngram_min": 3,
+      "ngram_max": 5,
+      "max_features": 300000,
+      "top_k": 120,
+      "len_weight": 0.4,
+      "len_mode": "ratio",
+      "strip_punct": false,
+      "lowercase": false,
+      "collapse_whitespace": true,
+      "stage2_type": "bm25",
+      "stage2_pool": 80,
+      "stage2_weight": 0.2,
+      "stage2_bm25_k1": 1.2,
+      "stage2_bm25_b": 0.5,
+      "enable_domain_override": true,
+      "domain_candidate_top_k": 120,
+      "domain_bonus": 0.02,
+      "domain_conf_threshold": 0.45,
+      "domain_margin": 0.02,
+      "external_memory_paths": [],
+      "external_source_col": "source",
+      "external_target_col": "target",
+      "external_context_col": "context",
+      "external_origin_col": "origin",
+      "external_memory_limit": 0,
+      "competition_origin_bonus": 0.0,
+      "external_origin_bonus": 0.0,
+      "evidence_k": 3
+    },
+    "score": {
+      "chrf2": 38.617579253949266,
+      "chrf2_reference": 38.617579253949266,
+      "abs_diff": 0.0
+    },
+    "override_count": 0,
+    "override_rate": 0.0,
+    "external_pick_count": 0,
+    "external_pick_rate": 0.0,
+    "memory_total_rows": 1249,
+    "memory_external_rows": 0,
+    "external_memory_stats": []
+  },
+  "external_baseline": {
+    "config": {
+      "analyzer": "char_wb",
+      "ngram_min": 3,
+      "ngram_max": 5,
+      "max_features": 300000,
+      "top_k": 120,
+      "len_weight": 0.4,
+      "len_mode": "ratio",
+      "strip_punct": false,
+      "lowercase": false,
+      "collapse_whitespace": true,
+      "stage2_type": "bm25",
+      "stage2_pool": 80,
+      "stage2_weight": 0.2,
+      "stage2_bm25_k1": 1.2,
+      "stage2_bm25_b": 0.5,
+      "enable_domain_override": true,
+      "domain_candidate_top_k": 120,
+      "domain_bonus": 0.02,
+      "domain_conf_threshold": 0.45,
+      "domain_margin": 0.02,
+      "external_memory_paths": [
+        "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv"
+      ],
+      "external_source_col": "source",
+      "external_target_col": "target",
+      "external_context_col": "context",
+      "external_origin_col": "origin",
+      "external_memory_limit": 0,
+      "competition_origin_bonus": 0.0,
+      "external_origin_bonus": 0.0,
+      "evidence_k": 1
+    },
+    "score": {
+      "chrf2": 38.13439718392265,
+      "chrf2_reference": 38.13439718392265,
+      "abs_diff": 0.0
+    },
+    "override_count": 0,
+    "override_rate": 0.0,
+    "external_pick_count": 1,
+    "external_pick_rate": 0.003205128205128205,
+    "memory_total_rows": 46186,
+    "memory_external_rows": 44937,
+    "external_memory_stats": [
+      {
+        "path": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+        "rows_total": 44937,
+        "rows_kept": 44937,
+        "rows_dropped_empty": 0,
+        "source_col": "source",
+        "target_col": "target",
+        "context_col": "context",
+        "origin_col": "origin"
+      }
+    ]
+  },
+  "search_space": {
+    "memory_limit": [
+      5000,
+      20000,
+      0
+    ],
+    "competition_origin_bonus": [
+      0.0,
+      0.03,
+      0.06
+    ],
+    "external_origin_bonus": [
+      0.0,
+      -0.02
+    ],
+    "stage2_pool": [
+      50,
+      80
+    ],
+    "domain_bonus": [
+      0.0,
+      0.03
+    ],
+    "domain_conf_threshold": [
+      0.35,
+      0.45
+    ],
+    "domain_margin": [
+      0.02
+    ]
+  },
+  "best": {
+    "config": {
+      "analyzer": "char_wb",
+      "ngram_min": 3,
+      "ngram_max": 5,
+      "max_features": 300000,
+      "top_k": 120,
+      "len_weight": 0.4,
+      "len_mode": "ratio",
+      "strip_punct": false,
+      "lowercase": false,
+      "collapse_whitespace": true,
+      "stage2_type": "bm25",
+      "stage2_pool": 80,
+      "stage2_weight": 0.2,
+      "stage2_bm25_k1": 1.2,
+      "stage2_bm25_b": 0.5,
+      "enable_domain_override": true,
+      "domain_candidate_top_k": 120,
+      "domain_bonus": 0.0,
+      "domain_conf_threshold": 0.35,
+      "domain_margin": 0.02,
+      "external_memory_paths": [
+        "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv"
+      ],
+      "external_source_col": "source",
+      "external_target_col": "target",
+      "external_context_col": "context",
+      "external_origin_col": "origin",
+      "external_memory_limit": 5000,
+      "competition_origin_bonus": 0.0,
+      "external_origin_bonus": 0.0,
+      "evidence_k": 1
+    },
+    "score": {
+      "chrf2": 38.591028403729716,
+      "chrf2_reference": 38.591028403729716,
+      "abs_diff": 0.0
+    },
+    "override_count": 0,
+    "override_rate": 0.0,
+    "external_pick_count": 1,
+    "external_pick_rate": 0.003205128205128205,
+    "memory_total_rows": 6249,
+    "memory_external_rows": 5000,
+    "external_memory_stats": [
+      {
+        "path": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+        "rows_total": 44937,
+        "rows_kept": 5000,
+        "rows_dropped_empty": 0,
+        "source_col": "source",
+        "target_col": "target",
+        "context_col": "context",
+        "origin_col": "origin"
+      }
+    ],
+    "delta_vs_no_external": -0.02655085021955017,
+    "delta_vs_external_baseline": 0.4566312198070648
+  },
+  "top20": [
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "strip_punct": false,
+        "lowercase": false,
+        "collapse_whitespace": true,
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.2,
+        "stage2_bm25_k1": 1.2,
+        "stage2_bm25_b": 0.5,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.0,
+        "domain_conf_threshold": 0.35,
+        "domain_margin": 0.02,
+        "external_memory_paths": [
+          "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv"
+        ],
+        "external_source_col": "source",
+        "external_target_col": "target",
+        "external_context_col": "context",
+        "external_origin_col": "origin",
+        "external_memory_limit": 5000,
+        "competition_origin_bonus": 0.0,
+        "external_origin_bonus": 0.0,
+        "evidence_k": 1
+      },
+      "score": {
+        "chrf2": 38.591028403729716,
+        "chrf2_reference": 38.591028403729716,
+        "abs_diff": 0.0
+      },
+      "override_count": 0,
+      "override_rate": 0.0,
+      "external_pick_count": 1,
+      "external_pick_rate": 0.003205128205128205,
+      "memory_total_rows": 6249,
+      "memory_external_rows": 5000,
+      "external_memory_stats": [
+        {
+          "path": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+          "rows_total": 44937,
+          "rows_kept": 5000,
+          "rows_dropped_empty": 0,
+          "source_col": "source",
+          "target_col": "target",
+          "context_col": "context",
+          "origin_col": "origin"
+        }
+      ],
+      "delta_vs_no_external": -0.02655085021955017,
+      "delta_vs_external_baseline": 0.4566312198070648
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "strip_punct": false,
+        "lowercase": false,
+        "collapse_whitespace": true,
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.2,
+        "stage2_bm25_k1": 1.2,
+        "stage2_bm25_b": 0.5,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.0,
+        "domain_conf_threshold": 0.45,
+        "domain_margin": 0.02,
+        "external_memory_paths": [
+          "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv"
+        ],
+        "external_source_col": "source",
+        "external_target_col": "target",
+        "external_context_col": "context",
+        "external_origin_col": "origin",
+        "external_memory_limit": 5000,
+        "competition_origin_bonus": 0.0,
+        "external_origin_bonus": 0.0,
+        "evidence_k": 1
+      },
+      "score": {
+        "chrf2": 38.591028403729716,
+        "chrf2_reference": 38.591028403729716,
+        "abs_diff": 0.0
+      },
+      "override_count": 0,
+      "override_rate": 0.0,
+      "external_pick_count": 1,
+      "external_pick_rate": 0.003205128205128205,
+      "memory_total_rows": 6249,
+      "memory_external_rows": 5000,
+      "external_memory_stats": [
+        {
+          "path": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+          "rows_total": 44937,
+          "rows_kept": 5000,
+          "rows_dropped_empty": 0,
+          "source_col": "source",
+          "target_col": "target",
+          "context_col": "context",
+          "origin_col": "origin"
+        }
+      ],
+      "delta_vs_no_external": -0.02655085021955017,
+      "delta_vs_external_baseline": 0.4566312198070648
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "strip_punct": false,
+        "lowercase": false,
+        "collapse_whitespace": true,
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.2,
+        "stage2_bm25_k1": 1.2,
+        "stage2_bm25_b": 0.5,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.03,
+        "domain_conf_threshold": 0.35,
+        "domain_margin": 0.02,
+        "external_memory_paths": [
+          "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv"
+        ],
+        "external_source_col": "source",
+        "external_target_col": "target",
+        "external_context_col": "context",
+        "external_origin_col": "origin",
+        "external_memory_limit": 5000,
+        "competition_origin_bonus": 0.0,
+        "external_origin_bonus": 0.0,
+        "evidence_k": 1
+      },
+      "score": {
+        "chrf2": 38.591028403729716,
+        "chrf2_reference": 38.591028403729716,
+        "abs_diff": 0.0
+      },
+      "override_count": 0,
+      "override_rate": 0.0,
+      "external_pick_count": 1,
+      "external_pick_rate": 0.003205128205128205,
+      "memory_total_rows": 6249,
+      "memory_external_rows": 5000,
+      "external_memory_stats": [
+        {
+          "path": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+          "rows_total": 44937,
+          "rows_kept": 5000,
+          "rows_dropped_empty": 0,
+          "source_col": "source",
+          "target_col": "target",
+          "context_col": "context",
+          "origin_col": "origin"
+        }
+      ],
+      "delta_vs_no_external": -0.02655085021955017,
+      "delta_vs_external_baseline": 0.4566312198070648
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "strip_punct": false,
+        "lowercase": false,
+        "collapse_whitespace": true,
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.2,
+        "stage2_bm25_k1": 1.2,
+        "stage2_bm25_b": 0.5,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.03,
+        "domain_conf_threshold": 0.45,
+        "domain_margin": 0.02,
+        "external_memory_paths": [
+          "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv"
+        ],
+        "external_source_col": "source",
+        "external_target_col": "target",
+        "external_context_col": "context",
+        "external_origin_col": "origin",
+        "external_memory_limit": 5000,
+        "competition_origin_bonus": 0.0,
+        "external_origin_bonus": 0.0,
+        "evidence_k": 1
+      },
+      "score": {
+        "chrf2": 38.591028403729716,
+        "chrf2_reference": 38.591028403729716,
+        "abs_diff": 0.0
+      },
+      "override_count": 0,
+      "override_rate": 0.0,
+      "external_pick_count": 1,
+      "external_pick_rate": 0.003205128205128205,
+      "memory_total_rows": 6249,
+      "memory_external_rows": 5000,
+      "external_memory_stats": [
+        {
+          "path": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+          "rows_total": 44937,
+          "rows_kept": 5000,
+          "rows_dropped_empty": 0,
+          "source_col": "source",
+          "target_col": "target",
+          "context_col": "context",
+          "origin_col": "origin"
+        }
+      ],
+      "delta_vs_no_external": -0.02655085021955017,
+      "delta_vs_external_baseline": 0.4566312198070648
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "strip_punct": false,
+        "lowercase": false,
+        "collapse_whitespace": true,
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.2,
+        "stage2_bm25_k1": 1.2,
+        "stage2_bm25_b": 0.5,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.0,
+        "domain_conf_threshold": 0.35,
+        "domain_margin": 0.02,
+        "external_memory_paths": [
+          "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv"
+        ],
+        "external_source_col": "source",
+        "external_target_col": "target",
+        "external_context_col": "context",
+        "external_origin_col": "origin",
+        "external_memory_limit": 5000,
+        "competition_origin_bonus": 0.0,
+        "external_origin_bonus": -0.02,
+        "evidence_k": 1
+      },
+      "score": {
+        "chrf2": 38.591028403729716,
+        "chrf2_reference": 38.591028403729716,
+        "abs_diff": 0.0
+      },
+      "override_count": 0,
+      "override_rate": 0.0,
+      "external_pick_count": 1,
+      "external_pick_rate": 0.003205128205128205,
+      "memory_total_rows": 6249,
+      "memory_external_rows": 5000,
+      "external_memory_stats": [
+        {
+          "path": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+          "rows_total": 44937,
+          "rows_kept": 5000,
+          "rows_dropped_empty": 0,
+          "source_col": "source",
+          "target_col": "target",
+          "context_col": "context",
+          "origin_col": "origin"
+        }
+      ],
+      "delta_vs_no_external": -0.02655085021955017,
+      "delta_vs_external_baseline": 0.4566312198070648
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "strip_punct": false,
+        "lowercase": false,
+        "collapse_whitespace": true,
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.2,
+        "stage2_bm25_k1": 1.2,
+        "stage2_bm25_b": 0.5,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.0,
+        "domain_conf_threshold": 0.45,
+        "domain_margin": 0.02,
+        "external_memory_paths": [
+          "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv"
+        ],
+        "external_source_col": "source",
+        "external_target_col": "target",
+        "external_context_col": "context",
+        "external_origin_col": "origin",
+        "external_memory_limit": 5000,
+        "competition_origin_bonus": 0.0,
+        "external_origin_bonus": -0.02,
+        "evidence_k": 1
+      },
+      "score": {
+        "chrf2": 38.591028403729716,
+        "chrf2_reference": 38.591028403729716,
+        "abs_diff": 0.0
+      },
+      "override_count": 0,
+      "override_rate": 0.0,
+      "external_pick_count": 1,
+      "external_pick_rate": 0.003205128205128205,
+      "memory_total_rows": 6249,
+      "memory_external_rows": 5000,
+      "external_memory_stats": [
+        {
+          "path": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+          "rows_total": 44937,
+          "rows_kept": 5000,
+          "rows_dropped_empty": 0,
+          "source_col": "source",
+          "target_col": "target",
+          "context_col": "context",
+          "origin_col": "origin"
+        }
+      ],
+      "delta_vs_no_external": -0.02655085021955017,
+      "delta_vs_external_baseline": 0.4566312198070648
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "strip_punct": false,
+        "lowercase": false,
+        "collapse_whitespace": true,
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.2,
+        "stage2_bm25_k1": 1.2,
+        "stage2_bm25_b": 0.5,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.03,
+        "domain_conf_threshold": 0.35,
+        "domain_margin": 0.02,
+        "external_memory_paths": [
+          "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv"
+        ],
+        "external_source_col": "source",
+        "external_target_col": "target",
+        "external_context_col": "context",
+        "external_origin_col": "origin",
+        "external_memory_limit": 5000,
+        "competition_origin_bonus": 0.0,
+        "external_origin_bonus": -0.02,
+        "evidence_k": 1
+      },
+      "score": {
+        "chrf2": 38.591028403729716,
+        "chrf2_reference": 38.591028403729716,
+        "abs_diff": 0.0
+      },
+      "override_count": 0,
+      "override_rate": 0.0,
+      "external_pick_count": 1,
+      "external_pick_rate": 0.003205128205128205,
+      "memory_total_rows": 6249,
+      "memory_external_rows": 5000,
+      "external_memory_stats": [
+        {
+          "path": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+          "rows_total": 44937,
+          "rows_kept": 5000,
+          "rows_dropped_empty": 0,
+          "source_col": "source",
+          "target_col": "target",
+          "context_col": "context",
+          "origin_col": "origin"
+        }
+      ],
+      "delta_vs_no_external": -0.02655085021955017,
+      "delta_vs_external_baseline": 0.4566312198070648
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "strip_punct": false,
+        "lowercase": false,
+        "collapse_whitespace": true,
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.2,
+        "stage2_bm25_k1": 1.2,
+        "stage2_bm25_b": 0.5,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.03,
+        "domain_conf_threshold": 0.45,
+        "domain_margin": 0.02,
+        "external_memory_paths": [
+          "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv"
+        ],
+        "external_source_col": "source",
+        "external_target_col": "target",
+        "external_context_col": "context",
+        "external_origin_col": "origin",
+        "external_memory_limit": 5000,
+        "competition_origin_bonus": 0.0,
+        "external_origin_bonus": -0.02,
+        "evidence_k": 1
+      },
+      "score": {
+        "chrf2": 38.591028403729716,
+        "chrf2_reference": 38.591028403729716,
+        "abs_diff": 0.0
+      },
+      "override_count": 0,
+      "override_rate": 0.0,
+      "external_pick_count": 1,
+      "external_pick_rate": 0.003205128205128205,
+      "memory_total_rows": 6249,
+      "memory_external_rows": 5000,
+      "external_memory_stats": [
+        {
+          "path": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+          "rows_total": 44937,
+          "rows_kept": 5000,
+          "rows_dropped_empty": 0,
+          "source_col": "source",
+          "target_col": "target",
+          "context_col": "context",
+          "origin_col": "origin"
+        }
+      ],
+      "delta_vs_no_external": -0.02655085021955017,
+      "delta_vs_external_baseline": 0.4566312198070648
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "strip_punct": false,
+        "lowercase": false,
+        "collapse_whitespace": true,
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.2,
+        "stage2_bm25_k1": 1.2,
+        "stage2_bm25_b": 0.5,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.0,
+        "domain_conf_threshold": 0.35,
+        "domain_margin": 0.02,
+        "external_memory_paths": [
+          "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv"
+        ],
+        "external_source_col": "source",
+        "external_target_col": "target",
+        "external_context_col": "context",
+        "external_origin_col": "origin",
+        "external_memory_limit": 5000,
+        "competition_origin_bonus": 0.03,
+        "external_origin_bonus": 0.0,
+        "evidence_k": 1
+      },
+      "score": {
+        "chrf2": 38.591028403729716,
+        "chrf2_reference": 38.591028403729716,
+        "abs_diff": 0.0
+      },
+      "override_count": 0,
+      "override_rate": 0.0,
+      "external_pick_count": 1,
+      "external_pick_rate": 0.003205128205128205,
+      "memory_total_rows": 6249,
+      "memory_external_rows": 5000,
+      "external_memory_stats": [
+        {
+          "path": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+          "rows_total": 44937,
+          "rows_kept": 5000,
+          "rows_dropped_empty": 0,
+          "source_col": "source",
+          "target_col": "target",
+          "context_col": "context",
+          "origin_col": "origin"
+        }
+      ],
+      "delta_vs_no_external": -0.02655085021955017,
+      "delta_vs_external_baseline": 0.4566312198070648
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "strip_punct": false,
+        "lowercase": false,
+        "collapse_whitespace": true,
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.2,
+        "stage2_bm25_k1": 1.2,
+        "stage2_bm25_b": 0.5,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.0,
+        "domain_conf_threshold": 0.45,
+        "domain_margin": 0.02,
+        "external_memory_paths": [
+          "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv"
+        ],
+        "external_source_col": "source",
+        "external_target_col": "target",
+        "external_context_col": "context",
+        "external_origin_col": "origin",
+        "external_memory_limit": 5000,
+        "competition_origin_bonus": 0.03,
+        "external_origin_bonus": 0.0,
+        "evidence_k": 1
+      },
+      "score": {
+        "chrf2": 38.591028403729716,
+        "chrf2_reference": 38.591028403729716,
+        "abs_diff": 0.0
+      },
+      "override_count": 0,
+      "override_rate": 0.0,
+      "external_pick_count": 1,
+      "external_pick_rate": 0.003205128205128205,
+      "memory_total_rows": 6249,
+      "memory_external_rows": 5000,
+      "external_memory_stats": [
+        {
+          "path": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+          "rows_total": 44937,
+          "rows_kept": 5000,
+          "rows_dropped_empty": 0,
+          "source_col": "source",
+          "target_col": "target",
+          "context_col": "context",
+          "origin_col": "origin"
+        }
+      ],
+      "delta_vs_no_external": -0.02655085021955017,
+      "delta_vs_external_baseline": 0.4566312198070648
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "strip_punct": false,
+        "lowercase": false,
+        "collapse_whitespace": true,
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.2,
+        "stage2_bm25_k1": 1.2,
+        "stage2_bm25_b": 0.5,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.03,
+        "domain_conf_threshold": 0.35,
+        "domain_margin": 0.02,
+        "external_memory_paths": [
+          "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv"
+        ],
+        "external_source_col": "source",
+        "external_target_col": "target",
+        "external_context_col": "context",
+        "external_origin_col": "origin",
+        "external_memory_limit": 5000,
+        "competition_origin_bonus": 0.03,
+        "external_origin_bonus": 0.0,
+        "evidence_k": 1
+      },
+      "score": {
+        "chrf2": 38.591028403729716,
+        "chrf2_reference": 38.591028403729716,
+        "abs_diff": 0.0
+      },
+      "override_count": 0,
+      "override_rate": 0.0,
+      "external_pick_count": 1,
+      "external_pick_rate": 0.003205128205128205,
+      "memory_total_rows": 6249,
+      "memory_external_rows": 5000,
+      "external_memory_stats": [
+        {
+          "path": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+          "rows_total": 44937,
+          "rows_kept": 5000,
+          "rows_dropped_empty": 0,
+          "source_col": "source",
+          "target_col": "target",
+          "context_col": "context",
+          "origin_col": "origin"
+        }
+      ],
+      "delta_vs_no_external": -0.02655085021955017,
+      "delta_vs_external_baseline": 0.4566312198070648
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "strip_punct": false,
+        "lowercase": false,
+        "collapse_whitespace": true,
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.2,
+        "stage2_bm25_k1": 1.2,
+        "stage2_bm25_b": 0.5,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.03,
+        "domain_conf_threshold": 0.45,
+        "domain_margin": 0.02,
+        "external_memory_paths": [
+          "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv"
+        ],
+        "external_source_col": "source",
+        "external_target_col": "target",
+        "external_context_col": "context",
+        "external_origin_col": "origin",
+        "external_memory_limit": 5000,
+        "competition_origin_bonus": 0.03,
+        "external_origin_bonus": 0.0,
+        "evidence_k": 1
+      },
+      "score": {
+        "chrf2": 38.591028403729716,
+        "chrf2_reference": 38.591028403729716,
+        "abs_diff": 0.0
+      },
+      "override_count": 0,
+      "override_rate": 0.0,
+      "external_pick_count": 1,
+      "external_pick_rate": 0.003205128205128205,
+      "memory_total_rows": 6249,
+      "memory_external_rows": 5000,
+      "external_memory_stats": [
+        {
+          "path": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+          "rows_total": 44937,
+          "rows_kept": 5000,
+          "rows_dropped_empty": 0,
+          "source_col": "source",
+          "target_col": "target",
+          "context_col": "context",
+          "origin_col": "origin"
+        }
+      ],
+      "delta_vs_no_external": -0.02655085021955017,
+      "delta_vs_external_baseline": 0.4566312198070648
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "strip_punct": false,
+        "lowercase": false,
+        "collapse_whitespace": true,
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.2,
+        "stage2_bm25_k1": 1.2,
+        "stage2_bm25_b": 0.5,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.0,
+        "domain_conf_threshold": 0.35,
+        "domain_margin": 0.02,
+        "external_memory_paths": [
+          "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv"
+        ],
+        "external_source_col": "source",
+        "external_target_col": "target",
+        "external_context_col": "context",
+        "external_origin_col": "origin",
+        "external_memory_limit": 5000,
+        "competition_origin_bonus": 0.03,
+        "external_origin_bonus": -0.02,
+        "evidence_k": 1
+      },
+      "score": {
+        "chrf2": 38.591028403729716,
+        "chrf2_reference": 38.591028403729716,
+        "abs_diff": 0.0
+      },
+      "override_count": 0,
+      "override_rate": 0.0,
+      "external_pick_count": 1,
+      "external_pick_rate": 0.003205128205128205,
+      "memory_total_rows": 6249,
+      "memory_external_rows": 5000,
+      "external_memory_stats": [
+        {
+          "path": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+          "rows_total": 44937,
+          "rows_kept": 5000,
+          "rows_dropped_empty": 0,
+          "source_col": "source",
+          "target_col": "target",
+          "context_col": "context",
+          "origin_col": "origin"
+        }
+      ],
+      "delta_vs_no_external": -0.02655085021955017,
+      "delta_vs_external_baseline": 0.4566312198070648
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "strip_punct": false,
+        "lowercase": false,
+        "collapse_whitespace": true,
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.2,
+        "stage2_bm25_k1": 1.2,
+        "stage2_bm25_b": 0.5,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.0,
+        "domain_conf_threshold": 0.45,
+        "domain_margin": 0.02,
+        "external_memory_paths": [
+          "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv"
+        ],
+        "external_source_col": "source",
+        "external_target_col": "target",
+        "external_context_col": "context",
+        "external_origin_col": "origin",
+        "external_memory_limit": 5000,
+        "competition_origin_bonus": 0.03,
+        "external_origin_bonus": -0.02,
+        "evidence_k": 1
+      },
+      "score": {
+        "chrf2": 38.591028403729716,
+        "chrf2_reference": 38.591028403729716,
+        "abs_diff": 0.0
+      },
+      "override_count": 0,
+      "override_rate": 0.0,
+      "external_pick_count": 1,
+      "external_pick_rate": 0.003205128205128205,
+      "memory_total_rows": 6249,
+      "memory_external_rows": 5000,
+      "external_memory_stats": [
+        {
+          "path": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+          "rows_total": 44937,
+          "rows_kept": 5000,
+          "rows_dropped_empty": 0,
+          "source_col": "source",
+          "target_col": "target",
+          "context_col": "context",
+          "origin_col": "origin"
+        }
+      ],
+      "delta_vs_no_external": -0.02655085021955017,
+      "delta_vs_external_baseline": 0.4566312198070648
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "strip_punct": false,
+        "lowercase": false,
+        "collapse_whitespace": true,
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.2,
+        "stage2_bm25_k1": 1.2,
+        "stage2_bm25_b": 0.5,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.03,
+        "domain_conf_threshold": 0.35,
+        "domain_margin": 0.02,
+        "external_memory_paths": [
+          "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv"
+        ],
+        "external_source_col": "source",
+        "external_target_col": "target",
+        "external_context_col": "context",
+        "external_origin_col": "origin",
+        "external_memory_limit": 5000,
+        "competition_origin_bonus": 0.03,
+        "external_origin_bonus": -0.02,
+        "evidence_k": 1
+      },
+      "score": {
+        "chrf2": 38.591028403729716,
+        "chrf2_reference": 38.591028403729716,
+        "abs_diff": 0.0
+      },
+      "override_count": 0,
+      "override_rate": 0.0,
+      "external_pick_count": 1,
+      "external_pick_rate": 0.003205128205128205,
+      "memory_total_rows": 6249,
+      "memory_external_rows": 5000,
+      "external_memory_stats": [
+        {
+          "path": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+          "rows_total": 44937,
+          "rows_kept": 5000,
+          "rows_dropped_empty": 0,
+          "source_col": "source",
+          "target_col": "target",
+          "context_col": "context",
+          "origin_col": "origin"
+        }
+      ],
+      "delta_vs_no_external": -0.02655085021955017,
+      "delta_vs_external_baseline": 0.4566312198070648
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "strip_punct": false,
+        "lowercase": false,
+        "collapse_whitespace": true,
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.2,
+        "stage2_bm25_k1": 1.2,
+        "stage2_bm25_b": 0.5,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.03,
+        "domain_conf_threshold": 0.45,
+        "domain_margin": 0.02,
+        "external_memory_paths": [
+          "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv"
+        ],
+        "external_source_col": "source",
+        "external_target_col": "target",
+        "external_context_col": "context",
+        "external_origin_col": "origin",
+        "external_memory_limit": 5000,
+        "competition_origin_bonus": 0.03,
+        "external_origin_bonus": -0.02,
+        "evidence_k": 1
+      },
+      "score": {
+        "chrf2": 38.591028403729716,
+        "chrf2_reference": 38.591028403729716,
+        "abs_diff": 0.0
+      },
+      "override_count": 0,
+      "override_rate": 0.0,
+      "external_pick_count": 1,
+      "external_pick_rate": 0.003205128205128205,
+      "memory_total_rows": 6249,
+      "memory_external_rows": 5000,
+      "external_memory_stats": [
+        {
+          "path": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+          "rows_total": 44937,
+          "rows_kept": 5000,
+          "rows_dropped_empty": 0,
+          "source_col": "source",
+          "target_col": "target",
+          "context_col": "context",
+          "origin_col": "origin"
+        }
+      ],
+      "delta_vs_no_external": -0.02655085021955017,
+      "delta_vs_external_baseline": 0.4566312198070648
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "strip_punct": false,
+        "lowercase": false,
+        "collapse_whitespace": true,
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.2,
+        "stage2_bm25_k1": 1.2,
+        "stage2_bm25_b": 0.5,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.0,
+        "domain_conf_threshold": 0.35,
+        "domain_margin": 0.02,
+        "external_memory_paths": [
+          "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv"
+        ],
+        "external_source_col": "source",
+        "external_target_col": "target",
+        "external_context_col": "context",
+        "external_origin_col": "origin",
+        "external_memory_limit": 5000,
+        "competition_origin_bonus": 0.06,
+        "external_origin_bonus": 0.0,
+        "evidence_k": 1
+      },
+      "score": {
+        "chrf2": 38.591028403729716,
+        "chrf2_reference": 38.591028403729716,
+        "abs_diff": 0.0
+      },
+      "override_count": 0,
+      "override_rate": 0.0,
+      "external_pick_count": 1,
+      "external_pick_rate": 0.003205128205128205,
+      "memory_total_rows": 6249,
+      "memory_external_rows": 5000,
+      "external_memory_stats": [
+        {
+          "path": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+          "rows_total": 44937,
+          "rows_kept": 5000,
+          "rows_dropped_empty": 0,
+          "source_col": "source",
+          "target_col": "target",
+          "context_col": "context",
+          "origin_col": "origin"
+        }
+      ],
+      "delta_vs_no_external": -0.02655085021955017,
+      "delta_vs_external_baseline": 0.4566312198070648
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "strip_punct": false,
+        "lowercase": false,
+        "collapse_whitespace": true,
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.2,
+        "stage2_bm25_k1": 1.2,
+        "stage2_bm25_b": 0.5,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.0,
+        "domain_conf_threshold": 0.45,
+        "domain_margin": 0.02,
+        "external_memory_paths": [
+          "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv"
+        ],
+        "external_source_col": "source",
+        "external_target_col": "target",
+        "external_context_col": "context",
+        "external_origin_col": "origin",
+        "external_memory_limit": 5000,
+        "competition_origin_bonus": 0.06,
+        "external_origin_bonus": 0.0,
+        "evidence_k": 1
+      },
+      "score": {
+        "chrf2": 38.591028403729716,
+        "chrf2_reference": 38.591028403729716,
+        "abs_diff": 0.0
+      },
+      "override_count": 0,
+      "override_rate": 0.0,
+      "external_pick_count": 1,
+      "external_pick_rate": 0.003205128205128205,
+      "memory_total_rows": 6249,
+      "memory_external_rows": 5000,
+      "external_memory_stats": [
+        {
+          "path": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+          "rows_total": 44937,
+          "rows_kept": 5000,
+          "rows_dropped_empty": 0,
+          "source_col": "source",
+          "target_col": "target",
+          "context_col": "context",
+          "origin_col": "origin"
+        }
+      ],
+      "delta_vs_no_external": -0.02655085021955017,
+      "delta_vs_external_baseline": 0.4566312198070648
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "strip_punct": false,
+        "lowercase": false,
+        "collapse_whitespace": true,
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.2,
+        "stage2_bm25_k1": 1.2,
+        "stage2_bm25_b": 0.5,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.03,
+        "domain_conf_threshold": 0.35,
+        "domain_margin": 0.02,
+        "external_memory_paths": [
+          "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv"
+        ],
+        "external_source_col": "source",
+        "external_target_col": "target",
+        "external_context_col": "context",
+        "external_origin_col": "origin",
+        "external_memory_limit": 5000,
+        "competition_origin_bonus": 0.06,
+        "external_origin_bonus": 0.0,
+        "evidence_k": 1
+      },
+      "score": {
+        "chrf2": 38.591028403729716,
+        "chrf2_reference": 38.591028403729716,
+        "abs_diff": 0.0
+      },
+      "override_count": 0,
+      "override_rate": 0.0,
+      "external_pick_count": 1,
+      "external_pick_rate": 0.003205128205128205,
+      "memory_total_rows": 6249,
+      "memory_external_rows": 5000,
+      "external_memory_stats": [
+        {
+          "path": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+          "rows_total": 44937,
+          "rows_kept": 5000,
+          "rows_dropped_empty": 0,
+          "source_col": "source",
+          "target_col": "target",
+          "context_col": "context",
+          "origin_col": "origin"
+        }
+      ],
+      "delta_vs_no_external": -0.02655085021955017,
+      "delta_vs_external_baseline": 0.4566312198070648
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "strip_punct": false,
+        "lowercase": false,
+        "collapse_whitespace": true,
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.2,
+        "stage2_bm25_k1": 1.2,
+        "stage2_bm25_b": 0.5,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.03,
+        "domain_conf_threshold": 0.45,
+        "domain_margin": 0.02,
+        "external_memory_paths": [
+          "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv"
+        ],
+        "external_source_col": "source",
+        "external_target_col": "target",
+        "external_context_col": "context",
+        "external_origin_col": "origin",
+        "external_memory_limit": 5000,
+        "competition_origin_bonus": 0.06,
+        "external_origin_bonus": 0.0,
+        "evidence_k": 1
+      },
+      "score": {
+        "chrf2": 38.591028403729716,
+        "chrf2_reference": 38.591028403729716,
+        "abs_diff": 0.0
+      },
+      "override_count": 0,
+      "override_rate": 0.0,
+      "external_pick_count": 1,
+      "external_pick_rate": 0.003205128205128205,
+      "memory_total_rows": 6249,
+      "memory_external_rows": 5000,
+      "external_memory_stats": [
+        {
+          "path": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+          "rows_total": 44937,
+          "rows_kept": 5000,
+          "rows_dropped_empty": 0,
+          "source_col": "source",
+          "target_col": "target",
+          "context_col": "context",
+          "origin_col": "origin"
+        }
+      ],
+      "delta_vs_no_external": -0.02655085021955017,
+      "delta_vs_external_baseline": 0.4566312198070648
+    }
+  ]
+}

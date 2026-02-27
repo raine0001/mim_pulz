@@ -1,0 +1,45 @@
+{
+  "run_id": "lora_lenfix_20260223",
+  "created_at_utc": "2026-02-23T23:46:05+00:00",
+  "git_short_hash": "nogit",
+  "command": "src/train_lora_mt5.py --config configs/lora_mt5_small.yaml --run-id lora_lenfix_20260223 --device cuda --no-enforce-gate",
+  "paths": {
+    "run_dir": "C:\\MIM_pulz\\artifacts\\runs\\lora_lenfix_20260223",
+    "config": "C:\\MIM_pulz\\artifacts\\runs\\lora_lenfix_20260223\\config.yaml",
+    "training_script": "C:\\MIM_pulz\\src\\train_lora_mt5.py",
+    "adapter_dir": "C:\\MIM_pulz\\artifacts\\runs\\lora_lenfix_20260223\\adapter",
+    "tokenizer_dir": "C:\\MIM_pulz\\artifacts\\runs\\lora_lenfix_20260223\\tokenizer",
+    "submission_csv": "C:\\MIM_pulz\\artifacts\\runs\\lora_lenfix_20260223\\submission.csv",
+    "submission_sha_file": "C:\\MIM_pulz\\artifacts\\runs\\lora_lenfix_20260223\\submission.csv.sha256"
+  },
+  "hashes": {
+    "config_sha256": "6cfd28a72a0099000c491d85fdf9690a9227a878e894d655fad20876cf4c7b88",
+    "training_script_sha256": "1e262f918b4a8f6d7dd83eba0b77fe983189b1ed7a127b14c610febcaef4cbd8",
+    "submission_sha256": "d1355bb202299775a8d696efb8d2377f692ab162ce645197a03bf99b41c724a9"
+  },
+  "training": {
+    "base_model": "google/mt5-small",
+    "seed": 42,
+    "best_metric": 1.139617700519477,
+    "best_checkpoint": "C:\\MIM_pulz\\artifacts\\runs\\lora_lenfix_20260223\\checkpoints\\checkpoint-126"
+  },
+  "evaluation_reference": {
+    "baseline_model_kind": "retrieval",
+    "baseline_model_id": "TfidfNearestNeighborTranslator(top_k=80)",
+    "lora_base_model": "google/mt5-small",
+    "lora_decode": {
+      "input_max_length": 512,
+      "max_length": 96,
+      "max_new_tokens": 128,
+      "num_beams": 4
+    }
+  },
+  "gate": {
+    "pass": false,
+    "reason": "delta -35.7967 < required 0.1000; spam_rate 0.420 > threshold 0.350",
+    "min_delta_over_baseline": 0.1,
+    "spam_threshold": 0.35,
+    "spam_rate": 0.4198717948717949,
+    "delta_chrF2": -35.79669693202891
+  }
+}

@@ -1,0 +1,50 @@
+run_name: lora_mt5_small_safe
+seed: 42
+
+data:
+  competition_dir: data/raw/competition
+  schema_path: config/schema.json
+  val_frac: 0.20
+
+model:
+  base_model: google/mt5-small
+  use_fast_tokenizer: false
+  max_source_length: 256
+  max_target_length: 128
+
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules: [q, v]
+
+training:
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 2
+  gradient_accumulation_steps: 8
+  learning_rate: 1e-5
+  lr_scheduler_type: constant_with_warmup
+  warmup_ratio: 0.05
+  num_train_epochs: 2
+  max_grad_norm: 1.0
+  optim: adafactor
+  logging_steps: 50
+  save_total_limit: 2
+  eval_strategy: epoch
+  save_strategy: epoch
+  load_best_model_at_end: true
+  metric_for_best_model: chrf2
+  greater_is_better: true
+
+generation:
+  num_beams: 4
+  max_length: 96
+  do_sample: false
+
+gate:
+  enforce: true
+  min_delta_over_baseline: 0.1
+  spam_threshold: 0.35
+
+artifacts:
+  output_root: artifacts/runs

@@ -1,0 +1,85 @@
+run_name: lora_mt5_small_safe
+seed: 42
+
+data:
+  competition_dir: data/raw/competition
+  schema_path: config/schema.json
+  val_frac: 0.20
+  truncation_policy: drop_any
+  apply_truncation_filter_to_val: false
+
+model:
+  base_model: google/mt5-small
+  use_fast_tokenizer: false
+  max_source_length: 512
+  max_target_length: 256
+
+formatting:
+  task_prefix: "translate transliteration to english:"
+  use_domain_tag: true
+
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules: [q, v]
+
+training:
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 2
+  gradient_accumulation_steps: 8
+  learning_rate: 1e-5
+  lr_scheduler_type: constant_with_warmup
+  warmup_ratio: 0.05
+  num_train_epochs: 2
+  max_grad_norm: 1.0
+  optim: adafactor
+  logging_steps: 50
+  save_total_limit: 2
+  eval_strategy: epoch
+  save_strategy: epoch
+  load_best_model_at_end: true
+  metric_for_best_model: chrf2
+  greater_is_better: true
+
+generation:
+  num_beams: 4
+  max_length: 96
+  max_new_tokens: 128
+  no_repeat_ngram_size: 3
+  repetition_penalty: 1.1
+  early_stopping: true
+  do_sample: false
+
+preflight:
+  enabled: true
+  enforce: true
+  sample_size: 8
+  steps: 120
+  learning_rate: 5e-6
+  max_grad_norm: 1.0
+  loss_ratio_threshold: 0.6
+  spam_threshold: 0.10
+  full_prefix_on_min_chrf2: 20.0
+  lora_prefix_on_min_chrf2: 15.0
+  run_full_prefix_off_control: true
+
+micro_diagnostic:
+  enforce: true
+  sample_size: 8
+  steps: 1500
+  log_interval: 100
+  train_batch_size: 1
+  full_ft_lr: 5e-4
+  lora_lr: 1e-3
+  max_grad_norm: 1.0
+  loss_ratio_threshold: 0.3
+  exact_match_threshold: 50.0
+
+gate:
+  enforce: true
+  min_delta_over_baseline: 0.1
+  spam_threshold: 0.35
+
+artifacts:
+  output_root: artifacts/runs

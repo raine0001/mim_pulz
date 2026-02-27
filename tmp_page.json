@@ -1,0 +1,101 @@
+﻿{
+  "evidence_weight": 1.0,
+  "is_reference_page": false,
+  "ok": true,
+  "page_id": "6bfe0ee7e114915b3d5ae54138763c5988f84ea6",
+  "page_number": "138",
+  "pdf_name": "Dercksen, J.G. et al. - Veenhof Anniversary Volume. PIHANS 89, 2001.pdf",
+  "philology": {
+    "accounting_markers": [
+      "gin",
+      "ma-na"
+    ],
+    "accounting_markers_norm": [
+      "gin",
+      "ma-na"
+    ],
+    "citations": [
+      "ICK I 105",
+      "ICK I 131",
+      "ICK I 140",
+      "ICK I 162",
+      "ICK I 49a",
+      "ICK I 6",
+      "ICK I 8",
+      "ICK I 99",
+      "ICK II 124",
+      "ICK II 14",
+      "ICK II 184",
+      "ICK II 186",
+      "ICK II 20",
+      "ICK II 222",
+      "ICK II 230",
+      "ICK II 25",
+      "ICK II 254",
+      "ICK II 40",
+      "ICK II 41",
+      "ICK II 54"
+    ],
+    "divine_names": [
+      "assur",
+      "istar",
+      "istarzaat"
+    ],
+    "formula_markers": [
+      "assur",
+      "istar"
+    ],
+    "formula_markers_norm": [
+      "assur",
+      "istar"
+    ],
+    "formula_snippets": [
+      "assur: ...nach der Tafel rekonstruierte Wortlaut der H\u00fclle ICK II 14 lautet:\\nVs. 3 [K8IB A-sur-t\u00f9-ku-ul-tt] (Siegelabrollung A) 2[DUMU ... KIIB A sur mu ta] bi il5 3[DUMU\\nSu...",
+      "assur: ...ng) u.K. 6DUMU Puzur-\u00a7a-[du-e sa] 72 ma-na K\u00d9.BABBAR 1sa'-[r]u p\u00e2-am sa Puzu[r6-A-sur]\\nRs. :[DUMU] Su-La-ba-an i-s\u00e9-r[i-su] 9[i]-kt-\u00fb is-t\u00f9 ha-mu[s-tim] 1 \u00d4[sla A-l...",
+      "istar: ...k\u00fcnum und/oder\\narrum-k\u00e9n.\\nAm Ende bleibt zu sagen, da\u00df das Archiv des Iddi(n)-Istar eine weitergehendere Betrachtung\\nverdient, als es hier geschehen kann, denn ke...",
+      "istar: ...einer\\nGesamtheit so alt und bietet so viele Besonderheiten wie das von Iddi(n)-Istar. Die angesprochenen\\nBeobachtungen zur Pal\u00e4ographie fordern daneben eine Konseq...",
+      "istar: ...Td-ba-lu-k\u00e0\\n8[I-dt-I]star i-su Es'-t\u00f9 9[ha-mu-u]s-tim sa U-ra-a-a 10[\u00f9 Kur]-ub-Istar 1 G\u00ceN.TA (Siegelabrollung\\nD) 33 [i-ITU.KAM st-ib]-t\u00e2m 32[\u00fc/we-cib li-qya-um o....",
+      "istar: ...iner Mine Silber und Nennung des Schuldners mit\\ndem \u00fcberaus seltenen Namen Dan-Istar-ZA.AT sicher.\\n7. ICK I 140 (Tafel) + ICK II 186 (H\u00fclle):\\nDie Namen der Zeugen..."
+    ],
+    "formula_snippets_structured": [
+      {
+        "marker": "assur",
+        "snippet": "...nach der Tafel rekonstruierte Wortlaut der H\u00fclle ICK II 14 lautet:\\nVs. 3 [K8IB A-sur-t\u00f9-ku-ul-tt] (Siegelabrollung A) 2[DUMU ... KIIB A sur mu ta] bi il5 3[DUMU\\nSu..."
+      },
+      {
+        "marker": "assur",
+        "snippet": "...ng) u.K. 6DUMU Puzur-\u00a7a-[du-e sa] 72 ma-na K\u00d9.BABBAR 1sa'-[r]u p\u00e2-am sa Puzu[r6-A-sur]\\nRs. :[DUMU] Su-La-ba-an i-s\u00e9-r[i-su] 9[i]-kt-\u00fb is-t\u00f9 ha-mu[s-tim] 1 \u00d4[sla A-l..."
+      },
+      {
+        "marker": "istar",
+        "snippet": "...k\u00fcnum und/oder\\narrum-k\u00e9n.\\nAm Ende bleibt zu sagen, da\u00df das Archiv des Iddi(n)-Istar eine weitergehendere Betrachtung\\nverdient, als es hier geschehen kann, denn ke..."
+      },
+      {
+        "marker": "istar",
+        "snippet": "...einer\\nGesamtheit so alt und bietet so viele Besonderheiten wie das von Iddi(n)-Istar. Die angesprochenen\\nBeobachtungen zur Pal\u00e4ographie fordern daneben eine Konseq..."
+      },
+      {
+        "marker": "istar",
+        "snippet": "...Td-ba-lu-k\u00e0\\n8[I-dt-I]star i-su Es'-t\u00f9 9[ha-mu-u]s-tim sa U-ra-a-a 10[\u00f9 Kur]-ub-Istar 1 G\u00ceN.TA (Siegelabrollung\\nD) 33 [i-ITU.KAM st-ib]-t\u00e2m 32[\u00fc/we-cib li-qya-um o...."
+      },
+      {
+        "marker": "istar",
+        "snippet": "...iner Mine Silber und Nennung des Schuldners mit\\ndem \u00fcberaus seltenen Namen Dan-Istar-ZA.AT sicher.\\n7. ICK I 140 (Tafel) + ICK II 186 (H\u00fclle):\\nDie Namen der Zeugen..."
+      }
+    ],
+    "legal_markers": [
+      "dumu"
+    ],
+    "legal_markers_norm": [
+      "dumu"
+    ]
+  },
+  "social": {
+    "doc_type": "legal",
+    "institutions": [],
+    "topics": []
+  },
+  "text_norm": null,
+  "text_raw": null
+}
+

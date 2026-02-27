@@ -1,0 +1,54 @@
+seed: 42
+
+retrieval:
+  analyzer: char_wb
+  ngram_range: [3, 5]
+  max_features: 300000
+  top_k: 100
+  len_weight: 0.6
+  len_mode: ratio
+  strip_punct: false
+  lowercase: false
+  collapse_whitespace: true
+  stage2_type: bm25
+  stage2_pool: 40
+  stage2_weight: 0.35
+  stage2_bm25_k1: 1.2
+  stage2_bm25_b: 0.5
+  enable_domain_override: false
+  domain_candidate_top_k: 120
+  domain_bonus: 0.01
+  domain_conf_threshold: 0.25
+  domain_margin: 0.02
+  external_memory_paths:
+    - data/processed/oracc_evacun_memory.csv
+  external_source_col: source
+  external_target_col: target
+  external_context_col: context
+  external_origin_col: origin
+  external_memory_limit: 5000
+  external_context_allowlist: [legal, letter]
+  competition_origin_bonus: 0.01
+  external_origin_bonus: -0.05
+  enable_uncertainty_adaptation: true
+  uncertainty_high_threshold: 0.03
+  uncertainty_closing_threshold: 0.02
+  uncertainty_bracket_percentile: 80.0
+  uncertainty_internal_top_threshold: 0.48
+  uncertainty_internal_gap_threshold: 0.01
+  uncertainty_topk_add: 20
+  uncertainty_external_cap_add: 2
+  uncertainty_topk_boost: 0.0
+  uncertainty_external_bonus: 0.0
+  uncertainty_stage2_discount: 0.0
+  uncertainty_len_discount: 0.0
+  uncertainty_triggered_len_ratio_min: 0.65
+  uncertainty_skeleton_blend: 0.05
+  uncertainty_number_bonus: 0.005
+  uncertainty_formula_bonus: 0.005
+  uncertainty_slot_bonus: 0.0
+  uncertainty_variant_bonus: 0.002
+  uncertainty_candidate_uncertain_penalty: 0.0
+  enable_skeleton_retrieval_path: true
+  skeleton_candidate_top_k: 120
+  evidence_k: 3

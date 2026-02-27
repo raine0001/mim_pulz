@@ -1,0 +1,10 @@
+{
+  "output_csv": "C:\\MIM_pulz\\artifacts\\runs\\lora_mt5_small_safe_20260223_122757_nogit\\submission.csv",
+  "rows": 4,
+  "output_sha256": "a06e26561a01552edeb4f61141b776cf2a86f5456813383bcd3ef8cc15015ec0",
+  "metadata_json": "C:\\MIM_pulz\\artifacts\\runs\\lora_mt5_small_safe_20260223_122757_nogit\\submission.csv.meta.json",
+  "sha_file": "C:\\MIM_pulz\\artifacts\\runs\\lora_mt5_small_safe_20260223_122757_nogit\\submission.csv.sha256",
+  "adapter_dir": "C:\\MIM_pulz\\artifacts\\runs\\lora_mt5_small_safe_20260223_122757_nogit\\adapter",
+  "tokenizer_dir": "C:\\MIM_pulz\\artifacts\\runs\\lora_mt5_small_safe_20260223_122757_nogit\\tokenizer",
+  "determinism_verified": true
+}

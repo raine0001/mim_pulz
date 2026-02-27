@@ -1,0 +1,194 @@
+{
+  "version": 1,
+  "routing_map_sha256": "58395ca8fb4c67453592715028bcd54433e5f6c00a6cd8681cdaace897b89892",
+  "rows": [
+    {
+      "row_index": 0,
+      "source_sha256": "63a25dd8ad72eae32834f373b5c6ac71a9491b4e4bb0c4c422a4507caffea6b8",
+      "features": {
+        "src_chars": 133.0,
+        "src_tokens": 16.0,
+        "src_lines": 1.0,
+        "bracket_ratio": 0.015037593984962405,
+        "ellipsis_count": 1.0,
+        "unknown_token_ratio": 0.0,
+        "repeat_trigram_rate": 0.0,
+        "line_prefix_repeat_rate": 0.0,
+        "digit_ratio": 0.0,
+        "digit_token_count": 0.0,
+        "hyphen_token_ratio": 0.875,
+        "rare_token_ratio": 0.375
+      },
+      "labels": {
+        "length_bucket": "short",
+        "fragmentation": "fragmentary",
+        "formula_density": "medium",
+        "numeric_density": "low",
+        "proper_name_density": "high",
+        "template_type": "hybrid",
+        "layout_hint": "single_column",
+        "role_hint": "unknown",
+        "confidence": {
+          "length_bucket": 0.9,
+          "fragmentation": 0.9139579368891149,
+          "formula_density": 1.0,
+          "numeric_density": 1.0,
+          "proper_name_density": 1.0,
+          "template_type": 0.75,
+          "layout_hint": 0.7,
+          "role_hint": 0.6
+        },
+        "overall_confidence": 0.8579947352409363
+      },
+      "route": "RETRIEVE_INTERNAL",
+      "policy_name": "internal_only",
+      "policy_params": {
+        "top_k": 120
+      },
+      "rationale": "internal_top_score>=T_high",
+      "internal_top_score": 0.5065381564287634,
+      "internal_gap": 0.0
+    },
+    {
+      "row_index": 1,
+      "source_sha256": "d34337af9453482b77fe325b39e162b6b43b1cba39e1c85866f443ef892a6519",
+      "features": {
+        "src_chars": 146.0,
+        "src_tokens": 19.0,
+        "src_lines": 1.0,
+        "bracket_ratio": 0.0136986301369863,
+        "ellipsis_count": 0.0,
+        "unknown_token_ratio": 0.0,
+        "repeat_trigram_rate": 0.0,
+        "line_prefix_repeat_rate": 0.0,
+        "digit_ratio": 0.0,
+        "digit_token_count": 0.0,
+        "hyphen_token_ratio": 0.8947368421052632,
+        "rare_token_ratio": 0.5263157894736842
+      },
+      "labels": {
+        "length_bucket": "short",
+        "fragmentation": "fragmentary",
+        "formula_density": "medium",
+        "numeric_density": "low",
+        "proper_name_density": "high",
+        "template_type": "hybrid",
+        "layout_hint": "single_column",
+        "role_hint": "unknown",
+        "confidence": {
+          "length_bucket": 0.9,
+          "fragmentation": 0.9216192164811801,
+          "formula_density": 1.0,
+          "numeric_density": 1.0,
+          "proper_name_density": 1.0,
+          "template_type": 0.75,
+          "layout_hint": 0.7,
+          "role_hint": 0.6
+        },
+        "overall_confidence": 0.8589524030685425
+      },
+      "route": "RETRIEVE_INTERNAL",
+      "policy_name": "internal_only",
+      "policy_params": {
+        "top_k": 120
+      },
+      "rationale": "internal_top_score>=T_high",
+      "internal_top_score": 0.5175835768966969,
+      "internal_gap": 0.255454159142834
+    },
+    {
+      "row_index": 2,
+      "source_sha256": "00dfafcf7ed0c603f19f3ae6ef692ef6998fad2a417307bb4a555b20d7f200b6",
+      "features": {
+        "src_chars": 267.0,
+        "src_tokens": 34.0,
+        "src_lines": 1.0,
+        "bracket_ratio": 0.0,
+        "ellipsis_count": 0.0,
+        "unknown_token_ratio": 0.0,
+        "repeat_trigram_rate": 0.0,
+        "line_prefix_repeat_rate": 0.0,
+        "digit_ratio": 0.0,
+        "digit_token_count": 0.0,
+        "hyphen_token_ratio": 0.8235294117647058,
+        "rare_token_ratio": 0.5
+      },
+      "labels": {
+        "length_bucket": "short",
+        "fragmentation": "complete",
+        "formula_density": "medium",
+        "numeric_density": "low",
+        "proper_name_density": "high",
+        "template_type": "hybrid",
+        "layout_hint": "single_column",
+        "role_hint": "unknown",
+        "confidence": {
+          "length_bucket": 0.9,
+          "fragmentation": 1.0,
+          "formula_density": 1.0,
+          "numeric_density": 1.0,
+          "proper_name_density": 1.0,
+          "template_type": 0.75,
+          "layout_hint": 0.7,
+          "role_hint": 0.6
+        },
+        "overall_confidence": 0.8687499761581421
+      },
+      "route": "RETRIEVE_INTERNAL",
+      "policy_name": "internal_only",
+      "policy_params": {
+        "top_k": 120
+      },
+      "rationale": "internal_top_score>=T_high",
+      "internal_top_score": 0.6762632773756309,
+      "internal_gap": 0.297674315226585
+    },
+    {
+      "row_index": 3,
+      "source_sha256": "b62ea8aa5eb980ef245fc518feaf09ae158c7180f73be4f16597b9fc5c4bec8e",
+      "features": {
+        "src_chars": 129.0,
+        "src_tokens": 16.0,
+        "src_lines": 1.0,
+        "bracket_ratio": 0.0,
+        "ellipsis_count": 0.0,
+        "unknown_token_ratio": 0.0,
+        "repeat_trigram_rate": 0.0,
+        "line_prefix_repeat_rate": 0.0,
+        "digit_ratio": 0.0,
+        "digit_token_count": 0.0,
+        "hyphen_token_ratio": 0.8125,
+        "rare_token_ratio": 0.375
+      },
+      "labels": {
+        "length_bucket": "short",
+        "fragmentation": "complete",
+        "formula_density": "medium",
+        "numeric_density": "low",
+        "proper_name_density": "high",
+        "template_type": "hybrid",
+        "layout_hint": "single_column",
+        "role_hint": "unknown",
+        "confidence": {
+          "length_bucket": 0.9,
+          "fragmentation": 1.0,
+          "formula_density": 1.0,
+          "numeric_density": 1.0,
+          "proper_name_density": 1.0,
+          "template_type": 0.75,
+          "layout_hint": 0.7,
+          "role_hint": 0.6
+        },
+        "overall_confidence": 0.8687499761581421
+      },
+      "route": "RETRIEVE_INTERNAL",
+      "policy_name": "internal_only",
+      "policy_params": {
+        "top_k": 120
+      },
+      "rationale": "internal_top_score>=T_high",
+      "internal_top_score": 0.6815788243725356,
+      "internal_gap": 0.4264997720092551
+    }
+  ]
+}

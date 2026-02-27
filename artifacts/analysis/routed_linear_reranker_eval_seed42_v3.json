@@ -1,0 +1,152 @@
+{
+  "seed": 42,
+  "feature_names": [
+    "cosine",
+    "base_score",
+    "stage2_norm",
+    "rank_inv",
+    "is_external",
+    "domain_match",
+    "len_ratio",
+    "digits_overlap",
+    "pn_overlap",
+    "section_match",
+    "digit_ratio_proximity",
+    "bracket_ratio_proximity",
+    "unknown_ratio_proximity",
+    "repeat_trigram_proximity",
+    "marker_density_proximity"
+  ],
+  "feature_transform": "raw_z_rel_to_top_base",
+  "weights": [
+    -0.34243798632774064,
+    -0.06620095147308858,
+    0.26627223502257785,
+    0.08106704577102894,
+    -0.278939794890865,
+    0.11406440571315211,
+    0.05124966642326799,
+    0.11030202047499676,
+    -0.1312108232385584,
+    0.0016397054634261098,
+    -0.2972867031449945,
+    -0.0853070145661853,
+    -0.004082299018063293,
+    -0.09972719578800722,
+    -0.0374201222710835,
+    0.07611830538494066,
+    0.5670707417106079,
+    0.19789571852638702,
+    0.08106627249301959,
+    -0.278939794890865,
+    0.05203321401943677,
+    -0.16219828542364975,
+    0.04865059224074473,
+    0.3217100481614427,
+    0.049165275508152924,
+    0.2869451423063733,
+    0.16343361733219192,
+    0.06909011021619807,
+    0.1696273248671077,
+    0.12974682479583902,
+    0.2729571609746633,
+    0.3773719336867612,
+    0.12642960555866586,
+    -0.04443266843034105,
+    -0.18546334331549472,
+    0.05061916077908878,
+    0.24183627564525295,
+    0.07553913112426819,
+    0.05770955423507419,
+    0.004273656765653122,
+    0.01682949629060719,
+    -0.12790005310596486,
+    -0.035531157335667085,
+    0.033113937193389384,
+    0.02859134261856011
+  ],
+  "intercept": -1.5985553133424277,
+  "top_weights": [
+    {
+      "feature": "cosine",
+      "weight": -0.34243798632774064,
+      "abs_weight": 0.34243798632774064
+    },
+    {
+      "feature": "digit_ratio_proximity",
+      "weight": -0.2972867031449945,
+      "abs_weight": 0.2972867031449945
+    },
+    {
+      "feature": "is_external",
+      "weight": -0.278939794890865,
+      "abs_weight": 0.278939794890865
+    },
+    {
+      "feature": "stage2_norm",
+      "weight": 0.26627223502257785,
+      "abs_weight": 0.26627223502257785
+    },
+    {
+      "feature": "pn_overlap",
+      "weight": -0.1312108232385584,
+      "abs_weight": 0.1312108232385584
+    },
+    {
+      "feature": "domain_match",
+      "weight": 0.11406440571315211,
+      "abs_weight": 0.11406440571315211
+    },
+    {
+      "feature": "digits_overlap",
+      "weight": 0.11030202047499676,
+      "abs_weight": 0.11030202047499676
+    },
+    {
+      "feature": "repeat_trigram_proximity",
+      "weight": -0.09972719578800722,
+      "abs_weight": 0.09972719578800722
+    }
+  ],
+  "train_queries": 1249,
+  "train_rows": 1249,
+  "val_rows": 312,
+  "train_examples": 181105,
+  "positive_rate": 0.00876839402556528,
+  "positive_band": 0.5,
+  "logistic_c": 0.25,
+  "baseline_routed": {
+    "chrf2": 38.871040078592706,
+    "chrf2_reference": 38.871040078592706,
+    "abs_diff": 0.0
+  },
+  "reranked_raw": {
+    "chrf2": 37.80685209216064,
+    "chrf2_reference": 37.80685209216064,
+    "abs_diff": 0.0
+  },
+  "reranked_gated": {
+    "chrf2": 38.87148283796048,
+    "chrf2_reference": 38.87148283796048,
+    "abs_diff": 0.0
+  },
+  "selected_gate": {
+    "prob_margin": 0.05,
+    "base_score_drop": 0.08,
+    "changed_count": 16,
+    "changed_rate": 0.05128205128205128
+  },
+  "oracle_from_candidate_pool": {
+    "chrf2": 44.81867512378382,
+    "chrf2_reference": 44.81867512378382,
+    "abs_diff": 0.0
+  },
+  "delta_vs_baseline_raw": -1.0641879864320671,
+  "delta_vs_baseline_gated": 0.0004427593677718278,
+  "delta_vs_target_38_871_gated": 0.00048283796047599026,
+  "reranker_external_pick_rate_raw": 0.0,
+  "target_baseline": 38.871,
+  "model_out": "C:\\MIM_pulz\\artifacts\\models\\routed_linear_reranker_seed42_v3.json",
+  "train_jsonl": "C:\\MIM_pulz\\artifacts\\analysis\\routed_candidates_seed42_v2\\train_candidates.jsonl",
+  "val_jsonl": "C:\\MIM_pulz\\artifacts\\analysis\\routed_candidates_seed42_v2\\val_candidates.jsonl"
+}

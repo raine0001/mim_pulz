@@ -1,0 +1,470 @@
+{
+  "seed": 42,
+  "val_frac": 0.2,
+  "train_rows": 1249,
+  "val_rows": 312,
+  "search_space": {
+    "ngram_range": [
+      3,
+      5
+    ],
+    "stage1_top_k": [
+      120,
+      160,
+      200
+    ],
+    "stage2_pool": [
+      30,
+      50,
+      80,
+      120
+    ],
+    "alpha": [
+      0.2,
+      0.35,
+      0.5,
+      0.65,
+      0.8
+    ],
+    "additive_stage2_weight": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ],
+    "len_weight": [
+      0.0,
+      0.1,
+      0.2,
+      0.3
+    ],
+    "normalizations": [
+      "keep_all",
+      "collapse_ws",
+      "collapse_ws_lower",
+      "collapse_ws_strip_punct",
+      "collapse_ws_norm_punct"
+    ],
+    "dynamic_thresholds": [
+      [
+        0.6,
+        0.4
+      ],
+      [
+        0.65,
+        0.45
+      ],
+      [
+        0.7,
+        0.5
+      ],
+      [
+        0.55,
+        0.35
+      ],
+      [
+        0.68,
+        0.42
+      ]
+    ],
+    "scoring_mode": "alpha_blend"
+  },
+  "canonical_reference": {
+    "model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=120,len_weight=0.4,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=80,weight=0.2,k1=1.2,b=0.5),domain_override=True,domain_candidate_top_k=120,domain_bonus=0.02,domain_conf_threshold=0.45,domain_margin=0.02)",
+    "chrf2": 38.617579253949266,
+    "chrf2_reference": 38.617579253949266,
+    "chrf2_abs_diff": 0.0
+  },
+  "normalization_probe_top5": [
+    {
+      "family": "normalization_probe",
+      "config": {
+        "normalization": "keep_all",
+        "top_k": 120,
+        "stage2_pool": 80,
+        "scoring_mode": "additive",
+        "stage2_weight": 0.2,
+        "len_weight": 0.2
+      },
+      "chrf2": 38.20188937678971,
+      "chrf2_reference": 38.20188937678971,
+      "chrf2_abs_diff": 0.0,
+      "delta_vs_canonical": -0.41568987715955785
+    },
+    {
+      "family": "normalization_probe",
+      "config": {
+        "normalization": "collapse_ws",
+        "top_k": 120,
+        "stage2_pool": 80,
+        "scoring_mode": "additive",
+        "stage2_weight": 0.2,
+        "len_weight": 0.2
+      },
+      "chrf2": 38.20188937678971,
+      "chrf2_reference": 38.20188937678971,
+      "chrf2_abs_diff": 0.0,
+      "delta_vs_canonical": -0.41568987715955785
+    },
+    {
+      "family": "normalization_probe",
+      "config": {
+        "normalization": "collapse_ws_lower",
+        "top_k": 120,
+        "stage2_pool": 80,
+        "scoring_mode": "additive",
+        "stage2_weight": 0.2,
+        "len_weight": 0.2
+      },
+      "chrf2": 38.20188937678971,
+      "chrf2_reference": 38.20188937678971,
+      "chrf2_abs_diff": 0.0,
+      "delta_vs_canonical": -0.41568987715955785
+    },
+    {
+      "family": "normalization_probe",
+      "config": {
+        "normalization": "collapse_ws_norm_punct",
+        "top_k": 120,
+        "stage2_pool": 80,
+        "scoring_mode": "additive",
+        "stage2_weight": 0.2,
+        "len_weight": 0.2
+      },
+      "chrf2": 38.0444788318599,
+      "chrf2_reference": 38.0444788318599,
+      "chrf2_abs_diff": 0.0,
+      "delta_vs_canonical": -0.5731004220893681
+    },
+    {
+      "family": "normalization_probe",
+      "config": {
+        "normalization": "collapse_ws_strip_punct",
+        "top_k": 120,
+        "stage2_pool": 80,
+        "scoring_mode": "additive",
+        "stage2_weight": 0.2,
+        "len_weight": 0.2
+      },
+      "chrf2": 36.79595889159689,
+      "chrf2_reference": 36.79595889159689,
+      "chrf2_abs_diff": 0.0,
+      "delta_vs_canonical": -1.8216203623523768
+    }
+  ],
+  "selected_top2_normalizations": [
+    "keep_all",
+    "collapse_ws"
+  ],
+  "best_main_sweep": {
+    "family": "main_surgical",
+    "config": {
+      "normalization": "keep_all",
+      "top_k": 120,
+      "stage2_pool": 50,
+      "scoring_mode": "alpha_blend",
+      "len_weight": 0.3,
+      "alpha": 0.2
+    },
+    "chrf2": 37.659417342738365,
+    "chrf2_reference": 37.659417342738365,
+    "chrf2_abs_diff": 0.0,
+    "delta_vs_canonical": -0.958161911210901
+  },
+  "best_dynamic_pool": {
+    "family": "dynamic_pool",
+    "config": {
+      "normalization": "keep_all",
+      "top_k": 120,
+      "scoring_mode": "alpha_blend",
+      "blend_value": 0.2,
+      "len_weight": 0.3,
+      "dynamic_threshold_high": 0.65,
+      "dynamic_threshold_mid": 0.45,
+      "dynamic_pools": [
+        30,
+        80,
+        120
+      ]
+    },
+    "chrf2": 37.51946812224607,
+    "chrf2_reference": 37.51946812224607,
+    "chrf2_abs_diff": 0.0,
+    "delta_vs_canonical": -1.0981111317031989
+  },
+  "best_overall": {
+    "family": "main_surgical",
+    "config": {
+      "normalization": "keep_all",
+      "top_k": 120,
+      "stage2_pool": 50,
+      "scoring_mode": "alpha_blend",
+      "len_weight": 0.3,
+      "alpha": 0.2
+    },
+    "chrf2": 37.659417342738365,
+    "chrf2_reference": 37.659417342738365,
+    "chrf2_abs_diff": 0.0,
+    "delta_vs_canonical": -0.958161911210901
+  },
+  "top10_main_sweep": [
+    {
+      "family": "main_surgical",
+      "config": {
+        "normalization": "keep_all",
+        "top_k": 120,
+        "stage2_pool": 50,
+        "scoring_mode": "alpha_blend",
+        "len_weight": 0.3,
+        "alpha": 0.2
+      },
+      "chrf2": 37.659417342738365,
+      "chrf2_reference": 37.659417342738365,
+      "chrf2_abs_diff": 0.0,
+      "delta_vs_canonical": -0.958161911210901
+    },
+    {
+      "family": "main_surgical",
+      "config": {
+        "normalization": "keep_all",
+        "top_k": 160,
+        "stage2_pool": 50,
+        "scoring_mode": "alpha_blend",
+        "len_weight": 0.3,
+        "alpha": 0.2
+      },
+      "chrf2": 37.659417342738365,
+      "chrf2_reference": 37.659417342738365,
+      "chrf2_abs_diff": 0.0,
+      "delta_vs_canonical": -0.958161911210901
+    },
+    {
+      "family": "main_surgical",
+      "config": {
+        "normalization": "keep_all",
+        "top_k": 200,
+        "stage2_pool": 50,
+        "scoring_mode": "alpha_blend",
+        "len_weight": 0.3,
+        "alpha": 0.2
+      },
+      "chrf2": 37.659417342738365,
+      "chrf2_reference": 37.659417342738365,
+      "chrf2_abs_diff": 0.0,
+      "delta_vs_canonical": -0.958161911210901
+    },
+    {
+      "family": "main_surgical",
+      "config": {
+        "normalization": "collapse_ws",
+        "top_k": 120,
+        "stage2_pool": 50,
+        "scoring_mode": "alpha_blend",
+        "len_weight": 0.3,
+        "alpha": 0.2
+      },
+      "chrf2": 37.659417342738365,
+      "chrf2_reference": 37.659417342738365,
+      "chrf2_abs_diff": 0.0,
+      "delta_vs_canonical": -0.958161911210901
+    },
+    {
+      "family": "main_surgical",
+      "config": {
+        "normalization": "collapse_ws",
+        "top_k": 160,
+        "stage2_pool": 50,
+        "scoring_mode": "alpha_blend",
+        "len_weight": 0.3,
+        "alpha": 0.2
+      },
+      "chrf2": 37.659417342738365,
+      "chrf2_reference": 37.659417342738365,
+      "chrf2_abs_diff": 0.0,
+      "delta_vs_canonical": -0.958161911210901
+    },
+    {
+      "family": "main_surgical",
+      "config": {
+        "normalization": "collapse_ws",
+        "top_k": 200,
+        "stage2_pool": 50,
+        "scoring_mode": "alpha_blend",
+        "len_weight": 0.3,
+        "alpha": 0.2
+      },
+      "chrf2": 37.659417342738365,
+      "chrf2_reference": 37.659417342738365,
+      "chrf2_abs_diff": 0.0,
+      "delta_vs_canonical": -0.958161911210901
+    },
+    {
+      "family": "main_surgical",
+      "config": {
+        "normalization": "keep_all",
+        "top_k": 120,
+        "stage2_pool": 80,
+        "scoring_mode": "alpha_blend",
+        "len_weight": 0.3,
+        "alpha": 0.2
+      },
+      "chrf2": 37.63028745589957,
+      "chrf2_reference": 37.63028745589957,
+      "chrf2_abs_diff": 0.0,
+      "delta_vs_canonical": -0.9872917980496965
+    },
+    {
+      "family": "main_surgical",
+      "config": {
+        "normalization": "keep_all",
+        "top_k": 160,
+        "stage2_pool": 80,
+        "scoring_mode": "alpha_blend",
+        "len_weight": 0.3,
+        "alpha": 0.2
+      },
+      "chrf2": 37.63028745589957,
+      "chrf2_reference": 37.63028745589957,
+      "chrf2_abs_diff": 0.0,
+      "delta_vs_canonical": -0.9872917980496965
+    },
+    {
+      "family": "main_surgical",
+      "config": {
+        "normalization": "keep_all",
+        "top_k": 200,
+        "stage2_pool": 80,
+        "scoring_mode": "alpha_blend",
+        "len_weight": 0.3,
+        "alpha": 0.2
+      },
+      "chrf2": 37.63028745589957,
+      "chrf2_reference": 37.63028745589957,
+      "chrf2_abs_diff": 0.0,
+      "delta_vs_canonical": -0.9872917980496965
+    },
+    {
+      "family": "main_surgical",
+      "config": {
+        "normalization": "collapse_ws",
+        "top_k": 120,
+        "stage2_pool": 80,
+        "scoring_mode": "alpha_blend",
+        "len_weight": 0.3,
+        "alpha": 0.2
+      },
+      "chrf2": 37.63028745589957,
+      "chrf2_reference": 37.63028745589957,
+      "chrf2_abs_diff": 0.0,
+      "delta_vs_canonical": -0.9872917980496965
+    }
+  ],
+  "top5_dynamic_pool": [
+    {
+      "family": "dynamic_pool",
+      "config": {
+        "normalization": "keep_all",
+        "top_k": 120,
+        "scoring_mode": "alpha_blend",
+        "blend_value": 0.2,
+        "len_weight": 0.3,
+        "dynamic_threshold_high": 0.65,
+        "dynamic_threshold_mid": 0.45,
+        "dynamic_pools": [
+          30,
+          80,
+          120
+        ]
+      },
+      "chrf2": 37.51946812224607,
+      "chrf2_reference": 37.51946812224607,
+      "chrf2_abs_diff": 0.0,
+      "delta_vs_canonical": -1.0981111317031989
+    },
+    {
+      "family": "dynamic_pool",
+      "config": {
+        "normalization": "keep_all",
+        "top_k": 120,
+        "scoring_mode": "alpha_blend",
+        "blend_value": 0.2,
+        "len_weight": 0.3,
+        "dynamic_threshold_high": 0.7,
+        "dynamic_threshold_mid": 0.5,
+        "dynamic_pools": [
+          30,
+          80,
+          120
+        ]
+      },
+      "chrf2": 37.51946812224607,
+      "chrf2_reference": 37.51946812224607,
+      "chrf2_abs_diff": 0.0,
+      "delta_vs_canonical": -1.0981111317031989
+    },
+    {
+      "family": "dynamic_pool",
+      "config": {
+        "normalization": "keep_all",
+        "top_k": 120,
+        "scoring_mode": "alpha_blend",
+        "blend_value": 0.2,
+        "len_weight": 0.3,
+        "dynamic_threshold_high": 0.68,
+        "dynamic_threshold_mid": 0.42,
+        "dynamic_pools": [
+          30,
+          80,
+          120
+        ]
+      },
+      "chrf2": 37.508978223603684,
+      "chrf2_reference": 37.508978223603684,
+      "chrf2_abs_diff": 0.0,
+      "delta_vs_canonical": -1.1086010303455822
+    },
+    {
+      "family": "dynamic_pool",
+      "config": {
+        "normalization": "keep_all",
+        "top_k": 120,
+        "scoring_mode": "alpha_blend",
+        "blend_value": 0.2,
+        "len_weight": 0.3,
+        "dynamic_threshold_high": 0.6,
+        "dynamic_threshold_mid": 0.4,
+        "dynamic_pools": [
+          30,
+          80,
+          120
+        ]
+      },
+      "chrf2": 37.283542620768486,
+      "chrf2_reference": 37.283542620768486,
+      "chrf2_abs_diff": 0.0,
+      "delta_vs_canonical": -1.33403663318078
+    },
+    {
+      "family": "dynamic_pool",
+      "config": {
+        "normalization": "keep_all",
+        "top_k": 120,
+        "scoring_mode": "alpha_blend",
+        "blend_value": 0.2,
+        "len_weight": 0.3,
+        "dynamic_threshold_high": 0.55,
+        "dynamic_threshold_mid": 0.35,
+        "dynamic_pools": [
+          30,
+          80,
+          120
+        ]
+      },
+      "chrf2": 37.27639531355563,
+      "chrf2_reference": 37.27639531355563,
+      "chrf2_abs_diff": 0.0,
+      "delta_vs_canonical": -1.341183940393634
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "seed43_evidence": "C:\\MIM_pulz\\artifacts\\submissions\\submission_canonical_default_afterlock.csv.evidence.json",
+  "seed44_evidence": "C:\\MIM_pulz\\artifacts\\submissions\\submission_canonical_seed44_probe_afterlock.csv.evidence.json",
+  "rows": 4,
+  "changed_predictions": 1,
+  "row_diffs": [
+    {
+      "row_index": 0,
+      "text_id": "332fda50",
+      "prediction_changed": true,
+      "seed43": {
+        "route": "RETRIEVE_HYBRID",
+        "policy_name": "hybrid",
+        "reranker_selected_idx": 196,
+        "reranker_selected_score": 0.8773604035377502,
+        "reranker_gated_to_baseline": true,
+        "chosen_idx": 196,
+        "chosen_origin": "competition"
+      },
+      "seed44": {
+        "route": "RETRIEVE_HYBRID",
+        "policy_name": "hybrid",
+        "reranker_selected_idx": 406,
+        "reranker_selected_score": 0.9949442744255066,
+        "reranker_gated_to_baseline": false,
+        "chosen_idx": 196,
+        "chosen_origin": "competition"
+      }
+    },
+    {
+      "row_index": 1,
+      "text_id": "332fda50",
+      "prediction_changed": false,
+      "seed43": {
+        "route": "RETRIEVE_HYBRID",
+        "policy_name": "hybrid",
+        "reranker_selected_idx": 406,
+        "reranker_selected_score": 0.9999746084213257,
+        "reranker_gated_to_baseline": true,
+        "chosen_idx": 406,
+        "chosen_origin": "competition"
+      },
+      "seed44": {
+        "route": "RETRIEVE_HYBRID",
+        "policy_name": "hybrid",
+        "reranker_selected_idx": 406,
+        "reranker_selected_score": 0.9996696710586548,
+        "reranker_gated_to_baseline": false,
+        "chosen_idx": 406,
+        "chosen_origin": "competition"
+      }
+    },
+    {
+      "row_index": 2,
+      "text_id": "332fda50",
+      "prediction_changed": false,
+      "seed43": {
+        "route": "RETRIEVE_INTERNAL",
+        "policy_name": "internal_only",
+        "reranker_selected_idx": 406,
+        "reranker_selected_score": 0.9999732971191406,
+        "reranker_gated_to_baseline": true,
+        "chosen_idx": 406,
+        "chosen_origin": "competition"
+      },
+      "seed44": {
+        "route": "RETRIEVE_INTERNAL",
+        "policy_name": "internal_only",
+        "reranker_selected_idx": 406,
+        "reranker_selected_score": 0.99965500831604,
+        "reranker_gated_to_baseline": false,
+        "chosen_idx": 406,
+        "chosen_origin": "competition"
+      }
+    },
+    {
+      "row_index": 3,
+      "text_id": "332fda50",
+      "prediction_changed": false,
+      "seed43": {
+        "route": "RETRIEVE_INTERNAL",
+        "policy_name": "internal_only",
+        "reranker_selected_idx": 406,
+        "reranker_selected_score": 0.9998921155929565,
+        "reranker_gated_to_baseline": true,
+        "chosen_idx": 406,
+        "chosen_origin": "competition"
+      },
+      "seed44": {
+        "route": "RETRIEVE_INTERNAL",
+        "policy_name": "internal_only",
+        "reranker_selected_idx": 406,
+        "reranker_selected_score": 0.9989169836044312,
+        "reranker_gated_to_baseline": false,
+        "chosen_idx": 406,
+        "chosen_origin": "competition"
+      }
+    }
+  ]
+}

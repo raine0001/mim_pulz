@@ -1,0 +1,706 @@
+{
+  "seed": 42,
+  "val_frac": 0.2,
+  "train_rows": 1249,
+  "val_rows": 312,
+  "best_first_stage": {
+    "family": "first_stage",
+    "config": {
+      "normalization": "collapse_ws",
+      "ngram_range": [
+        3,
+        5
+      ],
+      "top_k": 120,
+      "len_weight": 0.3,
+      "len_mode": "ratio"
+    },
+    "chrf2": 37.83958584301644,
+    "chrf2_reference": 37.83958584301644,
+    "chrf2_abs_diff": 0.0,
+    "overrides": 0,
+    "override_rate": 0.0
+  },
+  "best_stage2": {
+    "family": "stage2",
+    "config": {
+      "normalization": "collapse_ws",
+      "ngram_range": [
+        3,
+        5
+      ],
+      "top_k": 120,
+      "len_weight": 0.4,
+      "len_mode": "ratio",
+      "stage2_type": "bm25",
+      "stage2_pool": 80,
+      "stage2_weight": 0.2
+    },
+    "chrf2": 38.617579253949266,
+    "chrf2_reference": 38.617579253949266,
+    "chrf2_abs_diff": 0.0,
+    "overrides": 0,
+    "override_rate": 0.0
+  },
+  "best_domain_override": {
+    "family": "domain_override",
+    "config": {
+      "normalization": "collapse_ws",
+      "ngram_range": [
+        3,
+        5
+      ],
+      "top_k": 120,
+      "len_weight": 0.3,
+      "len_mode": "ratio",
+      "domain_bonus": 0.01,
+      "domain_conf_threshold": 0.35,
+      "domain_margin": 0.01,
+      "domain_candidate_top_k": 120
+    },
+    "chrf2": 37.83958584301644,
+    "chrf2_reference": 37.83958584301644,
+    "chrf2_abs_diff": 0.0,
+    "overrides": 0,
+    "override_rate": 0.0
+  },
+  "best_overall": {
+    "family": "stage2",
+    "config": {
+      "normalization": "collapse_ws",
+      "ngram_range": [
+        3,
+        5
+      ],
+      "top_k": 120,
+      "len_weight": 0.4,
+      "len_mode": "ratio",
+      "stage2_type": "bm25",
+      "stage2_pool": 80,
+      "stage2_weight": 0.2
+    },
+    "chrf2": 38.617579253949266,
+    "chrf2_reference": 38.617579253949266,
+    "chrf2_abs_diff": 0.0,
+    "overrides": 0,
+    "override_rate": 0.0
+  },
+  "top10_first_stage": [
+    {
+      "family": "first_stage",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.3,
+        "len_mode": "ratio"
+      },
+      "chrf2": 37.83958584301644,
+      "chrf2_reference": 37.83958584301644,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "first_stage",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.3,
+        "len_mode": "logexp"
+      },
+      "chrf2": 37.83958584301644,
+      "chrf2_reference": 37.83958584301644,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "first_stage",
+      "config": {
+        "normalization": "collapse_ws_lower",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.3,
+        "len_mode": "ratio"
+      },
+      "chrf2": 37.83958584301644,
+      "chrf2_reference": 37.83958584301644,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "first_stage",
+      "config": {
+        "normalization": "collapse_ws_lower",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.3,
+        "len_mode": "logexp"
+      },
+      "chrf2": 37.83958584301644,
+      "chrf2_reference": 37.83958584301644,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "first_stage",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 200,
+        "len_weight": 0.3,
+        "len_mode": "ratio"
+      },
+      "chrf2": 37.83498310784197,
+      "chrf2_reference": 37.83498310784197,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "first_stage",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 200,
+        "len_weight": 0.3,
+        "len_mode": "logexp"
+      },
+      "chrf2": 37.83498310784197,
+      "chrf2_reference": 37.83498310784197,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "first_stage",
+      "config": {
+        "normalization": "collapse_ws_lower",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 200,
+        "len_weight": 0.3,
+        "len_mode": "ratio"
+      },
+      "chrf2": 37.83498310784197,
+      "chrf2_reference": 37.83498310784197,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "first_stage",
+      "config": {
+        "normalization": "collapse_ws_lower",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 200,
+        "len_weight": 0.3,
+        "len_mode": "logexp"
+      },
+      "chrf2": 37.83498310784197,
+      "chrf2_reference": 37.83498310784197,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "first_stage",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 160,
+        "len_weight": 0.3,
+        "len_mode": "ratio"
+      },
+      "chrf2": 37.83380388549855,
+      "chrf2_reference": 37.83380388549855,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "first_stage",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 160,
+        "len_weight": 0.3,
+        "len_mode": "logexp"
+      },
+      "chrf2": 37.83380388549855,
+      "chrf2_reference": 37.83380388549855,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    }
+  ],
+  "top10_stage2": [
+    {
+      "family": "stage2",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.2
+      },
+      "chrf2": 38.617579253949266,
+      "chrf2_reference": 38.617579253949266,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "stage2",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "stage2_type": "bm25",
+        "stage2_pool": 50,
+        "stage2_weight": 0.3
+      },
+      "chrf2": 38.6090825772373,
+      "chrf2_reference": 38.6090825772373,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "stage2",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.3,
+        "len_mode": "ratio",
+        "stage2_type": "bm25",
+        "stage2_pool": 50,
+        "stage2_weight": 0.2
+      },
+      "chrf2": 38.56924939477269,
+      "chrf2_reference": 38.56924939477269,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "stage2",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "stage2_type": "bm25",
+        "stage2_pool": 50,
+        "stage2_weight": 0.2
+      },
+      "chrf2": 38.544693768710886,
+      "chrf2_reference": 38.544693768710886,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "stage2",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.3,
+        "len_mode": "ratio",
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.2
+      },
+      "chrf2": 38.49519224359067,
+      "chrf2_reference": 38.49519224359067,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "stage2",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "stage2_type": "bm25",
+        "stage2_pool": 80,
+        "stage2_weight": 0.3
+      },
+      "chrf2": 38.49271680859847,
+      "chrf2_reference": 38.49271680859847,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "stage2",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "stage2_type": "bm25",
+        "stage2_pool": 30,
+        "stage2_weight": 0.3
+      },
+      "chrf2": 38.48508364313994,
+      "chrf2_reference": 38.48508364313994,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "stage2",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.4,
+        "len_mode": "ratio",
+        "stage2_type": "bm25",
+        "stage2_pool": 30,
+        "stage2_weight": 0.2
+      },
+      "chrf2": 38.407160606713596,
+      "chrf2_reference": 38.407160606713596,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "stage2",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.3,
+        "len_mode": "ratio",
+        "stage2_type": "token_overlap",
+        "stage2_pool": 80,
+        "stage2_weight": 0.1
+      },
+      "chrf2": 38.352726450667504,
+      "chrf2_reference": 38.352726450667504,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "stage2",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.3,
+        "len_mode": "ratio",
+        "stage2_type": "token_overlap",
+        "stage2_pool": 50,
+        "stage2_weight": 0.1
+      },
+      "chrf2": 38.32354342367928,
+      "chrf2_reference": 38.32354342367928,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    }
+  ],
+  "top10_domain_override": [
+    {
+      "family": "domain_override",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.3,
+        "len_mode": "ratio",
+        "domain_bonus": 0.01,
+        "domain_conf_threshold": 0.35,
+        "domain_margin": 0.01,
+        "domain_candidate_top_k": 120
+      },
+      "chrf2": 37.83958584301644,
+      "chrf2_reference": 37.83958584301644,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "domain_override",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.3,
+        "len_mode": "ratio",
+        "domain_bonus": 0.01,
+        "domain_conf_threshold": 0.35,
+        "domain_margin": 0.01,
+        "domain_candidate_top_k": 160
+      },
+      "chrf2": 37.83958584301644,
+      "chrf2_reference": 37.83958584301644,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "domain_override",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.3,
+        "len_mode": "ratio",
+        "domain_bonus": 0.01,
+        "domain_conf_threshold": 0.35,
+        "domain_margin": 0.01,
+        "domain_candidate_top_k": 200
+      },
+      "chrf2": 37.83958584301644,
+      "chrf2_reference": 37.83958584301644,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "domain_override",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.3,
+        "len_mode": "ratio",
+        "domain_bonus": 0.01,
+        "domain_conf_threshold": 0.35,
+        "domain_margin": 0.01,
+        "domain_candidate_top_k": 300
+      },
+      "chrf2": 37.83958584301644,
+      "chrf2_reference": 37.83958584301644,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "domain_override",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.3,
+        "len_mode": "ratio",
+        "domain_bonus": 0.01,
+        "domain_conf_threshold": 0.35,
+        "domain_margin": 0.02,
+        "domain_candidate_top_k": 120
+      },
+      "chrf2": 37.83958584301644,
+      "chrf2_reference": 37.83958584301644,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "domain_override",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.3,
+        "len_mode": "ratio",
+        "domain_bonus": 0.01,
+        "domain_conf_threshold": 0.35,
+        "domain_margin": 0.02,
+        "domain_candidate_top_k": 160
+      },
+      "chrf2": 37.83958584301644,
+      "chrf2_reference": 37.83958584301644,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "domain_override",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.3,
+        "len_mode": "ratio",
+        "domain_bonus": 0.01,
+        "domain_conf_threshold": 0.35,
+        "domain_margin": 0.02,
+        "domain_candidate_top_k": 200
+      },
+      "chrf2": 37.83958584301644,
+      "chrf2_reference": 37.83958584301644,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "domain_override",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.3,
+        "len_mode": "ratio",
+        "domain_bonus": 0.01,
+        "domain_conf_threshold": 0.35,
+        "domain_margin": 0.02,
+        "domain_candidate_top_k": 300
+      },
+      "chrf2": 37.83958584301644,
+      "chrf2_reference": 37.83958584301644,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "domain_override",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.3,
+        "len_mode": "ratio",
+        "domain_bonus": 0.01,
+        "domain_conf_threshold": 0.35,
+        "domain_margin": 0.05,
+        "domain_candidate_top_k": 120
+      },
+      "chrf2": 37.83958584301644,
+      "chrf2_reference": 37.83958584301644,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    },
+    {
+      "family": "domain_override",
+      "config": {
+        "normalization": "collapse_ws",
+        "ngram_range": [
+          3,
+          5
+        ],
+        "top_k": 120,
+        "len_weight": 0.3,
+        "len_mode": "ratio",
+        "domain_bonus": 0.01,
+        "domain_conf_threshold": 0.35,
+        "domain_margin": 0.05,
+        "domain_candidate_top_k": 160
+      },
+      "chrf2": 37.83958584301644,
+      "chrf2_reference": 37.83958584301644,
+      "chrf2_abs_diff": 0.0,
+      "overrides": 0,
+      "override_rate": 0.0
+    }
+  ],
+  "metric_crosscheck_max_abs_diff": 0.0,
+  "rows_evaluated": 887
+}

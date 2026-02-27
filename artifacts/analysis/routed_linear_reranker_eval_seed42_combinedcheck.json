@@ -1,0 +1,172 @@
+{
+  "seed": 42,
+  "feature_names": [
+    "cosine",
+    "base_score",
+    "stage2_norm",
+    "rank_inv",
+    "is_external",
+    "domain_match",
+    "len_ratio",
+    "digits_overlap",
+    "pn_overlap",
+    "section_match",
+    "digit_ratio_proximity",
+    "bracket_ratio_proximity",
+    "unknown_ratio_proximity",
+    "repeat_trigram_proximity",
+    "marker_density_proximity"
+  ],
+  "feature_transform": "raw_z_rel_to_top_base",
+  "weights": [
+    -0.29826077223595254,
+    -0.09522247193161633,
+    0.295156671443084,
+    0.07972011792626243,
+    -0.3795283097046874,
+    0.0050099784616846966,
+    -0.024812369496906433,
+    0.16301710327845442,
+    -0.16388857567958978,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.05375402975166603,
+    0.587005178210925,
+    0.1727236417013292,
+    0.07971936883462787,
+    -0.3795283097046874,
+    0.1631633008214011,
+    -0.030580595391119944,
+    0.016763478194053584,
+    0.33956076171284016,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.26030238929154453,
+    0.3412064633321653,
+    0.11713192585420314,
+    -0.035838797125383653,
+    -0.008672089941534154,
+    0.04558939213795738,
+    0.2275359205319793,
+    0.07111639733357425,
+    0.09884254676841328,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "intercept": -1.5158129462650896,
+  "top_weights": [
+    {
+      "feature": "is_external",
+      "weight": -0.3795283097046874,
+      "abs_weight": 0.3795283097046874
+    },
+    {
+      "feature": "cosine",
+      "weight": -0.29826077223595254,
+      "abs_weight": 0.29826077223595254
+    },
+    {
+      "feature": "stage2_norm",
+      "weight": 0.295156671443084,
+      "abs_weight": 0.295156671443084
+    },
+    {
+      "feature": "pn_overlap",
+      "weight": -0.16388857567958978,
+      "abs_weight": 0.16388857567958978
+    },
+    {
+      "feature": "digits_overlap",
+      "weight": 0.16301710327845442,
+      "abs_weight": 0.16301710327845442
+    },
+    {
+      "feature": "base_score",
+      "weight": -0.09522247193161633,
+      "abs_weight": 0.09522247193161633
+    },
+    {
+      "feature": "rank_inv",
+      "weight": 0.07972011792626243,
+      "abs_weight": 0.07972011792626243
+    },
+    {
+      "feature": "len_ratio",
+      "weight": -0.024812369496906433,
+      "abs_weight": 0.024812369496906433
+    }
+  ],
+  "train_queries": 1249,
+  "train_rows": 1249,
+  "val_rows": 312,
+  "train_examples": 181105,
+  "positive_rate": 0.00876839402556528,
+  "sample_weight_mean": 1.0005372762680054,
+  "sample_weight_max": 1.350000023841858,
+  "positive_band": 0.5,
+  "logistic_c": 0.25,
+  "triggered_positive_weight": 1.35,
+  "triggered_bracket_percentile": 80.0,
+  "triggered_internal_top_threshold": 0.48,
+  "triggered_margin_threshold": 0.01,
+  "triggered_query_count": 213,
+  "triggered_query_rate": 0.17053642914331466,
+  "triggered_bracket_threshold": 0.00789272636175156,
+  "triggered_unknown_p90": 0.10028985589742667,
+  "baseline_routed": {
+    "bleu": 17.095958117108207,
+    "chrf2": 38.871040078592706,
+    "combined": 25.778628224792246,
+    "chrf2_reference": 38.871040078592706,
+    "abs_diff": 0.0
+  },
+  "reranked_raw": {
+    "bleu": 15.931458874656709,
+    "chrf2": 37.735731224802954,
+    "combined": 24.519079308021485,
+    "chrf2_reference": 37.735731224802954,
+    "abs_diff": 0.0
+  },
+  "reranked_gated": {
+    "bleu": 17.07810988269701,
+    "chrf2": 38.84708447512209,
+    "combined": 25.757227670860622,
+    "chrf2_reference": 38.84708447512209,
+    "abs_diff": 0.0
+  },
+  "selected_gate": {
+    "prob_margin": 0.15,
+    "base_score_drop": 0.02,
+    "changed_count": 1,
+    "changed_rate": 0.003205128205128205
+  },
+  "oracle_from_candidate_pool": {
+    "bleu": 17.199418153673616,
+    "chrf2": 44.81867512378382,
+    "combined": 27.76427803036858,
+    "chrf2_reference": 44.81867512378382,
+    "abs_diff": 0.0
+  },
+  "delta_vs_baseline_raw_combined": -1.2595489167707612,
+  "delta_vs_baseline_gated_combined": -0.02140055393162399,
+  "delta_vs_baseline_raw": -1.135308853789752,
+  "delta_vs_baseline_gated": -0.023955603470618314,
+  "delta_vs_target_38_871_gated": -0.02391552487791415,
+  "reranker_external_pick_rate_raw": 0.0,
+  "target_baseline": 38.871,
+  "model_out": "C:\\MIM_pulz\\artifacts\\models\\routed_linear_reranker_seed42_combinedcheck.json",
+  "train_jsonl": "C:\\MIM_pulz\\artifacts\\analysis\\routed_candidates_seed42\\train_candidates.jsonl",
+  "val_jsonl": "C:\\MIM_pulz\\artifacts\\analysis\\routed_candidates_seed42\\val_candidates.jsonl"
+}

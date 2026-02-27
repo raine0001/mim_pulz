@@ -1,0 +1,288 @@
+{
+  "seed": 42,
+  "val_frac": 0.2,
+  "train_rows": 1249,
+  "val_rows": 312,
+  "baseline_config": {
+    "analyzer": "char_wb",
+    "ngram_min": 3,
+    "ngram_max": 5,
+    "max_features": 300000,
+    "top_k": 120,
+    "len_weight": 0.2,
+    "enable_domain_override": true,
+    "domain_candidate_top_k": 200,
+    "domain_bonus": 0.04,
+    "domain_conf_threshold": 0.55,
+    "domain_margin": 0.02
+  },
+  "baseline_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=120,len_weight=0.2,domain_override=True,domain_candidate_top_k=200,domain_bonus=0.04,domain_conf_threshold=0.55,domain_margin=0.02)",
+  "baseline": {
+    "chrf2": 37.75626051418253,
+    "chrf2_reference": 37.75626051418253,
+    "abs_diff": 0.0
+  },
+  "baseline_override_count": 32,
+  "domain_counts_train": {
+    "letter": 546,
+    "economic": 343,
+    "legal": 299,
+    "unknown": 53,
+    "ritual": 8
+  },
+  "best_gated_domain_override": {
+    "config": {
+      "analyzer": "char_wb",
+      "ngram_min": 3,
+      "ngram_max": 5,
+      "max_features": 300000,
+      "top_k": 120,
+      "len_weight": 0.2,
+      "enable_domain_override": true,
+      "domain_candidate_top_k": 120,
+      "domain_bonus": 0.02,
+      "domain_conf_threshold": 0.45,
+      "domain_margin": 0.02
+    },
+    "score": {
+      "chrf2": 37.8010867972611,
+      "chrf2_reference": 37.8010867972611,
+      "abs_diff": 0.0
+    },
+    "delta_vs_baseline": 0.04482628307857084,
+    "override_count": 30,
+    "override_rate": 0.09615384615384616
+  },
+  "top10_gated_domain_override": [
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.2,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.02,
+        "domain_conf_threshold": 0.45,
+        "domain_margin": 0.02
+      },
+      "score": {
+        "chrf2": 37.8010867972611,
+        "chrf2_reference": 37.8010867972611,
+        "abs_diff": 0.0
+      },
+      "delta_vs_baseline": 0.04482628307857084,
+      "override_count": 30,
+      "override_rate": 0.09615384615384616
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.2,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 200,
+        "domain_bonus": 0.02,
+        "domain_conf_threshold": 0.45,
+        "domain_margin": 0.02
+      },
+      "score": {
+        "chrf2": 37.8010867972611,
+        "chrf2_reference": 37.8010867972611,
+        "abs_diff": 0.0
+      },
+      "delta_vs_baseline": 0.04482628307857084,
+      "override_count": 30,
+      "override_rate": 0.09615384615384616
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.2,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 300,
+        "domain_bonus": 0.02,
+        "domain_conf_threshold": 0.45,
+        "domain_margin": 0.02
+      },
+      "score": {
+        "chrf2": 37.8010867972611,
+        "chrf2_reference": 37.8010867972611,
+        "abs_diff": 0.0
+      },
+      "delta_vs_baseline": 0.04482628307857084,
+      "override_count": 30,
+      "override_rate": 0.09615384615384616
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.2,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.02,
+        "domain_conf_threshold": 0.45,
+        "domain_margin": 0.05
+      },
+      "score": {
+        "chrf2": 37.8010867972611,
+        "chrf2_reference": 37.8010867972611,
+        "abs_diff": 0.0
+      },
+      "delta_vs_baseline": 0.04482628307857084,
+      "override_count": 0,
+      "override_rate": 0.0
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.2,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 200,
+        "domain_bonus": 0.02,
+        "domain_conf_threshold": 0.45,
+        "domain_margin": 0.05
+      },
+      "score": {
+        "chrf2": 37.8010867972611,
+        "chrf2_reference": 37.8010867972611,
+        "abs_diff": 0.0
+      },
+      "delta_vs_baseline": 0.04482628307857084,
+      "override_count": 0,
+      "override_rate": 0.0
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.2,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 300,
+        "domain_bonus": 0.02,
+        "domain_conf_threshold": 0.45,
+        "domain_margin": 0.05
+      },
+      "score": {
+        "chrf2": 37.8010867972611,
+        "chrf2_reference": 37.8010867972611,
+        "abs_diff": 0.0
+      },
+      "delta_vs_baseline": 0.04482628307857084,
+      "override_count": 0,
+      "override_rate": 0.0
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.2,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.02,
+        "domain_conf_threshold": 0.45,
+        "domain_margin": 0.1
+      },
+      "score": {
+        "chrf2": 37.8010867972611,
+        "chrf2_reference": 37.8010867972611,
+        "abs_diff": 0.0
+      },
+      "delta_vs_baseline": 0.04482628307857084,
+      "override_count": 0,
+      "override_rate": 0.0
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.2,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 200,
+        "domain_bonus": 0.02,
+        "domain_conf_threshold": 0.45,
+        "domain_margin": 0.1
+      },
+      "score": {
+        "chrf2": 37.8010867972611,
+        "chrf2_reference": 37.8010867972611,
+        "abs_diff": 0.0
+      },
+      "delta_vs_baseline": 0.04482628307857084,
+      "override_count": 0,
+      "override_rate": 0.0
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.2,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 300,
+        "domain_bonus": 0.02,
+        "domain_conf_threshold": 0.45,
+        "domain_margin": 0.1
+      },
+      "score": {
+        "chrf2": 37.8010867972611,
+        "chrf2_reference": 37.8010867972611,
+        "abs_diff": 0.0
+      },
+      "delta_vs_baseline": 0.04482628307857084,
+      "override_count": 0,
+      "override_rate": 0.0
+    },
+    {
+      "config": {
+        "analyzer": "char_wb",
+        "ngram_min": 3,
+        "ngram_max": 5,
+        "max_features": 300000,
+        "top_k": 120,
+        "len_weight": 0.2,
+        "enable_domain_override": true,
+        "domain_candidate_top_k": 120,
+        "domain_bonus": 0.02,
+        "domain_conf_threshold": 0.55,
+        "domain_margin": 0.02
+      },
+      "score": {
+        "chrf2": 37.8010867972611,
+        "chrf2_reference": 37.8010867972611,
+        "abs_diff": 0.0
+      },
+      "delta_vs_baseline": 0.04482628307857084,
+      "override_count": 30,
+      "override_rate": 0.09615384615384616
+    }
+  ]
+}

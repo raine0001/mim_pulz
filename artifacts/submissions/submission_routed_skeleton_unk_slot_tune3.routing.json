@@ -1,0 +1,157 @@
+{
+  "model_id": "RoutedRetrieval(base=CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3,uncertainty(enabled=True,thr=0.03,closing_thr=0.02,br_pct=80.0,itop_thr=0.48,igap_thr=0.01,topk_add=20,ext_add=2,kboost=0.0,ext_bonus=0.0,stg2_disc=0.0,len_disc=0.0,len_min=0.65,skel_blend=0.05,num_bonus=0.005,form_bonus=0.005,slot_bonus=0.0,unc_pen=0.0,skel_path=True,skel_k=120,rare_cut=2)),routing_sha=a3b078fdfffb)",
+  "routing_map_path": "C:\\MIM_pulz\\artifacts\\profiles\\routing_map.json",
+  "routing_map_sha256": "a3b078fdfffbe3d897dbde0ac479314fc302b7410af62351e8b13f7fcbc4845a",
+  "route_counts": {
+    "RETRIEVE_HYBRID": 2,
+    "RETRIEVE_INTERNAL": 2
+  },
+  "section_closing_count": 0,
+  "section_closing_rate": 0.0,
+  "section_match_count": 4,
+  "section_match_rate": 1.0,
+  "policy_model_ids": {
+    "internal_only": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=120,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=0,ext_mem_limit=0,ext_mem_ctx_allow=0,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3,uncertainty(enabled=True,thr=0.03,closing_thr=0.02,br_pct=80.0,itop_thr=0.48,igap_thr=0.01,topk_add=20,ext_add=2,kboost=0.0,ext_bonus=0.0,stg2_disc=0.0,len_disc=0.0,len_min=0.65,skel_blend=0.05,num_bonus=0.005,form_bonus=0.005,slot_bonus=0.0,unc_pen=0.0,skel_path=True,skel_k=120,rare_cut=2),policy=internal_only)",
+    "hybrid": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=80,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3,uncertainty(enabled=True,thr=0.03,closing_thr=0.02,br_pct=80.0,itop_thr=0.48,igap_thr=0.01,topk_add=20,ext_add=2,kboost=0.0,ext_bonus=0.0,stg2_disc=0.0,len_disc=0.0,len_min=0.65,skel_blend=0.05,num_bonus=0.005,form_bonus=0.005,slot_bonus=0.0,unc_pen=0.0,skel_path=True,skel_k=120,rare_cut=2),policy=hybrid)",
+    "fallback": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=True,cap=5,top_thr=0.5,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3,uncertainty(enabled=True,thr=0.03,closing_thr=0.02,br_pct=80.0,itop_thr=0.48,igap_thr=0.01,topk_add=20,ext_add=2,kboost=0.0,ext_bonus=0.0,stg2_disc=0.0,len_disc=0.0,len_min=0.65,skel_blend=0.05,num_bonus=0.005,form_bonus=0.005,slot_bonus=0.0,unc_pen=0.0,skel_path=True,skel_k=120,rare_cut=2),policy=fallback)",
+    "strong_rerank": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=80,weight=0.2,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=0,ext_mem_limit=0,ext_mem_ctx_allow=0,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3,uncertainty(enabled=True,thr=0.03,closing_thr=0.02,br_pct=80.0,itop_thr=0.48,igap_thr=0.01,topk_add=20,ext_add=2,kboost=0.0,ext_bonus=0.0,stg2_disc=0.0,len_disc=0.0,len_min=0.65,skel_blend=0.05,num_bonus=0.005,form_bonus=0.005,slot_bonus=0.0,unc_pen=0.0,skel_path=True,skel_k=120,rare_cut=2),policy=strong_rerank)"
+  },
+  "rows": [
+    {
+      "row_index": 0,
+      "route": "RETRIEVE_HYBRID",
+      "policy_name": "hybrid",
+      "policy_params": {
+        "top_k": 80
+      },
+      "labels": {
+        "length_bucket": "short",
+        "fragmentation": "fragmentary",
+        "formula_density": "medium",
+        "numeric_density": "low",
+        "proper_name_density": "high",
+        "template_type": "hybrid",
+        "layout_hint": "single_column",
+        "role_hint": "unknown",
+        "confidence": {
+          "length_bucket": 0.9,
+          "fragmentation": 0.9139579368891149,
+          "formula_density": 1.0,
+          "numeric_density": 1.0,
+          "proper_name_density": 1.0,
+          "template_type": 0.75,
+          "layout_hint": 0.7,
+          "role_hint": 0.6
+        },
+        "overall_confidence": 0.8579947352409363
+      },
+      "rationale": "fragmentary_or_long",
+      "internal_top_score": 0.5065381564287634,
+      "internal_gap": 0.0,
+      "chosen_origin": "competition",
+      "chosen_context": "unknown"
+    },
+    {
+      "row_index": 1,
+      "route": "RETRIEVE_HYBRID",
+      "policy_name": "hybrid",
+      "policy_params": {
+        "top_k": 80
+      },
+      "labels": {
+        "length_bucket": "short",
+        "fragmentation": "fragmentary",
+        "formula_density": "medium",
+        "numeric_density": "low",
+        "proper_name_density": "high",
+        "template_type": "hybrid",
+        "layout_hint": "single_column",
+        "role_hint": "unknown",
+        "confidence": {
+          "length_bucket": 0.9,
+          "fragmentation": 0.9216192164811801,
+          "formula_density": 1.0,
+          "numeric_density": 1.0,
+          "proper_name_density": 1.0,
+          "template_type": 0.75,
+          "layout_hint": 0.7,
+          "role_hint": 0.6
+        },
+        "overall_confidence": 0.8589524030685425
+      },
+      "rationale": "fragmentary_or_long",
+      "internal_top_score": 0.5175835768966969,
+      "internal_gap": 0.255454159142834,
+      "chosen_origin": "competition",
+      "chosen_context": "letter"
+    },
+    {
+      "row_index": 2,
+      "route": "RETRIEVE_INTERNAL",
+      "policy_name": "internal_only",
+      "policy_params": {
+        "top_k": 120
+      },
+      "labels": {
+        "length_bucket": "short",
+        "fragmentation": "complete",
+        "formula_density": "medium",
+        "numeric_density": "low",
+        "proper_name_density": "high",
+        "template_type": "hybrid",
+        "layout_hint": "single_column",
+        "role_hint": "unknown",
+        "confidence": {
+          "length_bucket": 0.9,
+          "fragmentation": 1.0,
+          "formula_density": 1.0,
+          "numeric_density": 1.0,
+          "proper_name_density": 1.0,
+          "template_type": 0.75,
+          "layout_hint": 0.7,
+          "role_hint": 0.6
+        },
+        "overall_confidence": 0.8687499761581421
+      },
+      "rationale": "internal_top_score>=T_high",
+      "internal_top_score": 0.6762632773756309,
+      "internal_gap": 0.297674315226585,
+      "chosen_origin": "competition",
+      "chosen_context": "letter"
+    },
+    {
+      "row_index": 3,
+      "route": "RETRIEVE_INTERNAL",
+      "policy_name": "internal_only",
+      "policy_params": {
+        "top_k": 120
+      },
+      "labels": {
+        "length_bucket": "short",
+        "fragmentation": "complete",
+        "formula_density": "medium",
+        "numeric_density": "low",
+        "proper_name_density": "high",
+        "template_type": "hybrid",
+        "layout_hint": "single_column",
+        "role_hint": "unknown",
+        "confidence": {
+          "length_bucket": 0.9,
+          "fragmentation": 1.0,
+          "formula_density": 1.0,
+          "numeric_density": 1.0,
+          "proper_name_density": 1.0,
+          "template_type": 0.75,
+          "layout_hint": 0.7,
+          "role_hint": 0.6
+        },
+        "overall_confidence": 0.8687499761581421
+      },
+      "rationale": "internal_top_score>=T_high",
+      "internal_top_score": 0.6815788243725356,
+      "internal_gap": 0.4264997720092551,
+      "chosen_origin": "competition",
+      "chosen_context": "letter"
+    }
+  ]
+}

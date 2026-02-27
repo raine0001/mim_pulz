@@ -1,0 +1,108 @@
+{
+  "enabled": true,
+  "enforce": true,
+  "sample_size": 8,
+  "steps": 120,
+  "learning_rate": 5e-06,
+  "max_grad_norm": 1.0,
+  "loss_ratio_threshold": 0.6,
+  "spam_threshold": 0.1,
+  "task_prefix": "translate transliteration to english:",
+  "overall_pass": false,
+  "failed_required_variants": [
+    "full_prefix_on",
+    "lora_prefix_on"
+  ],
+  "variants": [
+    {
+      "name": "full_prefix_on",
+      "use_lora": false,
+      "use_prefix": true,
+      "start_loss": 23.130176544189453,
+      "end_loss": 18.76554298400879,
+      "loss_ratio": 0.8113013295924407,
+      "loss_ratio_threshold": 0.6,
+      "loss_pass": false,
+      "chrf2": 1.405529276180039,
+      "chrf2_min": 20.0,
+      "spam_rate": 0.125,
+      "spam_count": 1,
+      "spam_threshold": 0.1,
+      "gen_pass": false,
+      "pass": false,
+      "preview": [
+        {
+          "source": "22 ma-na 10 G\u00cdN K\u00d9.BABBAR \u1e63a-ru-p\u00e1-am i-\u1e63\u00e9-er i-d\u00ed-a-bi\u2084-im a-\u0161ur-ma-lik i-\u0161u a-na a-l\u00e1-ak \u0161u-(d)EN.L\u00cdL i-\u0161a-qal \u0161u-ma l\u00e1 i\u0161-q\u00fa-ul 1.5 G\u00cdN.TA i-na ITU.KAM a-na ma-na-im \u00fa-\u1e63a-\u00e1b IGI a-\u0161ur-e-mu-q\u00ed IGI en-nam-a-\u0161ur DUMU me-na-a",
+          "target": "Iddin-abum owes 22 minas 10 shekels of refined silver to A\u0161\u0161ur-malik. He is to pay before \u0160u-Illil arrives. If he has not paid (in time), he will add interest at the rate 1.5 shekel per month per mina. Witnessed by A\u0161\u0161ur-em\u016bq\u012b, by Ennam-A\u0161\u0161ur s. of Menaya.",
+          "prediction": "moji a-na"
+        },
+        {
+          "source": "5 G\u00cdN K\u00d9.BABBAR 1 na-ru-uq \u0160E-am a-na mu-la G\u00c9ME \u0161a a-\u0161\u00f9r-ma-s\u00fa-i en-um-a-\u0161\u00f9r i-d\u00ed-in um-ma en-um-a-\u0161\u00f9r-ma K\u00d9.BABBAR \u00f9 \u00fa-\u1e6d\u00e1-t\u00e1m ta-al-q\u00ed-i a-d\u00ed mu-ut-ki i-l\u00e1-k\u00e0-ni a-na \u00c9-b\u00e9-t\u00ed-\u0161u \u00f9 a ma-t\u00ed-\u0161u l\u00e1 ta-\u1e6d\u00e1-\u1e2bi-i \u0161u-ma a-na b\u00e9-t\u00ed-\u0161u \u00f9 am-t\u00ed-\u0161u ta-\u1e6d\u00e1-\u1e2bi-i 5 G\u00cdN K\u00d9.BABBAR \u00f9 na-ru-uq \u0160E-am um-m\u00ec-ki \u00f9 a-\u1e2bu-ki K\u00d9.BABBAR \u00f9 \u0160E-am \u00fa-ta-ru-nim um-ma um-ma-\u0161a \u00f9 a-\u1e2bu-\u0161a nu-ta-ra-kum IGI a-\u0161ur-na-da IGI a-\u0161ur-i-d\u00ed-in IGI ta-ar-\u1e2bu-a-l\u00e1 IGI \u0161\u00ed-li-\u00fa-ma-an",
+          "target": "Ennam-A\u0161\u0161ur gave 5 shekels of silver and 1 sack of barley to Mula, A\u0161\u0161ur-massu\u02be\u012b's maid. Ennam-A\u0161\u0161ur said: You have received the silver and the grain. Until your husband arrives you are not to touch his house and his slave-girls. If you have touched his house and his slave-girls, your mother and your brother must return the 5 shekels of silver and the sack of barley.\" Her mother and her brothers said: \"We shall return it to you.\" Witnessed by A\u0161\u0161ur-n\u0101d\u0101, by A\u0161\u0161ur-iddin, by Tarhuala, by \u0160iliuman.\"",
+          "prediction": "moji a-na-da a \u0161\u00f9r-m\u00ec-a \u0161a a\u0161"
+        }
+      ],
+      "enforce": true
+    },
+    {
+      "name": "lora_prefix_on",
+      "use_lora": true,
+      "use_prefix": true,
+      "start_loss": 23.130176544189453,
+      "end_loss": 22.7442684173584,
+      "loss_ratio": 0.9833158157658767,
+      "loss_ratio_threshold": 0.6,
+      "loss_pass": false,
+      "chrf2": 1.3225940657413549,
+      "chrf2_min": 15.0,
+      "spam_rate": 0.0,
+      "spam_count": 0,
+      "spam_threshold": 0.1,
+      "gen_pass": false,
+      "pass": false,
+      "preview": [
+        {
+          "source": "22 ma-na 10 G\u00cdN K\u00d9.BABBAR \u1e63a-ru-p\u00e1-am i-\u1e63\u00e9-er i-d\u00ed-a-bi\u2084-im a-\u0161ur-ma-lik i-\u0161u a-na a-l\u00e1-ak \u0161u-(d)EN.L\u00cdL i-\u0161a-qal \u0161u-ma l\u00e1 i\u0161-q\u00fa-ul 1.5 G\u00cdN.TA i-na ITU.KAM a-na ma-na-im \u00fa-\u1e63a-\u00e1b IGI a-\u0161ur-e-mu-q\u00ed IGI en-nam-a-\u0161ur DUMU me-na-a",
+          "target": "Iddin-abum owes 22 minas 10 shekels of refined silver to A\u0161\u0161ur-malik. He is to pay before \u0160u-Illil arrives. If he has not paid (in time), he will add interest at the rate 1.5 shekel per month per mina. Witnessed by A\u0161\u0161ur-em\u016bq\u012b, by Ennam-A\u0161\u0161ur s. of Menaya.",
+          "prediction": "moji a-na"
+        },
+        {
+          "source": "5 G\u00cdN K\u00d9.BABBAR 1 na-ru-uq \u0160E-am a-na mu-la G\u00c9ME \u0161a a-\u0161\u00f9r-ma-s\u00fa-i en-um-a-\u0161\u00f9r i-d\u00ed-in um-ma en-um-a-\u0161\u00f9r-ma K\u00d9.BABBAR \u00f9 \u00fa-\u1e6d\u00e1-t\u00e1m ta-al-q\u00ed-i a-d\u00ed mu-ut-ki i-l\u00e1-k\u00e0-ni a-na \u00c9-b\u00e9-t\u00ed-\u0161u \u00f9 a ma-t\u00ed-\u0161u l\u00e1 ta-\u1e6d\u00e1-\u1e2bi-i \u0161u-ma a-na b\u00e9-t\u00ed-\u0161u \u00f9 am-t\u00ed-\u0161u ta-\u1e6d\u00e1-\u1e2bi-i 5 G\u00cdN K\u00d9.BABBAR \u00f9 na-ru-uq \u0160E-am um-m\u00ec-ki \u00f9 a-\u1e2bu-ki K\u00d9.BABBAR \u00f9 \u0160E-am \u00fa-ta-ru-nim um-ma um-ma-\u0161a \u00f9 a-\u1e2bu-\u0161a nu-ta-ra-kum IGI a-\u0161ur-na-da IGI a-\u0161ur-i-d\u00ed-in IGI ta-ar-\u1e2bu-a-l\u00e1 IGI \u0161\u00ed-li-\u00fa-ma-an",
+          "target": "Ennam-A\u0161\u0161ur gave 5 shekels of silver and 1 sack of barley to Mula, A\u0161\u0161ur-massu\u02be\u012b's maid. Ennam-A\u0161\u0161ur said: You have received the silver and the grain. Until your husband arrives you are not to touch his house and his slave-girls. If you have touched his house and his slave-girls, your mother and your brother must return the 5 shekels of silver and the sack of barley.\" Her mother and her brothers said: \"We shall return it to you.\" Witnessed by A\u0161\u0161ur-n\u0101d\u0101, by A\u0161\u0161ur-iddin, by Tarhuala, by \u0160iliuman.\"",
+          "prediction": "moji \u00fa- a-\u0161i a K\u00d9. \u0161a a \u0161\u00ed a mu-la g\u00c9ME \u0161a nu a G\u00c9 K\u00c1 \u00f9 a lu-\u00fa \u0160E \u00e0l lu lu translate to-"
+        }
+      ],
+      "enforce": true
+    },
+    {
+      "name": "full_prefix_off_control",
+      "use_lora": false,
+      "use_prefix": false,
+      "start_loss": 17.337955474853516,
+      "end_loss": 15.23276138305664,
+      "loss_ratio": 0.8785788731058751,
+      "loss_ratio_threshold": 0.6,
+      "loss_pass": false,
+      "chrf2": 0.8950552081409275,
+      "chrf2_min": 0.0,
+      "spam_rate": 0.0,
+      "spam_count": 0,
+      "spam_threshold": 0.1,
+      "gen_pass": true,
+      "pass": false,
+      "preview": [
+        {
+          "source": "22 ma-na 10 G\u00cdN K\u00d9.BABBAR \u1e63a-ru-p\u00e1-am i-\u1e63\u00e9-er i-d\u00ed-a-bi\u2084-im a-\u0161ur-ma-lik i-\u0161u a-na a-l\u00e1-ak \u0161u-(d)EN.L\u00cdL i-\u0161a-qal \u0161u-ma l\u00e1 i\u0161-q\u00fa-ul 1.5 G\u00cdN.TA i-na ITU.KAM a-na ma-na-im \u00fa-\u1e63a-\u00e1b IGI a-\u0161ur-e-mu-q\u00ed IGI en-nam-a-\u0161ur DUMU me-na-a",
+          "target": "Iddin-abum owes 22 minas 10 shekels of refined silver to A\u0161\u0161ur-malik. He is to pay before \u0160u-Illil arrives. If he has not paid (in time), he will add interest at the rate 1.5 shekel per month per mina. Witnessed by A\u0161\u0161ur-em\u016bq\u012b, by Ennam-A\u0161\u0161ur s. of Menaya.",
+          "prediction": "moji\u043b\u043e\u0432\u043d\u0430\u0456\u0454\u043d\u0442a"
+        },
+        {
+          "source": "5 G\u00cdN K\u00d9.BABBAR 1 na-ru-uq \u0160E-am a-na mu-la G\u00c9ME \u0161a a-\u0161\u00f9r-ma-s\u00fa-i en-um-a-\u0161\u00f9r i-d\u00ed-in um-ma en-um-a-\u0161\u00f9r-ma K\u00d9.BABBAR \u00f9 \u00fa-\u1e6d\u00e1-t\u00e1m ta-al-q\u00ed-i a-d\u00ed mu-ut-ki i-l\u00e1-k\u00e0-ni a-na \u00c9-b\u00e9-t\u00ed-\u0161u \u00f9 a ma-t\u00ed-\u0161u l\u00e1 ta-\u1e6d\u00e1-\u1e2bi-i \u0161u-ma a-na b\u00e9-t\u00ed-\u0161u \u00f9 am-t\u00ed-\u0161u ta-\u1e6d\u00e1-\u1e2bi-i 5 G\u00cdN K\u00d9.BABBAR \u00f9 na-ru-uq \u0160E-am um-m\u00ec-ki \u00f9 a-\u1e2bu-ki K\u00d9.BABBAR \u00f9 \u0160E-am \u00fa-ta-ru-nim um-ma um-ma-\u0161a \u00f9 a-\u1e2bu-\u0161a nu-ta-ra-kum IGI a-\u0161ur-na-da IGI a-\u0161ur-i-d\u00ed-in IGI ta-ar-\u1e2bu-a-l\u00e1 IGI \u0161\u00ed-li-\u00fa-ma-an",
+          "target": "Ennam-A\u0161\u0161ur gave 5 shekels of silver and 1 sack of barley to Mula, A\u0161\u0161ur-massu\u02be\u012b's maid. Ennam-A\u0161\u0161ur said: You have received the silver and the grain. Until your husband arrives you are not to touch his house and his slave-girls. If you have touched his house and his slave-girls, your mother and your brother must return the 5 shekels of silver and the sack of barley.\" Her mother and her brothers said: \"We shall return it to you.\" Witnessed by A\u0161\u0161ur-n\u0101d\u0101, by A\u0161\u0161ur-iddin, by Tarhuala, by \u0160iliuman.\"",
+          "prediction": "wa a \u00e1-\u00e1"
+        }
+      ],
+      "enforce": false
+    }
+  ]
+}

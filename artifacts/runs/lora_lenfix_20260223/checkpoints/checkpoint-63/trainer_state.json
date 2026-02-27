@@ -1,0 +1,50 @@
+{
+  "best_global_step": 63,
+  "best_metric": 1.352102783482048,
+  "best_model_checkpoint": "C:\\MIM_pulz\\artifacts\\runs\\lora_lenfix_20260223\\checkpoints\\checkpoint-63",
+  "epoch": 1.0,
+  "eval_steps": 500,
+  "global_step": 63,
+  "is_hyper_param_search": false,
+  "is_local_process_zero": true,
+  "is_world_process_zero": true,
+  "log_history": [
+    {
+      "epoch": 0.7952286282306164,
+      "grad_norm": 825.9627075195312,
+      "learning_rate": 1e-05,
+      "loss": 27.2994,
+      "step": 50
+    },
+    {
+      "epoch": 1.0,
+      "eval_chrf2": 1.352102783482048,
+      "eval_loss": 18.576400756835938,
+      "eval_runtime": 485.6221,
+      "eval_samples_per_second": 0.642,
+      "eval_steps_per_second": 0.321,
+      "step": 63
+    }
+  ],
+  "logging_steps": 50,
+  "max_steps": 126,
+  "num_input_tokens_seen": 0,
+  "num_train_epochs": 2,
+  "save_steps": 500,
+  "stateful_callbacks": {
+    "TrainerControl": {
+      "args": {
+        "should_epoch_stop": false,
+        "should_evaluate": false,
+        "should_log": false,
+        "should_save": true,
+        "should_training_stop": false
+      },
+      "attributes": {}
+    }
+  },
+  "total_flos": 296887553224704.0,
+  "train_batch_size": 2,
+  "trial_name": null,
+  "trial_params": null
+}

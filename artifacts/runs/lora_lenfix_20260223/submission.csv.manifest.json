@@ -1,0 +1,16 @@
+{
+  "output_csv": "C:\\MIM_pulz\\artifacts\\runs\\lora_lenfix_20260223\\submission.csv",
+  "rows": 4,
+  "output_sha256": "bf8859f4f71092b2d322adc3b0b8f062a15f8b8628c362d2b2399f598a12886c",
+  "metadata_json": "C:\\MIM_pulz\\artifacts\\runs\\lora_lenfix_20260223\\submission.csv.meta.json",
+  "sha_file": "C:\\MIM_pulz\\artifacts\\runs\\lora_lenfix_20260223\\submission.csv.sha256",
+  "determinism_verified": true,
+  "method": "lora",
+  "method_meta": {
+    "method": "lora",
+    "adapter_dir": "C:\\MIM_pulz\\artifacts\\runs\\lora_lenfix_20260223\\adapter",
+    "tokenizer_dir": "C:\\MIM_pulz\\artifacts\\runs\\lora_lenfix_20260223\\tokenizer"
+  },
+  "adapter_dir": "C:\\MIM_pulz\\artifacts\\runs\\lora_lenfix_20260223\\adapter",
+  "tokenizer_dir": "C:\\MIM_pulz\\artifacts\\runs\\lora_lenfix_20260223\\tokenizer"
+}

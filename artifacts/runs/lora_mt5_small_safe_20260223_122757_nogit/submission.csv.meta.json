@@ -1,0 +1,27 @@
+{
+  "output_csv": "C:\\MIM_pulz\\artifacts\\runs\\lora_mt5_small_safe_20260223_122757_nogit\\submission.csv",
+  "output_sha256": "a06e26561a01552edeb4f61141b776cf2a86f5456813383bcd3ef8cc15015ec0",
+  "rows": 4,
+  "adapter_dir": "C:\\MIM_pulz\\artifacts\\runs\\lora_mt5_small_safe_20260223_122757_nogit\\adapter",
+  "tokenizer_source": "C:\\MIM_pulz\\artifacts\\runs\\lora_mt5_small_safe_20260223_122757_nogit\\tokenizer",
+  "base_model": "google/mt5-small",
+  "generation": {
+    "input_max_length": 256,
+    "max_length": 96,
+    "max_new_tokens": 128,
+    "num_beams": 4,
+    "do_sample": false,
+    "batch_size": 8,
+    "seed": 42,
+    "device": "cuda"
+  },
+  "determinism_verified": true,
+  "versions": {
+    "torch": "2.6.0+cu124",
+    "cuda_available": true,
+    "transformers": "4.57.3",
+    "peft": "0.18.0",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3"
+  }
+}

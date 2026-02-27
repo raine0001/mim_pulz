@@ -1,0 +1,20 @@
+{
+  "baseline_internal_chrF2": 38.617579253949266,
+  "routed_chrF2": 38.708223304803205,
+  "delta_routed_vs_internal": 0.090644050853939,
+  "route_counts": {
+    "RETRIEVE_HYBRID": 101,
+    "RETRIEVE_ORACC_FALLBACK": 80,
+    "RETRIEVE_INTERNAL": 109,
+    "RERANK_STRONG": 22
+  },
+  "counterfactual_best_policy_counts": {
+    "hybrid": 26,
+    "internal_only": 257,
+    "strong_rerank": 18,
+    "oracc_only": 10,
+    "fallback": 1
+  },
+  "routed_beats_internal_count": 22,
+  "val_rows": 312
+}

@@ -1,0 +1,21 @@
+# venv
+.venv/
+
+# python
+__pycache__/
+*.pyc
+
+# data & artifacts
+data/raw/
+data/processed/
+models/
+outputs/
+outputs/submission_smoke*
+outputs/mim_smoke_server.log
+
+# notebooks
+.ipynb_checkpoints/
+
+# misc
+.DS_Store
+.env

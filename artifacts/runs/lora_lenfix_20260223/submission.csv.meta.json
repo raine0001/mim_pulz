@@ -1,0 +1,32 @@
+{
+  "output_csv": "C:\\MIM_pulz\\artifacts\\runs\\lora_lenfix_20260223\\submission.csv",
+  "output_sha256": "bf8859f4f71092b2d322adc3b0b8f062a15f8b8628c362d2b2399f598a12886c",
+  "rows": 4,
+  "adapter_dir": "C:\\MIM_pulz\\artifacts\\runs\\lora_lenfix_20260223\\adapter",
+  "tokenizer_source": "C:\\MIM_pulz\\artifacts\\runs\\lora_lenfix_20260223\\tokenizer",
+  "base_model": "google/mt5-small",
+  "generation": {
+    "input_max_length": 512,
+    "max_length": 96,
+    "max_new_tokens": 128,
+    "num_beams": 4,
+    "no_repeat_ngram_size": 3,
+    "repetition_penalty": 1.1,
+    "early_stopping": true,
+    "task_prefix": "translate transliteration to english:",
+    "use_domain_tag": true,
+    "do_sample": false,
+    "batch_size": 8,
+    "seed": 42,
+    "device": "cuda"
+  },
+  "determinism_verified": true,
+  "versions": {
+    "torch": "2.6.0+cu124",
+    "cuda_available": true,
+    "transformers": "4.57.3",
+    "peft": "0.18.0",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3"
+  }
+}

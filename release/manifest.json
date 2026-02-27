@@ -1,0 +1,46 @@
+﻿{
+    "generated_at_utc":  "2026-02-26T05:37:15Z",
+    "project":  "MIM_pulz",
+    "environment":  {
+                        "python_version":  "3.11.5",
+                        "git_commit":  "nogit"
+                    },
+    "canonical":  {
+                      "submission_seed43":  {
+                                                "path":  "artifacts/submissions/submission_routed_reranked_pairwise_combined.csv",
+                                                "sha256":  "1b7c5f3456cbb588a9ae1ea8e8534532daf9bd381cb683c2db40bfc8628fd7bd",
+                                                "size_bytes":  2738
+                                            },
+                      "submission_seed44_probe":  {
+                                                      "path":  "artifacts/submissions/submission_routed_reranked_pairwise_combined_seed44.csv",
+                                                      "sha256":  "8b59ef6954961bfb32cc3fe481083518a16bf2a38222703e66752968b92fd494",
+                                                      "size_bytes":  3484
+                                                  },
+                      "routing_map":  {
+                                          "path":  "artifacts/profiles/routing_map.json",
+                                          "sha256":  "a3b078fdfffbe3d897dbde0ac479314fc302b7410af62351e8b13f7fcbc4845a",
+                                          "size_bytes":  2275
+                                      },
+                      "reranker_seed43":  {
+                                              "path":  "artifacts/models/routed_linear_reranker_seed43_pairwise_combined.json",
+                                              "sha256":  "e2ced1c1994b7b1c71ba2064051699b2129a3ad226b07568e014567c27020713",
+                                              "size_bytes":  3208
+                                          },
+                      "reranker_seed44":  {
+                                              "path":  "artifacts/models/routed_linear_reranker_seed44_pairwise_combined.json",
+                                              "sha256":  "81aa24123514b53436dffe909a32088f633ee826abd6f7759a44ee5235a94415",
+                                              "size_bytes":  3207
+                                          },
+                      "retrieval_profile":  {
+                                                "path":  "configs/retrieval_oracc_memory.yaml",
+                                                "sha256":  "ff6a399a56082173e74582ca282fe0522dc5f4b0d2ee3b7c6ac6b3c6424e8704",
+                                                "size_bytes":  1548
+                                            },
+                      "oracc_memory":  {
+                                           "path":  "data/processed/oracc_evacun_memory.csv",
+                                           "sha256":  "c79a18608276d023af7a3aa9db783edaaa37d8055992e295ab6026f9189947de",
+                                           "size_bytes":  11490914,
+                                           "expected_rows":  44937
+                                       }
+                  }
+}

@@ -1,0 +1,80 @@
+{
+  "seed": 42,
+  "feature_names": [
+    "cosine",
+    "base_score",
+    "stage2_norm",
+    "rank_inv",
+    "is_external",
+    "domain_match",
+    "len_ratio",
+    "digits_overlap",
+    "pn_overlap"
+  ],
+  "weights": [
+    -4.199678578157116,
+    -1.9923767173428921,
+    2.9407394706400622,
+    4.152171376526105,
+    -2.8770219988248913,
+    0.2856764257955013,
+    3.4172218494716122,
+    1.138535648272139,
+    1.403687359766427
+  ],
+  "intercept": -1.5655463728307346,
+  "top_weights": [
+    {
+      "feature": "cosine",
+      "weight": -4.199678578157116,
+      "abs_weight": 4.199678578157116
+    },
+    {
+      "feature": "rank_inv",
+      "weight": 4.152171376526105,
+      "abs_weight": 4.152171376526105
+    },
+    {
+      "feature": "len_ratio",
+      "weight": 3.4172218494716122,
+      "abs_weight": 3.4172218494716122
+    },
+    {
+      "feature": "stage2_norm",
+      "weight": 2.9407394706400622,
+      "abs_weight": 2.9407394706400622
+    },
+    {
+      "feature": "is_external",
+      "weight": -2.8770219988248913,
+      "abs_weight": 2.8770219988248913
+    }
+  ],
+  "train_queries": 1249,
+  "train_rows": 1249,
+  "val_rows": 312,
+  "train_examples": 181105,
+  "positive_rate": 0.006896551724137931,
+  "baseline_routed": {
+    "chrf2": 38.871040078592706,
+    "chrf2_reference": 38.871040078592706,
+    "abs_diff": 0.0
+  },
+  "reranked": {
+    "chrf2": 36.57758624015856,
+    "chrf2_reference": 36.57758624015856,
+    "abs_diff": 0.0
+  },
+  "oracle_from_candidate_pool": {
+    "chrf2": 44.81867512378382,
+    "chrf2_reference": 44.81867512378382,
+    "abs_diff": 0.0
+  },
+  "delta_vs_baseline": -2.2934538384341465,
+  "delta_vs_target_38_871": -2.2934137598414424,
+  "reranker_external_pick_rate": 0.0,
+  "target_baseline": 38.871,
+  "model_out": "C:\\MIM_pulz\\artifacts\\models\\routed_linear_reranker_seed42.json",
+  "train_jsonl": "C:\\MIM_pulz\\artifacts\\analysis\\routed_candidates_seed42\\train_candidates.jsonl",
+  "val_jsonl": "C:\\MIM_pulz\\artifacts\\analysis\\routed_candidates_seed42\\val_candidates.jsonl"
+}

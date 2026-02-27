@@ -1,0 +1,224 @@
+{
+  "memory_profile": "oracc_best",
+  "seed": 42,
+  "val_frac": 0.2,
+  "route_counts": {
+    "RETRIEVE_HYBRID": 246,
+    "RETRIEVE_INTERNAL": 57,
+    "RERANK_STRONG": 3,
+    "RETRIEVE_ORACC_FALLBACK": 6
+  },
+  "baseline_internal_chrf2": 38.48219989726628,
+  "n_combinations": 72,
+  "search_space": {
+    "hybrid_top_k": [
+      80,
+      100,
+      120,
+      160
+    ],
+    "fallback_oracc_cap": [
+      5,
+      10,
+      25
+    ],
+    "strong_stage2_pool": [
+      80,
+      120
+    ],
+    "strong_stage2_weight": [
+      0.2,
+      0.35,
+      0.5
+    ]
+  },
+  "best": {
+    "val_chrf2": 38.871040078592706,
+    "hybrid_params": {
+      "top_k": 80
+    },
+    "fallback_params": {
+      "oracc_cap": 5,
+      "gate": "low_conf"
+    },
+    "strong_params": {
+      "stage2_pool": 80,
+      "stage2_weight": 0.2
+    },
+    "hybrid_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=80,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)",
+    "fallback_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=True,cap=5,top_thr=0.5,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)",
+    "strong_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=80,weight=0.2,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=0,ext_mem_limit=0,ext_mem_ctx_allow=0,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)"
+  },
+  "top": [
+    {
+      "val_chrf2": 38.871040078592706,
+      "hybrid_params": {
+        "top_k": 80
+      },
+      "fallback_params": {
+        "oracc_cap": 5,
+        "gate": "low_conf"
+      },
+      "strong_params": {
+        "stage2_pool": 80,
+        "stage2_weight": 0.2
+      },
+      "hybrid_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=80,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)",
+      "fallback_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=True,cap=5,top_thr=0.5,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)",
+      "strong_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=80,weight=0.2,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=0,ext_mem_limit=0,ext_mem_ctx_allow=0,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)"
+    },
+    {
+      "val_chrf2": 38.871040078592706,
+      "hybrid_params": {
+        "top_k": 80
+      },
+      "fallback_params": {
+        "oracc_cap": 5,
+        "gate": "low_conf"
+      },
+      "strong_params": {
+        "stage2_pool": 80,
+        "stage2_weight": 0.35
+      },
+      "hybrid_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=80,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)",
+      "fallback_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=True,cap=5,top_thr=0.5,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)",
+      "strong_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=80,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=0,ext_mem_limit=0,ext_mem_ctx_allow=0,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)"
+    },
+    {
+      "val_chrf2": 38.871040078592706,
+      "hybrid_params": {
+        "top_k": 80
+      },
+      "fallback_params": {
+        "oracc_cap": 5,
+        "gate": "low_conf"
+      },
+      "strong_params": {
+        "stage2_pool": 80,
+        "stage2_weight": 0.5
+      },
+      "hybrid_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=80,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)",
+      "fallback_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=True,cap=5,top_thr=0.5,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)",
+      "strong_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=80,weight=0.5,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=0,ext_mem_limit=0,ext_mem_ctx_allow=0,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)"
+    },
+    {
+      "val_chrf2": 38.871040078592706,
+      "hybrid_params": {
+        "top_k": 80
+      },
+      "fallback_params": {
+        "oracc_cap": 5,
+        "gate": "low_conf"
+      },
+      "strong_params": {
+        "stage2_pool": 120,
+        "stage2_weight": 0.2
+      },
+      "hybrid_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=80,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)",
+      "fallback_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=True,cap=5,top_thr=0.5,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)",
+      "strong_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=120,weight=0.2,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=0,ext_mem_limit=0,ext_mem_ctx_allow=0,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)"
+    },
+    {
+      "val_chrf2": 38.871040078592706,
+      "hybrid_params": {
+        "top_k": 80
+      },
+      "fallback_params": {
+        "oracc_cap": 5,
+        "gate": "low_conf"
+      },
+      "strong_params": {
+        "stage2_pool": 120,
+        "stage2_weight": 0.35
+      },
+      "hybrid_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=80,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)",
+      "fallback_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=True,cap=5,top_thr=0.5,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)",
+      "strong_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=120,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=0,ext_mem_limit=0,ext_mem_ctx_allow=0,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)"
+    },
+    {
+      "val_chrf2": 38.871040078592706,
+      "hybrid_params": {
+        "top_k": 80
+      },
+      "fallback_params": {
+        "oracc_cap": 5,
+        "gate": "low_conf"
+      },
+      "strong_params": {
+        "stage2_pool": 120,
+        "stage2_weight": 0.5
+      },
+      "hybrid_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=80,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)",
+      "fallback_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=True,cap=5,top_thr=0.5,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)",
+      "strong_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=120,weight=0.5,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=0,ext_mem_limit=0,ext_mem_ctx_allow=0,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)"
+    },
+    {
+      "val_chrf2": 38.871040078592706,
+      "hybrid_params": {
+        "top_k": 80
+      },
+      "fallback_params": {
+        "oracc_cap": 10,
+        "gate": "low_conf"
+      },
+      "strong_params": {
+        "stage2_pool": 80,
+        "stage2_weight": 0.2
+      },
+      "hybrid_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=80,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)",
+      "fallback_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=True,cap=10,top_thr=0.5,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)",
+      "strong_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=80,weight=0.2,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=0,ext_mem_limit=0,ext_mem_ctx_allow=0,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)"
+    },
+    {
+      "val_chrf2": 38.871040078592706,
+      "hybrid_params": {
+        "top_k": 80
+      },
+      "fallback_params": {
+        "oracc_cap": 10,
+        "gate": "low_conf"
+      },
+      "strong_params": {
+        "stage2_pool": 80,
+        "stage2_weight": 0.35
+      },
+      "hybrid_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=80,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)",
+      "fallback_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=True,cap=10,top_thr=0.5,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)",
+      "strong_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=80,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=0,ext_mem_limit=0,ext_mem_ctx_allow=0,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)"
+    },
+    {
+      "val_chrf2": 38.871040078592706,
+      "hybrid_params": {
+        "top_k": 80
+      },
+      "fallback_params": {
+        "oracc_cap": 10,
+        "gate": "low_conf"
+      },
+      "strong_params": {
+        "stage2_pool": 80,
+        "stage2_weight": 0.5
+      },
+      "hybrid_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=80,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)",
+      "fallback_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=True,cap=10,top_thr=0.5,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)",
+      "strong_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=80,weight=0.5,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=0,ext_mem_limit=0,ext_mem_ctx_allow=0,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)"
+    },
+    {
+      "val_chrf2": 38.871040078592706,
+      "hybrid_params": {
+        "top_k": 80
+      },
+      "fallback_params": {
+        "oracc_cap": 10,
+        "gate": "low_conf"
+      },
+      "strong_params": {
+        "stage2_pool": 120,
+        "stage2_weight": 0.2
+      },
+      "hybrid_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=80,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)",
+      "fallback_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=40,weight=0.35,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=1,ext_mem_limit=5000,ext_mem_ctx_allow=2,ext_gate(enabled=True,cap=10,top_thr=0.5,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)",
+      "strong_model_id": "CanonicalRetrievalV2(analyzer=char_wb,ngram=(3,5),top_k=100,len_weight=0.6,len_mode=ratio,norm(strip_punct=False,lower=False,collapse_ws=True),stage2(type=bm25,pool=120,weight=0.2,k1=1.2,b=0.5),domain_override=False,domain_candidate_top_k=120,domain_bonus=0.01,domain_conf_threshold=0.25,domain_margin=0.02,ext_mem_paths=0,ext_mem_limit=0,ext_mem_ctx_allow=0,ext_gate(enabled=False,cap=25,top_thr=-1.0,gap_thr=-1.0,force_ctx=0,bonus=0.0,margin=0.0),origin_bonus(comp=0.01,ext=-0.05),evidence_k=3)"
+    }
+  ]
+}

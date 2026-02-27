@@ -1,0 +1,51 @@
+{
+  "seed": 42,
+  "val_frac": 0.2,
+  "thresholds": {
+    "fragment_bracket_p90": 0.012180272489786148,
+    "fragment_unknown_p90": 0.087385131418705,
+    "formula_high_p85": 0.044749467074871055,
+    "formula_mid_p60": 0.0,
+    "numeric_high_p85": 0.044184722006320946,
+    "pn_high_p85": 0.20343915224075312
+  },
+  "internal_score_stats": {
+    "p25": 0.3485313579440117,
+    "p75": 0.4967898577451706,
+    "mean": 0.44475257396698
+  },
+  "routing_map": {
+    "thresholds": {
+      "internal_top_low": 0.3485313579440117,
+      "internal_top_high": 0.4967898577451706
+    },
+    "routes": {
+      "P0": {
+        "route": "RETRIEVE_INTERNAL",
+        "policy_params": {
+          "top_k": 120
+        }
+      },
+      "P1": {
+        "route": "RETRIEVE_HYBRID",
+        "policy_params": {
+          "oracc_cap": 25
+        }
+      },
+      "P2": {
+        "route": "RETRIEVE_ORACC_FALLBACK",
+        "policy_params": {
+          "oracc_cap": 10,
+          "gate": "low_conf"
+        }
+      },
+      "P3": {
+        "route": "RERANK_STRONG",
+        "policy_params": {
+          "stage2_pool": 120,
+          "stage2_weight": 0.35
+        }
+      }
+    }
+  }
+}

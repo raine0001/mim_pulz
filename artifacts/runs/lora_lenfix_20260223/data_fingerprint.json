@@ -1,0 +1,38 @@
+{
+  "competition_dir": "C:\\MIM_pulz\\data\\raw\\competition",
+  "schema_path": "C:\\MIM_pulz\\config\\schema.json",
+  "train_file_sha256": "b18dfe7c749f087f5caf4696249ed1f55bfa03a21d4c60eb780a38232625ec98",
+  "test_file_sha256": "3799a9855069992b29b3b31c7f983cf50022703ad8e9069acaf428dec2565621",
+  "sample_submission_sha256": "65a213c2f9c42fdd7c0151162a0b7ebe16d9065c250725510d85963c9411d9b7",
+  "rows_total": 1561,
+  "rows_train": 1249,
+  "rows_val": 312,
+  "columns_used": {
+    "source_col": "transliteration",
+    "target_col": "translation"
+  },
+  "split": {
+    "train_idx_sha256": "5b77abf8a99dfe56a7c2d544132c5b0c45aaec39e1a713d2bb8d322f3dc98054",
+    "val_idx_sha256": "06823190262763ab90c33bfa558a57be719edaee53077598c39a03e6a7d30f7d"
+  },
+  "truncation": {
+    "policy": "drop_any",
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "train_rows_before": 1249,
+    "train_rows_after": 1006,
+    "train_source_truncated_count": 201,
+    "train_target_truncated_count": 220,
+    "train_any_truncated_count": 243,
+    "val_rows_before": 312,
+    "val_rows_after": 312,
+    "val_source_truncated_count": 60,
+    "val_target_truncated_count": 60,
+    "val_any_truncated_count": 69,
+    "apply_filter_to_val": false,
+    "train_source_len_median": 243.0,
+    "train_target_len_median": 125.0,
+    "val_source_len_median": 239.0,
+    "val_target_len_median": 127.0
+  }
+}

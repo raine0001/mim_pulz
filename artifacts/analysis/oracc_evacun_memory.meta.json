@@ -1,0 +1,37 @@
+{
+  "record_id": "17220688",
+  "source": "zenodo",
+  "base_url": "https://zenodo.org/records/17220688/files",
+  "output_csv": "C:\\MIM_pulz\\data\\processed\\oracc_evacun_memory.csv",
+  "rows_before_dedupe": 47783,
+  "rows_after_dedupe": 44937,
+  "context_mode": "infer",
+  "fixed_context": "oracc",
+  "limit": 0,
+  "split_stats": {
+    "train": {
+      "source_file": "transcription_train.txt",
+      "target_file": "english_train.txt",
+      "source_lines": 45269,
+      "target_lines": 45269,
+      "aligned_pairs": 45269,
+      "kept_pairs": 45269,
+      "dropped_empty": 0
+    },
+    "validation": {
+      "source_file": "transcription_validation.txt",
+      "target_file": "english_validation.txt",
+      "source_lines": 2514,
+      "target_lines": 2514,
+      "aligned_pairs": 2514,
+      "kept_pairs": 2514,
+      "dropped_empty": 0
+    }
+  },
+  "downloaded_file_sha256": {
+    "C:\\MIM_pulz\\data\\raw\\oracc_evacun_17220688\\transcription_train.txt": "a93a289d8d497d8aa43791b888694d6068d47cd48aa38b3987dfaf3538d27108",
+    "C:\\MIM_pulz\\data\\raw\\oracc_evacun_17220688\\english_train.txt": "dd3f2c0cd78505083f9b8b8dfb4d2b33a313f43bd7ff433f33b8fce3c8500e30",
+    "C:\\MIM_pulz\\data\\raw\\oracc_evacun_17220688\\transcription_validation.txt": "7ad666201ba1f829ccf839e856e544aa0ef8c4df950756cc89c611ae861072d5",
+    "C:\\MIM_pulz\\data\\raw\\oracc_evacun_17220688\\english_validation.txt": "614a884a93661ea72765764f4a21c9176eeb5cb42ca9c577092d3cedb1de27b1"
+  }
+}

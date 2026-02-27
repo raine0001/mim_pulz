@@ -1,0 +1,34 @@
+{
+  "source_full": {
+    "rows": 1249,
+    "non_ascii_char_count": 66939,
+    "combining_mark_count": 0,
+    "nfc_changed_rows": 0,
+    "nfc_changed_ratio": 0.0,
+    "changed_examples": []
+  },
+  "target_full": {
+    "rows": 1249,
+    "non_ascii_char_count": 13260,
+    "combining_mark_count": 0,
+    "nfc_changed_rows": 0,
+    "nfc_changed_ratio": 0.0,
+    "changed_examples": []
+  },
+  "source_micro": {
+    "rows": 8,
+    "non_ascii_char_count": 281,
+    "combining_mark_count": 0,
+    "nfc_changed_rows": 0,
+    "nfc_changed_ratio": 0.0,
+    "changed_examples": []
+  },
+  "target_micro": {
+    "rows": 8,
+    "non_ascii_char_count": 67,
+    "combining_mark_count": 0,
+    "nfc_changed_rows": 0,
+    "nfc_changed_ratio": 0.0,
+    "changed_examples": []
+  }
+}

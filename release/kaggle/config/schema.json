@@ -1,0 +1,11 @@
+{
+    "train_file": "train.csv",
+    "test_file": "test.csv",
+    "sample_submission_file": "sample_submission.csv",
+    "train_text_col": "transliteration",
+    "train_target_col": "translation",
+    "test_id_col": "id",
+    "test_text_col": "transliteration",
+    "submission_id_col": "id",
+    "submission_target_col": "translation"
+}

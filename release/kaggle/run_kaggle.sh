@@ -1,36 +1,38 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-cd "$ROOT_DIR"
+PKG_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$PKG_DIR"
+
+python -m pip install -r requirements.txt -c constraints.txt
 
 MODE="${1:-canonical}"
 
 fetch_oracc() {
   python src/fetch_oracc_memory.py \
     --record-id 17220688 \
-    --output-csv data/processed/oracc_evacun_memory.csv \
-    --meta-json artifacts/analysis/oracc_evacun_memory.meta.json
+    --output-csv artifacts/oracc_memory.csv \
+    --meta-json artifacts/oracc_memory.meta.json
 }
 
 build_seed43() {
   python src/make_submission.py \
     --method retrieval_routed_reranked \
     --memory oracc_best \
-    --routing-map artifacts/profiles/routing_map.json \
+    --routing-map artifacts/routing_map.json \
     --reranker-canonical seed43 \
     --verify-determinism \
-    --output artifacts/submissions/submission_routed_reranked_pairwise_combined.csv
+    --output submission.csv
 }
 
 build_seed44() {
   python src/make_submission.py \
     --method retrieval_routed_reranked \
     --memory oracc_best \
-    --routing-map artifacts/profiles/routing_map.json \
+    --routing-map artifacts/routing_map.json \
     --reranker-canonical seed44 \
     --verify-determinism \
-    --output artifacts/submissions/submission_routed_reranked_pairwise_combined_seed44.csv
+    --output submission_probe.csv
 }
 
 case "$MODE" in

@@ -4,7 +4,10 @@ import argparse
 from pathlib import Path
 import sys
 
-import torch
+try:
+    import torch
+except Exception:
+    torch = None
 import yaml
 
 
@@ -207,7 +210,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--device",
         type=str,
-        default="cuda" if torch.cuda.is_available() else "cpu",
+        default="cuda" if (torch is not None and torch.cuda.is_available()) else "cpu",
         choices=["cuda", "cpu"],
     )
     parser.add_argument("--retrieval-top-k", type=int, default=CANONICAL_BASELINE_V2.top_k)

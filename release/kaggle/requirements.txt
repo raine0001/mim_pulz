@@ -3,6 +3,4 @@ scikit-learn
 scipy
 pandas
 PyYAML
-torch
 sacrebleu
-requests

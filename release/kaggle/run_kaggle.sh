@@ -4,9 +4,28 @@ set -euo pipefail
 PKG_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$PKG_DIR"
 
-python -m pip install -r requirements.txt -c constraints.txt
+if [[ "${INSTALL_DEPS:-0}" == "1" ]]; then
+  python -m pip install -r requirements.txt -c constraints.txt
+fi
 
 MODE="${1:-canonical}"
+
+detect_competition_dir() {
+  if [[ -d "/kaggle/input" ]]; then
+    for p in /kaggle/input/*; do
+      [[ -d "$p" ]] || continue
+      [[ "$p" == */datasets* ]] && continue
+      if [[ -f "$p/sample_submission.csv" && -f "$p/train.csv" && -f "$p/test.csv" ]]; then
+        echo "$p"
+        return 0
+      fi
+    done
+  fi
+  echo "$PKG_DIR/data/raw/competition"
+}
+
+COMPETITION_DIR="$(detect_competition_dir)"
+echo "Using competition dir: $COMPETITION_DIR"
 
 fetch_oracc() {
   python src/fetch_oracc_memory.py \
@@ -19,6 +38,7 @@ build_seed43() {
   python src/make_submission.py \
     --method retrieval_routed_reranked \
     --memory oracc_best \
+    --competition-dir "$COMPETITION_DIR" \
     --routing-map artifacts/routing_map.json \
     --reranker-canonical seed43 \
     --verify-determinism \
@@ -29,6 +49,7 @@ build_seed44() {
   python src/make_submission.py \
     --method retrieval_routed_reranked \
     --memory oracc_best \
+    --competition-dir "$COMPETITION_DIR" \
     --routing-map artifacts/routing_map.json \
     --reranker-canonical seed44 \
     --verify-determinism \

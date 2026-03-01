@@ -42,6 +42,14 @@ python src/make_submission.py --method retrieval_routed_reranked --memory oracc_
 - POSIX shell wrapper: `release/kaggle/run_kaggle.sh`
 - PowerShell wrapper: `release/kaggle/run_kaggle.ps1`
 
+Wrappers auto-detect a Kaggle competition input folder (`/kaggle/input/<competition-slug>`) and pass it to `--competition-dir`.
+If no competition input is found, they fall back to packaged `data/raw/competition`.
+
+Dependency install is optional:
+
+- Bash: `INSTALL_DEPS=1 bash run_kaggle.sh canonical`
+- PowerShell: `powershell -ExecutionPolicy Bypass -File run_kaggle.ps1 -Mode canonical -InstallDeps`
+
 Examples (run from this folder):
 
 ```bash

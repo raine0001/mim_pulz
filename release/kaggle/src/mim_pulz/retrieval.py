@@ -2073,6 +2073,8 @@ def make_routed_retrieval_submission(
     final_debug: list[dict] = []
     route_counts: dict[str, int] = {}
     unknown_routes = set()
+    selected_by_text_id: dict[str, set[int]] = {}
+    selected_by_text_id: dict[str, set[int]] = {}
     for i, prow in enumerate(profile_rows):
         policy_name = str(prow.get("policy_name", ""))
         route_name = str(prow.get("route", ""))
@@ -2366,6 +2368,7 @@ def make_routed_reranked_retrieval_submission(
     final_debug: list[dict] = []
     route_counts: dict[str, int] = {}
     unknown_routes = set()
+    selected_by_text_id: dict[str, set[int]] = {}
 
     for i, prow in enumerate(profile_rows):
         policy_name = str(prow.get("policy_name", ""))
@@ -2380,8 +2383,22 @@ def make_routed_reranked_retrieval_submission(
         routed_dbg = dict(policy_debug[policy_name][i])
         routed_idx = int(routed_dbg.get("chosen_idx", 0))
         internal_idx = int(policy_debug["internal_only"][i].get("chosen_idx", routed_idx))
+        test_row = data.test.iloc[i]
+        test_id = test_row.get(data.schema.test_id_col, None) if data.schema.test_id_col in data.test.columns else None
+        text_id = test_row.get("text_id", None) if "text_id" in data.test.columns else None
+        line_start = test_row.get("line_start", None) if "line_start" in data.test.columns else None
+        line_end = test_row.get("line_end", None) if "line_end" in data.test.columns else None
+        span_len = None
+        try:
+            if line_start is not None and line_end is not None:
+                span_len = int(line_end) - int(line_start)
+        except Exception:
+            span_len = None
 
         row = sims[i]
+        external_top_cosine = None
+        if candidate_model.external_indices.size > 0:
+            external_top_cosine = float(np.max(row[candidate_model.external_indices]))
         candidate_pool = build_candidate_pool_top_internal_oracc(
             model=candidate_model,
             row=row,
@@ -2440,12 +2457,34 @@ def make_routed_reranked_retrieval_submission(
 
         chosen_idx = int(candidate_pool[best_pos])
 
+        diversity_applied = False
+        diversity_prev_idx = chosen_idx
+        diversity_replaced_idx = None
+        text_id_key = str(text_id).strip() if text_id is not None and str(text_id).strip() else ""
+        if text_id_key:
+            used = selected_by_text_id.setdefault(text_id_key, set())
+            if chosen_idx in used and len(candidate_pool) > len(used):
+                ranked_pos = np.argsort(rerank_scores)[::-1]
+                for pos in ranked_pos:
+                    alt_idx = int(candidate_pool[int(pos)])
+                    if alt_idx not in used:
+                        best_pos = int(pos)
+                        chosen_idx = alt_idx
+                        diversity_applied = True
+                        diversity_replaced_idx = alt_idx
+                        break
+            used.add(chosen_idx)
+
         pred = candidate_model.train_tgt[chosen_idx]
         final_preds.append(pred)
 
         tfidf_score = float(row[internal_idx]) if internal_idx < len(row) else 0.0
         bm25_score = float(routed_dbg.get("chosen_score", routed_dbg.get("global_score", 0.0)))
         rerank_score = float(rerank_scores[best_pos])
+        baseline_rerank_score = float(rerank_scores[routed_pos])
+        ranked_all_pos = np.argsort(rerank_scores)[::-1]
+        selected_rank = int(np.where(ranked_all_pos == best_pos)[0][0] + 1)
+        baseline_rank = int(np.where(ranked_all_pos == routed_pos)[0][0] + 1)
 
         top_pos = np.argsort(rerank_scores)[::-1][: min(5, len(candidate_pool))]
         top_candidates = []
@@ -2502,6 +2541,10 @@ def make_routed_reranked_retrieval_submission(
         routed_dbg["reranker_feature_names"] = list(reranker.feature_names)
         routed_dbg["reranker_selected_idx"] = int(chosen_idx)
         routed_dbg["reranker_selected_score"] = rerank_score
+        routed_dbg["reranker_selected_rank"] = int(selected_rank)
+        routed_dbg["reranker_baseline_idx"] = int(routed_idx)
+        routed_dbg["reranker_baseline_score"] = float(baseline_rerank_score)
+        routed_dbg["reranker_baseline_rank"] = int(baseline_rank)
         routed_dbg["reranker_gated_to_baseline"] = bool(gated_to_baseline)
         routed_dbg["reranker_gate_prob_gap"] = float(gate_prob_gap)
         routed_dbg["reranker_gate_pred_delta"] = float(gate_pred_delta)
@@ -2523,6 +2566,24 @@ def make_routed_reranked_retrieval_submission(
         routed_dbg["reranker_oracc_cap"] = int(reranker_oracc_cap)
         routed_dbg["reranker_candidates"] = top_candidates
         routed_dbg["selection_scorecard"] = scorecard
+        routed_dbg["query_preview"] = _short(test_src[i], max_chars=80)
+        routed_dbg["test_id"] = test_id.item() if hasattr(test_id, "item") else test_id
+        routed_dbg["text_id"] = text_id.item() if hasattr(text_id, "item") else text_id
+        routed_dbg["line_start"] = line_start.item() if hasattr(line_start, "item") else line_start
+        routed_dbg["line_end"] = line_end.item() if hasattr(line_end, "item") else line_end
+        routed_dbg["line_span_len"] = span_len
+        routed_dbg["oracc_top_cosine"] = external_top_cosine
+        routed_dbg["internal_oracc_margin"] = (
+            float(prow.get("internal_top_score", 0.0) - external_top_cosine)
+            if external_top_cosine is not None
+            else None
+        )
+        routed_dbg["diversity_text_id"] = text_id_key if text_id_key else None
+        routed_dbg["diversity_applied"] = bool(diversity_applied)
+        routed_dbg["diversity_prev_idx"] = int(diversity_prev_idx)
+        routed_dbg["diversity_replaced_idx"] = (
+            int(diversity_replaced_idx) if diversity_replaced_idx is not None else None
+        )
 
         final_debug.append(routed_dbg)
         route_counts[route_name] = route_counts.get(route_name, 0) + 1
@@ -2535,6 +2596,7 @@ def make_routed_reranked_retrieval_submission(
 
     if verify_determinism:
         verify_preds: list[str] = []
+        verify_selected_by_text_id: dict[str, set[int]] = {}
         for i, src in enumerate(test_src):
             prow = profile_rows[i]
             policy_name = str(prow.get("policy_name", ""))
@@ -2596,7 +2658,25 @@ def make_routed_reranked_retrieval_submission(
                     allow_digits = True
                 if not (allow_prob and allow_base and allow_delta and allow_digits):
                     best_pos = routed_pos
-            verify_preds.append(candidate_model.train_tgt[int(candidate_pool[best_pos])])
+            verify_idx = int(candidate_pool[best_pos])
+            if "text_id" in data.test.columns:
+                verify_text_id = data.test.iloc[i].get("text_id", None)
+                verify_text_key = (
+                    str(verify_text_id).strip() if verify_text_id is not None and str(verify_text_id).strip() else ""
+                )
+            else:
+                verify_text_key = ""
+            if verify_text_key:
+                used_verify = verify_selected_by_text_id.setdefault(verify_text_key, set())
+                if verify_idx in used_verify and len(candidate_pool) > len(used_verify):
+                    ranked_pos = np.argsort(scores)[::-1]
+                    for pos in ranked_pos:
+                        alt_idx = int(candidate_pool[int(pos)])
+                        if alt_idx not in used_verify:
+                            verify_idx = alt_idx
+                            break
+                used_verify.add(verify_idx)
+            verify_preds.append(candidate_model.train_tgt[verify_idx])
         if verify_preds != final_preds:
             raise RuntimeError("Determinism check failed for retrieval_routed_reranked submission.")
 
@@ -2632,21 +2712,53 @@ def make_routed_reranked_retrieval_submission(
                 value = row[col]
                 item[col] = value.item() if hasattr(value, "item") else value
         evidence_rows.append(item)
+        selected_idx = dbg.get("reranker_selected_idx")
+        baseline_idx = dbg.get("reranker_baseline_idx")
+        selected_idx_int = int(selected_idx) if selected_idx is not None else None
+        baseline_idx_int = int(baseline_idx) if baseline_idx is not None else None
+        telemetry_item: dict[str, Any] = {
+            "row_index": int(i),
+            "query_preview": _short(test_src[i], max_chars=80),
+            "route": str(prow.get("route", "")),
+            "policy_name": str(prow.get("policy_name", "")),
+            "policy_params": dict(prow.get("policy_params", {})),
+            "labels": dict(prow.get("labels", {})),
+            "rationale": str(prow.get("rationale", "")),
+            "internal_top_score": float(prow.get("internal_top_score", 0.0)),
+            "oracc_top_score": dbg.get("oracc_top_cosine"),
+            "internal_oracc_margin": dbg.get("internal_oracc_margin"),
+            "selected_candidate": {
+                "memory_idx": selected_idx_int,
+                "candidate_rank": dbg.get("reranker_selected_rank"),
+                "candidate_score": dbg.get("reranker_selected_score"),
+                "origin": dbg.get("chosen_origin"),
+                "context": dbg.get("chosen_context"),
+                "target_preview": _short(candidate_model.train_tgt[selected_idx_int]) if selected_idx_int is not None else None,
+            },
+            "baseline_candidate": {
+                "memory_idx": baseline_idx_int,
+                "candidate_rank": dbg.get("reranker_baseline_rank"),
+                "candidate_score": dbg.get("reranker_baseline_score"),
+                "origin": candidate_model.train_origins[baseline_idx_int] if baseline_idx_int is not None else None,
+                "context": candidate_model.train_domains[baseline_idx_int] if baseline_idx_int is not None else None,
+                "target_preview": _short(candidate_model.train_tgt[baseline_idx_int]) if baseline_idx_int is not None else None,
+            },
+            "reranker": {
+                "selected_idx": selected_idx_int,
+                "baseline_idx": baseline_idx_int,
+                "gated_to_baseline": dbg.get("reranker_gated_to_baseline"),
+                "predicted_delta": dbg.get("reranker_gate_pred_delta"),
+                "diversity_applied": dbg.get("diversity_applied"),
+                "diversity_prev_idx": dbg.get("diversity_prev_idx"),
+                "diversity_replaced_idx": dbg.get("diversity_replaced_idx"),
+            },
+        }
+        for col in optional_cols:
+            if col in data.test.columns:
+                value = row[col]
+                telemetry_item[col] = value.item() if hasattr(value, "item") else value
         telemetry_rows.append(
-            {
-                "row_index": int(i),
-                "route": str(prow.get("route", "")),
-                "policy_name": str(prow.get("policy_name", "")),
-                "policy_params": dict(prow.get("policy_params", {})),
-                "labels": dict(prow.get("labels", {})),
-                "rationale": str(prow.get("rationale", "")),
-                "internal_top_score": float(prow.get("internal_top_score", 0.0)),
-                "internal_gap": prow.get("internal_gap", None),
-                "chosen_origin": dbg.get("chosen_origin"),
-                "chosen_context": dbg.get("chosen_context"),
-                "reranker_selected_idx": dbg.get("reranker_selected_idx"),
-                "reranker_selected_score": dbg.get("reranker_selected_score"),
-            }
+            telemetry_item
         )
 
     evidence_payload = {
